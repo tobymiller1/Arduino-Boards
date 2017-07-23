@@ -1,4 +1,4 @@
-include libraries/Kaleidoscope-Plugin/build/arduino.mk
+-include libraries/Kaleidoscope-Plugin/build/arduino.mk
 
 travis-test: travis-install-arduino
 	TRAVIS_ARDUINO_PATH=$(TRAVIS_ARDUINO_PATH) perl build-tools/test-recursively travis-test
