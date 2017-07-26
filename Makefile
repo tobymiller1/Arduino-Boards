@@ -1,8 +1,7 @@
--include libraries/Kaleidoscope-Plugin/build/rules.mk
 
-build-all: travis-test
+build-all: travis-test-all
 
-travis-test: travis-install-arduino
+travis-test-all: travis-install-arduino
 	TRAVIS_ARDUINO_PATH=$(TRAVIS_ARDUINO_PATH) perl build-tools/test-recursively travis-test
 	TRAVIS_ARDUINO_PATH=$(TRAVIS_ARDUINO_PATH) perl build-tools/test-recursively cpplint
 
@@ -20,3 +19,4 @@ blindly-commit-updates: git-pull maintainer-update-submodules
 	git push
 
 
+-include libraries/Kaleidoscope-Plugin/build/rules.mk
