@@ -37,9 +37,6 @@
 [submodule "libraries/Kaleidoscope-SpaceCadet"]
 	path = libraries/Kaleidoscope-SpaceCadet
 	url = https://github.com/keyboardio/Kaleidoscope-SpaceCadet
-[submodule "libraries/Kaleidoscope-KeyLogger"]
-	path = libraries/Kaleidoscope-KeyLogger
-	url = https://github.com/keyboardio/Kaleidoscope-KeyLogger
 [submodule "libraries/Kaleidoscope-Leader"]
 	path = libraries/Kaleidoscope-Leader
 	url = https://github.com/keyboardio/Kaleidoscope-Leader
