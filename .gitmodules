@@ -11,7 +11,7 @@
 	path = libraries/FingerprintUSBHost
 	url = https://github.com/keyboardio/FingerprintUSBHost
 [submodule "libraries/Arduino-HID"]
-	path = libraries/Arduino-HID
+	path = libraries/HID
 	url = https://github.com/keyboardio/Arduino-HID
 [submodule "libraries/Kaleidoscope-OneShot"]
 	path = libraries/Kaleidoscope-OneShot
