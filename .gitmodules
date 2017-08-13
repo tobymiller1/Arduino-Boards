@@ -145,3 +145,6 @@
 [submodule "libraries/Kaleidoscope-Steno"]
 	path = libraries/Kaleidoscope-Steno
 	url = https://github.com/keyboardio/Kaleidoscope-Steno.git
+[submodule "libraries/Kaleidoscope-LEDEffect-BootGreeting"]
+	path = libraries/Kaleidoscope-LEDEffect-BootGreeting
+	url = https://github.com/keyboardio/Kaleidoscope-LEDEffect-BootGreeting
