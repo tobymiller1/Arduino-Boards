@@ -23,4 +23,4 @@ blindly-commit-updates: git-pull maintainer-update-submodules
 	git push
 
 
--include libraries/Kaleidoscope-Plugin/build/rules.mk
+-include build-tools/makefiles/rules.mk
