@@ -23,4 +23,7 @@ blindly-commit-updates: git-pull maintainer-update-submodules
 	git push
 
 
+doxygen-generate:
+	doxygen etc/doxygen/doxygen.conf
+
 -include build-tools/makefiles/rules.mk

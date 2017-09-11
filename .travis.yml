@@ -7,6 +7,16 @@ install:
   - ln -s `pwd` hardware/keyboardio/avr
 script:
   - make travis-test-all BOARD_HARDWARE_PATH=$(pwd)/hardware
+# Blacklist
+branches:
+  except:
+    - gh-pages
+env:
+  global:
+    - GH_REPO_NAME: Arduino-Boards
+    - DOXYFILE: $TRAVIS_BUILD_DIR/etc/doxygen/doxygen.conf
+    - GH_REPO_REF: github.com/keyboardio/Arduino-Boards.git
+
 notifications:
   irc:
     channels:
@@ -20,3 +30,17 @@ notifications:
     on_failure: change
 cache:
   ccache: true
+# Install dependencies
+addons:
+  apt:
+    packages:
+      - doxygen
+      - doxygen-doc
+      - doxygen-latex
+      - doxygen-gui
+      - graphviz
+# Generate and deploy documentation
+after_success:
+  - cd $TRAVIS_BUILD_DIR
+  - sh ./build-tools/doxygen-deploy.sh
+
