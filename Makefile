@@ -1,7 +1,9 @@
 
 
 ifeq ($(BOARD_HARDWARE_PATH),)
-PLUGIN_TEST_SUPPORT_DIR = ./build-tools
+PLUGIN_TEST_SUPPORT_DIR =? ./build-tools
+KALEIDOSCOPE_BUILDER_DIR =? ./libraries/Kaleidoscope/bin/
+
 endif
 
 update-submodules: checkout-submodules
