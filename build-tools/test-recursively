@@ -3,10 +3,14 @@
 use warnings;
 use strict;
 
+my $third_party_failed_count = 0;
 my $failed_count = 0;
 my $run_count =0;
 my $target = shift;
 
+# Third party libraries may fail our test suite. Since we don't have commit,
+# we complain but don't fail the whole run for that
+my @THIRD_PARTY_LIBRARIES = qw/Kaleidoscope-Hardware-Shortcut/;
 
 my $pwd = `pwd`;
 chomp($pwd);
@@ -33,15 +37,19 @@ for my $dir (@files) {
             print STDERR "\n$contents\n";
         }
         unlink(".build-log");
-
-        $failed_count += $result;
+	if (! grep $dir, @THIRD_PARTY_LIBRARIES ) {
+        	$failed_count += $result;
+	} else {
+		$third_party_failed_count += $result;
+	}
         $run_count++;
     } else {
         print " skip\n";
     }
 }
 
-print STDERR "Ran tests:      $run_count\n";
-print STDERR "Total failures: $failed_count\n";
+print STDERR "Ran tests:          $run_count\n";
+print STDERR "Total failures:     $failed_count\n";
+print STDERR "3rd party failures: $third_party_failed_count\n";
 exit($failed_count);
 #make -pRrq |grep -q '^travis-test:$'
