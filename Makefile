@@ -1,3 +1,9 @@
+
+
+ifeq ($(BOARD_HARDWARE_PATH),)
+PLUGIN_TEST_SUPPORT_DIR = ./build-tools
+endif
+
 update-submodules: checkout-submodules
 	@echo "All Kaleidoscope libraries have been updated from GitHub"
 
