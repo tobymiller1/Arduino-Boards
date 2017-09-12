@@ -78,6 +78,8 @@ echo "" > .nojekyll
 
 cp -a ../../doc/doxygen/html/* .
 
+cp ../../doxygen.log .
+
 ################################################################################
 ##### Upload the documentation to the gh-pages branch of the repository.   #####
 # Only upload if Doxygen successfully created the documentation.
