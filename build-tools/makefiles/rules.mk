@@ -23,10 +23,13 @@ astyle:
 
 travis-test: travis-smoke-examples travis-check-astyle
 
-test: smoke-examples check-astyle cpplint-noisy
+test: smoke-examples check-astyle cpplint-noisy check-docs
 
 smoke-examples:
 	$(KALEIDOSCOPE_BUILDER_DIR)/kaleidoscope-builder build-all 
+
+check-docs:
+	$(PLUGIN_TEST_SUPPORT_DIR)/check-docs
 
 check-astyle:
 	$(PLUGIN_TEST_SUPPORT_DIR)/run-astyle
