@@ -29,7 +29,7 @@ smoke-examples:
 	$(KALEIDOSCOPE_BUILDER_DIR)/kaleidoscope-builder build-all 
 
 check-docs:
-	doxygen $(PLUGIN_TEST_SUPPORT_DIR)/check-docs.conf
+	doxygen $(PLUGIN_TEST_SUPPORT_DIR)/check-docs.conf 2> /dev/null >/dev/null
 	python $(PLUGIN_TEST_SUPPORT_DIR)/doxy-coverage.py /tmp/undocced/xml
 
 check-astyle:
