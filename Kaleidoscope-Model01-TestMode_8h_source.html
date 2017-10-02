@@ -102,26 +102,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">void</span> begin();</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structTestMode___1_1chatter__test__state__t.html">   14</a></span>&#160;  <span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    uint8_t scan_map;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    uint8_t scan_count;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  } <a class="code" href="structTestMode___1_1chatter__test__state__t.html">chatter_test_state_t</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> run_tests();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> test_leds();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> testMatrix();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> toggle_programming_leds_on();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> waitForKeypress();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> loopHook(<span class="keywordtype">bool</span> postClear);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> set_leds(uint8_t r, uint8_t g, uint8_t b);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">static</span> <a class="code" href="structTestMode___1_1chatter__test__state__t.html">chatter_test_state_t</a> chatter_test_state_[ROWS][COLS];</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">extern</span> <a class="code" href="classTestMode__.html">TestMode_</a> TestMode;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="code" href="unionKey__.html">Key</a> handleKeyswitchEvent_test(<a class="code" href="unionKey__.html">Key</a> mappedKey, byte row, byte col, uint8_t keyState);</div>
-<div class="ttc" id="structTestMode___1_1chatter__test__state__t_html"><div class="ttname"><a href="structTestMode___1_1chatter__test__state__t.html">TestMode_::chatter_test_state_t</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Model01-TestMode_8h_source.html#l00014">Kaleidoscope-Model01-TestMode.h:14</a></div></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> run_tests();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> test_leds();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> testMatrix();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> toggle_programming_leds_on();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> waitForKeypress();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> loopHook(<span class="keywordtype">bool</span> postClear);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> set_leds(uint8_t r, uint8_t g, uint8_t b);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">extern</span> <a class="code" href="classTestMode__.html">TestMode_</a> TestMode;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<a class="code" href="unionKey__.html">Key</a> handleKeyswitchEvent_test(<a class="code" href="unionKey__.html">Key</a> mappedKey, byte row, byte col, uint8_t keyState);</div>
 <div class="ttc" id="classTestMode___html"><div class="ttname"><a href="classTestMode__.html">TestMode_</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Model01-TestMode_8h_source.html#l00008">Kaleidoscope-Model01-TestMode.h:8</a></div></div>
 <div class="ttc" id="unionKey___html"><div class="ttname"><a href="unionKey__.html">Key_</a></div><div class="ttdef"><b>Definition:</b> <a href="key__defs_8h_source.html#l00019">key_defs.h:19</a></div></div>
 <div class="ttc" id="classKaleidoscopePlugin_html"><div class="ttname"><a href="classKaleidoscopePlugin.html">KaleidoscopePlugin</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope_8h_source.html#l00040">Kaleidoscope.h:40</a></div></div>
