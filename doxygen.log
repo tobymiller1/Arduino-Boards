@@ -1060,7 +1060,7 @@ Searc/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LEDEffe
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/ConsumerControl.h:44: warning: Compound ConsumerControl_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-FingerPainter/src/Kaleidoscope/FingerPainter.h:24: warning: Compound kaleidoscope::FingerPainter is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Colormap/src/Kaleidoscope/Colormap.h:25: warning: Compound kaleidoscope::ColormapEffect is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:16: warning: Compound Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:19: warning: Compound Key_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Escape-OneShot/src/Kaleidoscope/Escape-OneShot.h:24: warning: Compound kaleidoscope::EscapeOneShot is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/KeyboardioScanner.h:24: warning: Compound key_t is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-MagicCombo/src/Kaleidoscope/MagicCombo.h:27: warning: Compound kaleidoscope::MagicCombo::combo_t is not documented.
@@ -1121,7 +1121,7 @@ Searc/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LEDEffe
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-TapDance/src/Kaleidoscope/TapDance.h:33: warning: Compound kaleidoscope::TapDance is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-TypingBreaks/src/Kaleidoscope/TypingBreaks.h:34: warning: Compound kaleidoscope::TypingBreaks::settings_t is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-TypingBreaks/src/Kaleidoscope/TypingBreaks.h:25: warning: Compound kaleidoscope::TypingBreaks is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:10: warning: Compound NumLock_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:7: warning: Compound NumLock_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-AlphaSquare/src/Kaleidoscope/LED-AlphaSquare.h:36: warning: Compound kaleidoscope::AlphaSquare is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Leader/src/Kaleidoscope/Leader.h:33: warning: Compound kaleidoscope::Leader is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Gamepad.h:99: warning: Compound Gamepad_ is not documented.
@@ -1774,19 +1774,19 @@ Ge/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Leader/REA
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/Kaleidoscope.h:99: warning: Member eventHandlers[HOOK_MAX] (variable) of class Kaleidoscope_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/Kaleidoscope.h:106: warning: Member loopHooks[HOOK_MAX] (variable) of class Kaleidoscope_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/Kaleidoscope.h:42: warning: Member begin(void)=0 (function) of class KaleidoscopePlugin is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:24: warning: Member operator==(uint16_t rhs) (function) of class Key_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:27: warning: Member operator==(const Key_ rhs) (function) of class Key_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:30: warning: Member operator=(uint16_t raw) (function) of class Key_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:34: warning: Member operator!=(const Key_ &rhs) (function) of class Key_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:37: warning: Member operator>=(uint16_t raw) (function) of class Key_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:40: warning: Member operator<=(uint16_t raw) (function) of class Key_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:43: warning: Member operator>(uint16_t raw) (function) of class Key_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:46: warning: Member operator<(uint16_t raw) (function) of class Key_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:49: warning: Member operator>=(const Key_ &other) (function) of class Key_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:52: warning: Member operator<=(const Key_ &other) (function) of class Key_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:55: warning: Member operator>(const Key_ &other) (function) of class Key_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:58: warning: Member operator<(const Key_ &other) (function) of class Key_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:22: warning: Member raw (variable) of class Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:27: warning: Member operator==(uint16_t rhs) (function) of class Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:30: warning: Member operator==(const Key_ rhs) (function) of class Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:33: warning: Member operator=(uint16_t raw) (function) of class Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:37: warning: Member operator!=(const Key_ &rhs) (function) of class Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:40: warning: Member operator>=(uint16_t raw) (function) of class Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:43: warning: Member operator<=(uint16_t raw) (function) of class Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:46: warning: Member operator>(uint16_t raw) (function) of class Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:49: warning: Member operator<(uint16_t raw) (function) of class Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:52: warning: Member operator>=(const Key_ &other) (function) of class Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:55: warning: Member operator<=(const Key_ &other) (function) of class Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:58: warning: Member operator>(const Key_ &other) (function) of class Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:61: warning: Member operator<(const Key_ &other) (function) of class Key_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/src/key_defs.h:25: warning: Member raw (variable) of class Key_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/KeyboardioScanner.h:32: warning: Member val (variable) of class key_t is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Keyboard.h:51: warning: Member begin(void) (function) of class Keyboard_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Keyboard.h:52: warning: Member end(void) (function) of class Keyboard_ is not documented.
@@ -1919,12 +1919,12 @@ Ge/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Leader/REA
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-MouseKeys/src/MouseWrapper.h:40: warning: Member section_top (variable) of class MouseWrapper_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-MouseKeys/src/MouseWrapper.h:41: warning: Member section_left (variable) of class MouseWrapper_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-MouseKeys/src/MouseWrapper.h:42: warning: Member is_warping (variable) of class MouseWrapper_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:14: warning: Member begin(void) final (function) of class NumLock_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:16: warning: Member toggle() (function) of class NumLock_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:17: warning: Member loopHook(const bool postClear) (function) of class NumLock_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:19: warning: Member numPadLayer (variable) of class NumLock_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:22: warning: Member row (variable) of class NumLock_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:22: warning: Member col (variable) of class NumLock_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:11: warning: Member begin(void) final (function) of class NumLock_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:13: warning: Member numPadLayer (variable) of class NumLock_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:16: warning: Member loopHook(const bool postClear) (function) of class NumLock_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:17: warning: Member eventHandlerHook(Key key, byte row, byte col, uint8_t key_state) (function) of class NumLock_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:19: warning: Member row (variable) of class NumLock_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Numlock/src/Kaleidoscope-Numlock.h:19: warning: Member col (variable) of class NumLock_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Shortcut/src/Kaleidoscope-Hardware-Shortcut.h:42: warning: Member syncLeds(void) (function) of class Shortcut is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Shortcut/src/Kaleidoscope-Hardware-Shortcut.h:43: warning: Member setCrgbAt(byte row, byte col, cRGB color) (function) of class Shortcut is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Shortcut/src/Kaleidoscope-Hardware-Shortcut.h:44: warning: Member setCrgbAt(uint8_t i, cRGB crgb) (function) of class Shortcut is not documented.
@@ -3377,5 +3377,5 @@ Patching output file 284/287
 Patching output file 285/287
 Patching output file 286/287
 Patching output file 287/287
-lookup cache used 3330/65536 hits=24785 misses=3457
+lookup cache used 3331/65536 hits=24820 misses=3458
 finished...
