@@ -140,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">)</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#define QWERTY KEYMAP ( \</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">        ___,          Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,         ___,        Key_6, Key_7, Key_8,     Key_9,      Key_0,         Key_ToggleNumlock, \</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">        ___,          Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,         ___,        Key_6, Key_7, Key_8,     Key_9,      Key_0,         Key_KeypadNumLock, \</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">        Key_Backtick, Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Tab,                   Key_Enter,  Key_Y, Key_U, Key_I,     Key_O,      Key_P,         Key_Equals, \</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">        Key_PageUp,   Key_A, Key_S, Key_D, Key_F, Key_G,                                        Key_H, Key_J, Key_K,     Key_L,      Key_Semicolon, Key_Quote, \</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">        Key_PageDown, Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Escape,                 ___,       Key_N, Key_M, Key_Comma, Key_Period, Key_Slash,     Key_Minus, \</span></div>
@@ -165,42 +165,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">static</span> <a class="code" href="classkaleidoscope_1_1LEDSolidColor.html">kaleidoscope::LEDSolidColor</a> solidViolet(70, 0, 60);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">const</span> macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">if</span> (macroIndex == TOGGLENUMLOCK &amp;&amp; keyToggledOn(keyState)) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> NumLock.toggle();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">if</span> (macroIndex == 1 &amp;&amp; keyToggledOn(keyState)) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Serial.print(<span class="stringliteral">&quot;Keyboard.IO keyboard driver v0.00&quot;</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> MACRO(I(25),</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                 D(LeftShift), T(M), U(LeftShift), T(O), T(D), T(E), T(L),</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                 T(Spacebar),</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                 W(100),</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                 T(0), T(1));</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordflow">return</span> MACRO_NONE;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">void</span> setup() {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  Kaleidoscope.setup();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  Kaleidoscope.use(&amp;TestMode,</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                   &amp;LEDControl, &amp;LEDOff,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                   &amp;solidRed, &amp;solidOrange, &amp;solidYellow, &amp;solidGreen, &amp;solidBlue, &amp;solidIndigo, &amp;solidViolet,</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                   &amp;LEDBreatheEffect, &amp;LEDRainbowEffect, &amp;LEDChaseEffect, &amp;NumLock,</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                   &amp;Macros,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                   &amp;MouseKeys,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                   NULL);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  NumLock.numPadLayer = NUMPAD_KEYMAP;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  LEDOff.<a class="code" href="classkaleidoscope_1_1LEDMode.html#a6942e459d6f78e68b3b148d3dbabc709">activate</a>();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">void</span> loop() {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  Kaleidoscope.loop();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">if</span> (macroIndex == 1 &amp;&amp; keyToggledOn(keyState)) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Serial.print(<span class="stringliteral">&quot;Keyboard.IO keyboard driver v0.00&quot;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> MACRO(I(25),</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                 D(LeftShift), T(M), U(LeftShift), T(O), T(D), T(E), T(L),</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                 T(Spacebar),</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                 W(100),</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                 T(0), T(1));</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">return</span> MACRO_NONE;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> setup() {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  Kaleidoscope.setup();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  Kaleidoscope.use(&amp;TestMode,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                   &amp;LEDControl, &amp;LEDOff,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                   &amp;solidRed, &amp;solidOrange, &amp;solidYellow, &amp;solidGreen, &amp;solidBlue, &amp;solidIndigo, &amp;solidViolet,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                   &amp;LEDBreatheEffect, &amp;LEDRainbowEffect, &amp;LEDChaseEffect, &amp;NumLock,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                   &amp;Macros,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                   &amp;MouseKeys,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                   NULL);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  NumLock.numPadLayer = NUMPAD_KEYMAP;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  LEDOff.<a class="code" href="classkaleidoscope_1_1LEDMode.html#a6942e459d6f78e68b3b148d3dbabc709">activate</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">void</span> loop() {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  Kaleidoscope.loop();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 <div class="ttc" id="classkaleidoscope_1_1LEDSolidColor_html"><div class="ttname"><a href="classkaleidoscope_1_1LEDSolidColor.html">kaleidoscope::LEDSolidColor</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-LEDEffect-SolidColor_8h_source.html#l00006">Kaleidoscope-LEDEffect-SolidColor.h:6</a></div></div>
-<div class="ttc" id="unionKey___html"><div class="ttname"><a href="unionKey__.html">Key_</a></div><div class="ttdef"><b>Definition:</b> <a href="key__defs_8h_source.html#l00019">key_defs.h:19</a></div></div>
+<div class="ttc" id="unionKey___html"><div class="ttname"><a href="unionKey__.html">Key_</a></div><div class="ttdef"><b>Definition:</b> <a href="key__defs_8h_source.html#l00020">key_defs.h:20</a></div></div>
 <div class="ttc" id="classkaleidoscope_1_1LEDMode_html_a6942e459d6f78e68b3b148d3dbabc709"><div class="ttname"><a href="classkaleidoscope_1_1LEDMode.html#a6942e459d6f78e68b3b148d3dbabc709">kaleidoscope::LEDMode::activate</a></div><div class="ttdeci">void activate(void)</div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-LEDControl_8cpp_source.html#l00011">Kaleidoscope-LEDControl.cpp:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
