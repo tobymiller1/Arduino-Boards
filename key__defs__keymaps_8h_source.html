@@ -122,6 +122,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define Key_KeymapNext_Momentary (Key) { KEYMAP_NEXT + MOMENTARY_OFFSET, KEY_FLAGS | SYNTHETIC | SWITCH_TO_KEYMAP }</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define Key_KeymapPrevious_Momentary (Key) { KEYMAP_PREVIOUS + MOMENTARY_OFFSET, KEY_FLAGS | SYNTHETIC | SWITCH_TO_KEYMAP }</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define LockLayer(n) (Key){ n, KEY_FLAGS | SYNTHETIC | SWITCH_TO_KEYMAP }</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define UnlockLayer(n) LockLayer(n)</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define ShiftToLayer(n) (Key){ n + MOMENTARY_OFFSET, KEY_FLAGS | SYNTHETIC | SWITCH_TO_KEYMAP }</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
