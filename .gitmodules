@@ -148,3 +148,6 @@
 [submodule "libraries/Kaleidoscope-CycleTimeReport"]
 	path = libraries/Kaleidoscope-CycleTimeReport
 	url = https://github.com/keyboardio/Kaleidoscope-CycleTimeReport
+[submodule "libraries/Model01-Firmware"]
+	path = libraries/Model01-Firmware
+	url = https://github.com/Keyboardio/Model01-Firmware
