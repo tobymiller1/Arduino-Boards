@@ -43,5 +43,6 @@ var searchData=
   ['kaleidoscope_2dtopsyturvy',['Kaleidoscope-TopsyTurvy',['../md_libraries_Kaleidoscope-TopsyTurvy_README.html',1,'']]],
   ['kaleidoscope_2dtypingbreaks',['Kaleidoscope-TypingBreaks',['../md_libraries_Kaleidoscope-TypingBreaks_README.html',1,'']]],
   ['kaleidoscope_2dunicode',['Kaleidoscope-Unicode',['../md_libraries_Kaleidoscope-Unicode_README.html',1,'']]],
-  ['keyboardio_20usb_20hid_20driver',['Keyboardio USB HID Driver',['../md_libraries_KeyboardioHID_Readme.html',1,'']]]
+  ['keyboardio_20usb_20hid_20driver',['Keyboardio USB HID Driver',['../md_libraries_KeyboardioHID_Readme.html',1,'']]],
+  ['keyboardio_20model_2001_20firmware',['Keyboardio Model 01 Firmware',['../md_libraries_Model01-Firmware_README.html',1,'']]]
 ];
