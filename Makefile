@@ -34,4 +34,10 @@ blindly-commit-updates: git-pull maintainer-update-submodules
 doxygen-generate:
 	doxygen etc/doxygen/doxygen.conf
 
+
+dist: 
+	mkdir /tmp/Keyboardio-Model011-Hardware
+	cp -a boards.txt bootloaders libraries variants platform.txt /tmp/Keyboardio-Model011-Hardware
+	tar czvf /tmp/Keyboardio-Model011-Hardware.tgz /tmp/Keyboardio-Model011-Hardware
+
 -include build-tools/makefiles/rules.mk
