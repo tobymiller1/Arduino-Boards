@@ -76,7 +76,7 @@ my $platform_template = {
 
 $platform_template->{archiveFileName} = $filename;
 $platform_template->{url} =
-  'https://raw.githubusercontent.com/keyboardio/boardsmanager/builds/master/'
+  'https://raw.githubusercontent.com/keyboardio/boardsmanager/master/builds/'
   . $filename;
 $platform_template->{checksum} = 'SHA-256:' . $sha256;
 $platform_template->{size}     = $size;
