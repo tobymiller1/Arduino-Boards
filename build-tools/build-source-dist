@@ -20,7 +20,7 @@ my $tag = shift || 'master';
 
 my $dir           = tempdir( CLEANUP => 0 );
 my $checkout_dir  = "Keyboardio-Model01-Hardware-$tag";
-my $filename      = $checkout_dir . ".tgz";
+my $filename      = $checkout_dir . ".tar.bz2";
 my $checkout_path = "$dir/$checkout_dir";
 chdir($dir);
 
@@ -33,7 +33,7 @@ chdir($checkout_path);
 `rm -rf $checkout_path/etc`;
 `rm -rf $checkout_path/doc`;
 chdir($dir);
-`tar czvf $filename $checkout_dir`;
+`tar cjvf $filename $checkout_dir`;
 $sha256 = `sha256sum $filename | cut -d' ' -f 1 `;
 chomp($sha256);
 $size = -s $filename;
