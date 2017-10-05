@@ -74,7 +74,13 @@ my $platform_template = {
     }
 };
 
+my $version = $tag;
+if ($version =~ /^v(\d.*)$/) {
+	$version = $1
+};
+
 $platform_template->{archiveFileName} = $filename;
+$platform_template->{version} = $version;
 $platform_template->{url} =
   'https://raw.githubusercontent.com/keyboardio/boardsmanager/master/builds/'
   . $filename;
