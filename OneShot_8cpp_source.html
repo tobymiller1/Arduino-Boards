@@ -129,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define isOneShotKey(key) (key.raw &gt;= ranges::OS_FIRST &amp;&amp; key.raw &lt;= ranges::OS_LAST)</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define isModifier(key) (key.raw &gt;= Key_LeftControl.raw &amp;&amp; key.raw &lt;= Key_RightGui.raw)</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define isLayerKey(key) (key.flags == (KEY_FLAGS | SYNTHETIC | SWITCH_TO_KEYMAP) &amp;&amp; key.keyCode &gt;= MOMENTARY_OFFSET &amp;&amp; key.keyCode &lt;= MOMENTARY_OFFSET + 23)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define isLayerKey(key) (key.flags == (KEY_FLAGS | SYNTHETIC | SWITCH_TO_KEYMAP) &amp;&amp; key.keyCode &gt;= LAYER_SHIFT_OFFSET &amp;&amp; key.keyCode &lt;= LAYER_SHIFT_OFFSET + 23)</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define isOneShot(idx) (bitRead (state_.all, (idx)))</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define setOneShot(idx) (bitWrite (state_.all, idx, 1))</span></div>
@@ -157,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    key.keyCode = Key_LeftControl.keyCode + idx;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    key.flags = KEY_FLAGS | SYNTHETIC | SWITCH_TO_KEYMAP;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    key.keyCode = MOMENTARY_OFFSET + idx - 8;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    key.keyCode = LAYER_SHIFT_OFFSET + idx - 8;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  handleKeyswitchEvent(key, UNKNOWN_KEYSWITCH_LOCATION, key_state | INJECTED);</div>

@@ -141,8 +141,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          ::LEDControl.refreshAt(r, c);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (k.flags == (SYNTHETIC | SWITCH_TO_KEYMAP)) {</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        uint8_t layer = k.keyCode;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> (layer &gt;= MOMENTARY_OFFSET)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;          layer -= MOMENTARY_OFFSET;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> (layer &gt;= LAYER_SHIFT_OFFSET)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;          layer -= LAYER_SHIFT_OFFSET;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> (Layer.isOn(layer))</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          ::LEDControl.setCrgbAt(r, c, highlight_color);</div>
