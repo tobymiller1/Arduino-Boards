@@ -29,7 +29,7 @@ chdir($checkout_path);
 `git checkout $tag`;
 `make update-submodules`;
 `find $checkout_path -name .git |xargs rm -rf`;
-`rm -rf $checkout_path/build-tools`;
+`rm -rf $checkout_path/build-tools/x86_64`;
 `rm -rf $checkout_path/etc`;
 `rm -rf $checkout_path/doc`;
 chdir($dir);
