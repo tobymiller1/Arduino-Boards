@@ -100,8 +100,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<a class="code" href="unionKey__.html">Key</a>(*Layer_::getKey)(uint8_t layer, byte row, byte col) = Layer.getKeyFromPROGMEM;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> handleKeymapKeyswitchEvent(<a class="code" href="unionKey__.html">Key</a> keymapEntry, uint8_t keyState) {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordflow">if</span> (keymapEntry.keyCode &gt;= MOMENTARY_OFFSET) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    uint8_t target = keymapEntry.keyCode - MOMENTARY_OFFSET;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordflow">if</span> (keymapEntry.keyCode &gt;= LAYER_SHIFT_OFFSET) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    uint8_t target = keymapEntry.keyCode - LAYER_SHIFT_OFFSET;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">switch</span> (target) {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">case</span> KEYMAP_NEXT:</div>

@@ -212,13 +212,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">/* -- DEPRECATED aliases; remove them when there are no more users. -- */</span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#define event_handler_hook_use(hook) Kaleidoscope.useEventHandlerHook(hook);</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define event_handler_hook_append(hook) Kaleidoscope.appendEventHandlerHook(hook)</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define event_handler_hook_replace(oldHook, newHook) Kaleidoscope.replaceEventHandlerHook(oldHook, newHook)</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#define loop_hook_use(hook) Kaleidoscope.useLoopHook(hook)</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define loop_hook_append(hook) Kaleidoscope.appendLoopHook(hook)</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define loop_hook_replace(oldHook, newHook) Kaleidoscope.replaceLoopHook(oldHook, newHook)</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keywordtype">void</span> event_handler_hook_use(Kaleidoscope_::eventHandlerHook hook) __attribute__((deprecated));</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordtype">void</span> loop_hook_use(Kaleidoscope_::loopHook hook) __attribute__((deprecated));</div>
 <div class="ttc" id="classKaleidoscope___html"><div class="ttname"><a href="classKaleidoscope__.html">Kaleidoscope_</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope_8h_source.html#l00045">Kaleidoscope.h:45</a></div></div>
 <div class="ttc" id="unionKey___html"><div class="ttname"><a href="unionKey__.html">Key_</a></div><div class="ttdef"><b>Definition:</b> <a href="key__defs_8h_source.html#l00020">key_defs.h:20</a></div></div>
 <div class="ttc" id="classKaleidoscopePlugin_html"><div class="ttname"><a href="classKaleidoscopePlugin.html">KaleidoscopePlugin</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope_8h_source.html#l00040">Kaleidoscope.h:40</a></div></div>
