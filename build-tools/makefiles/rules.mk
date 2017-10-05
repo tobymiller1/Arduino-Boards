@@ -72,7 +72,7 @@ travis-check-astyle:
 	$(PLUGIN_TEST_SUPPORT_DIR)/astyle-check
 
 %:	
-	$(KALEIDOSCOPE_BUILDER_DIR)/kaleidoscope-builder $@
+	BOARD_HARDWARE_PATH="$(BOARD_HARDWARE_PATH)" $(KALEIDOSCOPE_BUILDER_DIR)/kaleidoscope-builder $@
 
 
 travis-install-arduino:
