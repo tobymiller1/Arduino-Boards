@@ -1,6 +1,11 @@
 var searchData=
 [
+  ['kaleidoscope_2dhardware_2eh',['Kaleidoscope-Hardware.h',['../Kaleidoscope-Hardware_8h.html',1,'']]],
   ['kaleidoscope_5f',['Kaleidoscope_',['../classKaleidoscope__.html',1,'']]],
+  ['kaleidoscope_3a_3ahardware_2fleds',['Kaleidoscope::Hardware/LEDs',['../group__kaleidoscope__hardware__leds.html',1,'']]],
+  ['kaleidoscope_3a_3ahardware_2fkey_20masking',['Kaleidoscope::Hardware/Key masking',['../group__kaleidoscope__hardware__masking.html',1,'']]],
+  ['kaleidoscope_3a_3ahardware_2fmatrix',['Kaleidoscope::Hardware/Matrix',['../group__kaleidoscope__hardware__matrix.html',1,'']]],
+  ['kaleidoscope_3a_3ahardware_2fmiscellaneous_20methods',['Kaleidoscope::Hardware/Miscellaneous methods',['../group__kaleidoscope__hardware__misc.html',1,'']]],
   ['kaleidoscopeplugin',['KaleidoscopePlugin',['../classKaleidoscopePlugin.html',1,'']]],
   ['key_5f',['Key_',['../unionKey__.html',1,'']]],
   ['key_5ft',['key_t',['../unionkey__t.html',1,'']]],
@@ -22,6 +27,7 @@ var searchData=
   ['kaleidoscope_2dghostinthefirmware',['Kaleidoscope-GhostInTheFirmware',['../md_libraries_Kaleidoscope-GhostInTheFirmware_README.html',1,'']]],
   ['kaleidoscope_2dhardware_2dmodel01',['Kaleidoscope-Hardware-Model01',['../md_libraries_Kaleidoscope-Hardware-Model01_README.html',1,'']]],
   ['kaleidoscope_2dhardware_2dshortcut',['Kaleidoscope-Hardware-Shortcut',['../md_libraries_Kaleidoscope-Hardware-Shortcut_README.html',1,'']]],
+  ['kaleidoscope_2dhardware',['Kaleidoscope-Hardware',['../md_libraries_Kaleidoscope-Hardware_README.html',1,'']]],
   ['kaleidoscope_2dheatmap',['Kaleidoscope-Heatmap',['../md_libraries_Kaleidoscope-Heatmap_README.html',1,'']]],
   ['kaleidoscope_2dhostos',['Kaleidoscope-HostOS',['../md_libraries_Kaleidoscope-HostOS_README.html',1,'']]],
   ['kaleidoscope_2dignoranceisbliss',['Kaleidoscope-IgnoranceIsBliss',['../md_libraries_Kaleidoscope-IgnoranceIsBliss_README.html',1,'']]],

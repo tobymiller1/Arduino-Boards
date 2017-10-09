@@ -306,6 +306,8 @@ Searching for files in directory /home/travis/build/keyboardio/Arduino-Boards/li
 Searching for files in directory /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-GhostInTheFirmware/output/GhostInTheFirmware
 Searching for files in directory /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-GhostInTheFirmware/src
 Searching for files in directory /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-GhostInTheFirmware/src/Kaleidoscope
+Searching for files in directory /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware
+Searching for files in directory /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware/src
 Searching for files in directory /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Model01
 Searching for files in directory /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Model01/src
 Searching for files in directory /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Shortcut
@@ -670,6 +672,11 @@ Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscop
 Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-GhostInTheFirmware/src/Kaleidoscope/GhostInTheFirmware.h...
 Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-GhostInTheFirmware/src/Kaleidoscope-GhostInTheFirmware.h...
 Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-GhostInTheFirmware/src/Kaleidoscope-GhostInTheFirmware.h...
+Reading /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware/README.md...
+Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware/src/Kaleidoscope-Hardware.cpp...
+Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware/src/Kaleidoscope-Hardware.cpp...
+Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware/src/Kaleidoscope-Hardware.h...
+Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware/src/Kaleidoscope-Hardware.h...
 Reading /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Model01/README.md...
 Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Model01/src/Kaleidoscope-Hardware-Model01.cpp...
 Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Model01/src/Kaleidoscope-Hardware-Model01.cpp...
@@ -1032,15 +1039,7 @@ Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioSc
 Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/examples/SetLEDsExample/SetLEDsExample.ino...
 Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/examples/SetLEDsExample/SetLEDsExample.ino...
 Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/examples/VersionExample/VersionExample.ino...
-Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/examples/VersionExample/VersionExample.ino...
-Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/KeyboardioScanner.cpp...
-Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/KeyboardioScanner.cpp...
-Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/KeyboardioScanner.h...
-Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/KeyboardioScanner.h...
-Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/twi.c...
-Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/twi.c...
-Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/twi.h...
-Parsing file /home/travis/build/keyboardio/Arduino-Boards/li/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LEDEffect-Chase/src/Kaleidoscope-LEDEffect-Chase.h:7: warning: Compound kaleidoscope::LEDChaseEffect is not documented.
+Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/examples/VersionExample/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LEDEffect-Chase/src/Kaleidoscope-LEDEffect-Chase.h:7: warning: Compound kaleidoscope::LEDChaseEffect is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-MouseKeys/src/MouseWrapper.h:25: warning: Compound MouseWrapper_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-OneShot/src/Kaleidoscope/OneShot.h:29: warning: Compound kaleidoscope::OneShot is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Macros/src/Kaleidoscope-Macros.h:10: warning: Compound Macros_ is not documented.
@@ -1133,7 +1132,15 @@ Parsing file /home/travis/build/keyboardio/Arduino-Boards/li/home/travis/build/k
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-GhostInTheFirmware/examples/GhostInTheFirmware/GhostInTheFirmware.ino:54: warning: documented symbol `static const kaleidoscope::GhostInTheFirmware::GhostKey ghost_keys' was not declared or defined.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Leader/examples/Leader/Leader.ino:49: warning: documented symbol `static const kaleidoscope::Leader::dictionary_t leader_dictionary' was not declared or defined.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-ShapeShifter/examples/ShapeShifter/ShapeShifter.ino:42: warning: documented symbol `static const kaleidoscope::ShapeShifter::dictionary_t shape_shift_dictionary' was not declared or defined.
-braries/KeyboardioScanner/twi.h...
+/VersionExample.ino...
+Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/KeyboardioScanner.cpp...
+Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/KeyboardioScanner.cpp...
+Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/KeyboardioScanner.h...
+Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/KeyboardioScanner.h...
+Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/twi.c...
+Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/twi.c...
+Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/twi.h...
+Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/twi.h...
 Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/wire-protocol-constants.h...
 Parsing file /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/wire-protocol-constants.h...
 Preprocessing /home/travis/build/keyboardio/Arduino-Boards/libraries/Model01-Firmware/Model01-Firmware.ino...
@@ -1206,6 +1213,7 @@ Generating code for file libraries/Kaleidoscope-Escape-OneShot/README.md...
 Generating code for file libraries/Kaleidoscope-FingerPainter/README.md...
 Generating code for file libraries/Kaleidoscope-Focus/README.md...
 Generating code for file libraries/Kaleidoscope-GhostInTheFirmware/README.md...
+Generating code for file libraries/Kaleidoscope-Hardware/README.md...
 Generating code for file libraries/Kaleidoscope-Hardware-Model01/README.md...
 Generating code for file libraries/Kaleidoscope-Hardware-Shortcut/README.md...
 Generating code for file libraries/Kaleidoscope-Heatmap/README.md...
@@ -1302,6 +1310,8 @@ Generating code for file libraries/Kaleidoscope-Hardware-Shortcut/src/Kaleidosco
 Generating code for file libraries/Kaleidoscope-Hardware-Shortcut/src/Light_WS2812/light_ws2812.cpp...
 Generating code for file libraries/Kaleidoscope-Hardware-Shortcut/src/Light_WS2812/light_ws2812.h...
 Generating code for file libraries/Kaleidoscope-Hardware-Shortcut/src/ws2812_config.h...
+Generating code for file libraries/Kaleidoscope-Hardware/src/Kaleidoscope-Hardware.cpp...
+Generating code for file libraries/Kaleidoscope-Hardware/src/Kaleidoscope-Hardware.h...
 Generating code for file libraries/Kaleidoscope-Heatmap/examples/Heatmap/Heatmap.ino...
 Generating code for file libraries/Kaleidoscope-Heatmap/src/Kaleidoscope-Heatmap.h...
 Generating code for file libraries/Kaleidoscope-Heatmap/src/Kaleidoscope/Heatmap.cpp...
@@ -1477,19 +1487,7 @@ Generating code for file libraries/KeyboardioHID/src/MultiReport/Mouse.cpp...
 Generating code for file libraries/KeyboardioHID/src/MultiReport/Mouse.h...
 Generating code for file libraries/KeyboardioHID/src/MultiReport/SystemControl.cpp...
 Generating code for file libraries/KeyboardioHID/src/MultiReport/SystemControl.h...
-Generating code for file libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.cpp...
-Generating code for file libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.h...
-Generating code for file libraries/KeyboardioScanner/examples/KeyboardExample/KeyboardExample.ino...
-Generating code for file libraries/KeyboardioScanner/examples/RainbowWaveExample/RainbowWaveExample.ino...
-Generating code for file libraries/KeyboardioScanner/examples/SetLEDsExample/SetLEDsExample.ino...
-Generating code for file libraries/KeyboardioScanner/examples/VersionExample/VersionExample.ino...
-Generating code for file libraries/KeyboardioScanner/KeyboardioScanner.cpp...
-Generating code for file libraries/KeyboardioScanner/KeyboardioScanner.h...
-Generating code for file libraries/KeyboardioScanner/twi.c...
-Generating code for file libraries/KeyboardioScanner/twi.h...
-Generating code for file libraries/KeyboardioScanner/wire-protocol-constants.h...
-Generating code for file libraries/Model01-Firmware/Model01-Firmware.ino...
-Generating code for file libraries/Model01/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/doc/CODING_STYLE.md:175: warning: explicit link request to 'include' could not be resolved
+Generati/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/doc/CODING_STYLE.md:175: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/doc/CODING_STYLE.md:262: warning: explicit link request to 'pragma' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/doc/CODING_STYLE.md:267: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope/doc/CODING_STYLE.md:279: warning: explicit link request to 'include' could not be resolved
@@ -1613,7 +1611,61 @@ Generating code for file libraries/Model01/home/travis/build/keyboardio/Arduino-
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-OneShot/README.md:29: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-OneShot/README.md:30: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-OneShot/README.md:31: warning: explicit link request to 'include' could not be resolved
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-ShapeShifter/README.md:21: warning: explicit link request to 'include' could not be resolved
+ng code for file libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.cpp...
+Generating code for file libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.h...
+Generating code for file libraries/KeyboardioScanner/examples/KeyboardExample/KeyboardExample.ino...
+Generating code for file libraries/KeyboardioScanner/examples/RainbowWaveExample/RainbowWaveExample.ino...
+Generating code for file libraries/KeyboardioScanner/examples/SetLEDsExample/SetLEDsExample.ino...
+Generating code for file libraries/KeyboardioScanner/examples/VersionExample/VersionExample.ino...
+Generating code for file libraries/KeyboardioScanner/KeyboardioScanner.cpp...
+Generating code for file libraries/KeyboardioScanner/KeyboardioScanner.h...
+Generating code for file libraries/KeyboardioScanner/twi.c...
+Generating code for file libraries/KeyboardioScanner/twi.h...
+Generating code for file libraries/KeyboardioScanner/wire-protocol-constants.h...
+Generating code for file libraries/Model01-Firmware/Model01-Firmware.ino...
+Generating code for file libraries/Model01-Firmware/src/Model01-Firmware.h...
+Generating file documentation...
+Generating docs for file libraries/Kaleidoscope-Hardware/src/Kaleidoscope-Hardware.h...
+Generating page documentation...
+Generating docs for page md_libraries_AtmegaScanner_README...
+Generating docs for page md_libraries_Kaleidoscope_CODE_OF_CONDUCT...
+Generating docs for page md_libraries_Kaleidoscope_doc_CODING_STYLE...
+Generating docs for page md_libraries_Kaleidoscope-Colormap_README...
+Generating docs for page md_libraries_Kaleidoscope-Cycle_README...
+Generating docs for page md_libraries_Kaleidoscope-CycleTimeReport_README...
+Generating docs for page md_libraries_Kaleidoscope-DualUse_README...
+Generating docs for page md_libraries_Kaleidoscope-EEPROM-Keymap_README...
+Generating docs for page md_libraries_Kaleidoscope-EEPROM-Keymap-Programmer_README...
+Generating docs for page md_libraries_Kaleidoscope-EEPROM-Settings_README...
+Generating docs for page md_libraries_Kaleidoscope-Escape-OneShot_README...
+Generating docs for page md_libraries_Kaleidoscope-FingerPainter_README...
+Generating docs for page md_libraries_Kaleidoscope-Focus_README...
+Generating docs for page md_libraries_Kaleidoscope-GhostInTheFirmware_README...
+Generating docs for page md_libraries_Kaleidoscope-Hardware_README...
+Generating docs for page md_libraries_Kaleidoscope-Hardware-Model01_README...
+Generating docs for page md_libraries_Kaleidoscope-Hardware-Shortcut_README...
+Generating docs for page md_libraries_Kaleidoscope-Heatmap_README...
+Generating docs for page md_libraries_Kaleidoscope-HostOS_README...
+Generating docs for page md_libraries_Kaleidoscope-IgnoranceIsBliss_README...
+Generating docs for page md_libraries_Kaleidoscope-Leader_README...
+Generating docs for page md_libraries_Kaleidoscope-LED-ActiveModColor_README...
+Generating docs for page md_libraries_Kaleidoscope-LED-AlphaSquare_README...
+Generating docs for page md_libraries_Kaleidoscope-LED-Palette-Theme_README...
+Generating docs for page md_libraries_Kaleidoscope-LED-Stalker_README...
+Generating docs for page md_libraries_Kaleidoscope-LEDControl_README...
+Generating docs for page md_libraries_Kaleidoscope-LEDEffect-BootGreeting_README...
+Generating docs for page md_libraries_Kaleidoscope-LEDEffect-Breathe_README...
+Generating docs for page md_libraries_Kaleidoscope-LEDEffect-Chase_README...
+Generating docs for page md_libraries_Kaleidoscope-LEDEffect-Rainbow_README...
+Generating docs for page md_libraries_Kaleidoscope-LEDEffect-SolidColor_README...
+Generating docs for page md_libraries_Kaleidoscope-LEDEffects_README...
+Generating docs for page md_libraries_Kaleidoscope-LEDEffects_TriColor...
+Generating docs for page md_libraries_Kaleidoscope-Macros_README...
+Generating docs for page md_libraries_Kaleidoscope-MagicCombo_README...
+Generating docs for page md_libraries_Kaleidoscope-MouseKeys_README...
+Generating docs for page md_libraries_Kaleidoscope-Numlock_README...
+Generating docs for page md_libraries_Kaleidoscope-OneShot_README...
+Generating docs for page md_libraries/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-ShapeShifter/README.md:21: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-ShapeShifter/README.md:22: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-SpaceCadet/README.md:36: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-SpaceCadet/README.md:37: warning: explicit link request to 'include' could not be resolved
@@ -1709,68 +1761,7 @@ Generating code for file libraries/Model01/home/travis/build/keyboardio/Arduino-
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Shortcut/src/Kaleidoscope-Hardware-Shortcut.h:30: warning: Member g (variable) of class cRGB is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Shortcut/src/Kaleidoscope-Hardware-Shortcut.h:31: warning: Member r (variable) of class cRGB is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Shortcut/src/Kaleidoscope-Hardware-Shortcut.h:32: warning: Member b (variable) of class cRGB is not documented.
--Firmware/src/Model01-Firmware.h...
-Generating file documentation...
-Generating page documentation...
-Generating docs for page md_libraries_AtmegaScanner_README...
-Generating docs for page md_libraries_Kaleidoscope_CODE_OF_CONDUCT...
-Generating docs for page md_libraries_Kaleidoscope_doc_CODING_STYLE...
-Generating docs for page md_libraries_Kaleidoscope-Colormap_README...
-Generating docs for page md_libraries_Kaleidoscope-Cycle_README...
-Generating docs for page md_libraries_Kaleidoscope-CycleTimeReport_README...
-Generating docs for page md_libraries_Kaleidoscope-DualUse_README...
-Generating docs for page md_libraries_Kaleidoscope-EEPROM-Keymap_README...
-Generating docs for page md_libraries_Kaleidoscope-EEPROM-Keymap-Programmer_README...
-Generating docs for page md_libraries_Kaleidoscope-EEPROM-Settings_README...
-Generating docs for page md_libraries_Kaleidoscope-Escape-OneShot_README...
-Generating docs for page md_libraries_Kaleidoscope-FingerPainter_README...
-Generating docs for page md_libraries_Kaleidoscope-Focus_README...
-Generating docs for page md_libraries_Kaleidoscope-GhostInTheFirmware_README...
-Generating docs for page md_libraries_Kaleidoscope-Hardware-Model01_README...
-Generating docs for page md_libraries_Kaleidoscope-Hardware-Shortcut_README...
-Generating docs for page md_libraries_Kaleidoscope-Heatmap_README...
-Generating docs for page md_libraries_Kaleidoscope-HostOS_README...
-Generating docs for page md_libraries_Kaleidoscope-IgnoranceIsBliss_README...
-Generating docs for page md_libraries_Kaleidoscope-Leader_README...
-Generating docs for page md_libraries_Kaleidoscope-LED-ActiveModColor_README...
-Generating docs for page md_libraries_Kaleidoscope-LED-AlphaSquare_README...
-Generating docs for page md_libraries_Kaleidoscope-LED-Palette-Theme_README...
-Generating docs for page md_libraries_Kaleidoscope-LED-Stalker_README...
-Generating docs for page md_libraries_Kaleidoscope-LEDControl_README...
-Generating docs for page md_libraries_Kaleidoscope-LEDEffect-BootGreeting_README...
-Generating docs for page md_libraries_Kaleidoscope-LEDEffect-Breathe_README...
-Generating docs for page md_libraries_Kaleidoscope-LEDEffect-Chase_README...
-Generating docs for page md_libraries_Kaleidoscope-LEDEffect-Rainbow_README...
-Generating docs for page md_libraries_Kaleidoscope-LEDEffect-SolidColor_README...
-Generating docs for page md_libraries_Kaleidoscope-LEDEffects_README...
-Generating docs for page md_libraries_Kaleidoscope-LEDEffects_TriColor...
-Generating docs for page md_libraries_Kaleidoscope-Macros_README...
-Generating docs for page md_libraries_Kaleidoscope-MagicCombo_README...
-Generating docs for page md_libraries_Kaleidoscope-MouseKeys_README...
-Generating docs for page md_libraries_Kaleidoscope-Numlock_README...
-Generating docs for page md_libraries_Kaleidoscope-OneShot_README...
-Generating docs for page md_libraries_Kaleidoscope-Ranges_README...
-Generating docs for page md_libraries_Kaleidoscope-ShapeShifter_README...
-Generating docs for page md_libraries_Kaleidoscope-SpaceCadet_README...
-Generating docs for page md_libraries_Kaleidoscope-Steno_README...
-Generating docs for page md_libraries_Kaleidoscope-Syster_README...
-Generating docs for page md_libraries_Kaleidoscope-TapDance_README...
-Generating docs for page md_libraries_Kaleidoscope-TopsyTurvy_README...
-Generating docs for page md_libraries_Kaleidoscope-TypingBreaks_README...
-Generating docs for page md_libraries_Kaleidoscope-Unicode_README...
-Generating docs for page md_libraries_KeyboardioHID_Readme...
-Generating docs for page md_libraries_Model01-Firmware_README...
-Generating group documentation...
-Generating class documentation...
-Generating docs for compound AbsoluteMouse_...
-Generating docs for compound AbsoluteMouseAPI...
-Generating docs for compound AtmegaScanner...
-Generating docs for nested compound AtmegaScanner::keydata_t...
-Generating docs for compound BootKeyboard_...
-Generating docs for compound ConsumerControl_...
-Generating docs for compound CRC_...
-Generating docs for compound cRGB...
-Generating docs for compound FingerprintUSBHost_.../home/travis/build/keyboardio/Arduino-Boards/libraries/FingerprintUSBHost/src/FingerprintUSBHost.h:19: warning: Member begin(void) (function) of class FingerprintUSBHost_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/FingerprintUSBHost/src/FingerprintUSBHost.h:19: warning: Member begin(void) (function) of class FingerprintUSBHost_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/FingerprintUSBHost/src/FingerprintUSBHost.h:20: warning: Member guessHostOS(void) (function) of class FingerprintUSBHost_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/FingerprintUSBHost/src/FingerprintUSBHost.h:21: warning: Member guessHostOS(String &os) (function) of class FingerprintUSBHost_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/FingerprintUSBHost/src/FingerprintUSBHost.h:22: warning: Member usbSetups[32] (variable) of class FingerprintUSBHost_ is not documented.
@@ -2215,7 +2206,82 @@ Generating docs for compound FingerprintUSBHost_.../home/travis/build/keyboardio
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Stalker/src/Kaleidoscope/LED-Stalker.h:45: warning: Member step_end_time_ (variable) of class kaleidoscope::StalkerEffect is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Stalker/src/Kaleidoscope/LED-Stalker.h:46: warning: Member map_[ROWS][COLS] (variable) of class kaleidoscope::StalkerEffect is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LEDControl/src/Kaleidoscope-LEDControl.h:64: warning: Found unknown command `\onActivate'
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Stalker/src/Kaleidoscope/LED-Stalker.h:31: warning: Member compute(uint8_t *step)=0 (function) of class kaleidoscope::StalkerEffect::ColorComputer is not documented.
+_Kaleidoscope-Ranges_README...
+Generating docs for page md_libraries_Kaleidoscope-ShapeShifter_README...
+Generating docs for page md_libraries_Kaleidoscope-SpaceCadet_README...
+Generating docs for page md_libraries_Kaleidoscope-Steno_README...
+Generating docs for page md_libraries_Kaleidoscope-Syster_README...
+Generating docs for page md_libraries_Kaleidoscope-TapDance_README...
+Generating docs for page md_libraries_Kaleidoscope-TopsyTurvy_README...
+Generating docs for page md_libraries_Kaleidoscope-TypingBreaks_README...
+Generating docs for page md_libraries_Kaleidoscope-Unicode_README...
+Generating docs for page md_libraries_KeyboardioHID_Readme...
+Generating docs for page md_libraries_Model01-Firmware_README...
+Generating group documentation...
+Generating class documentation...
+Generating docs for compound AbsoluteMouse_...
+Generating docs for compound AbsoluteMouseAPI...
+Generating docs for compound AtmegaScanner...
+Generating docs for nested compound AtmegaScanner::keydata_t...
+Generating docs for compound BootKeyboard_...
+Generating docs for compound ConsumerControl_...
+Generating docs for compound CRC_...
+Generating docs for compound cRGB...
+Generating docs for compound FingerprintUSBHost_...
+Generating docs for compound Gamepad_...
+Generating docs for compound HID_BootKeyboardReport_Data_t...
+Generating docs for compound HID_ConsumerControlReport_Data_t...
+Generating docs for compound HID_GamepadReport_Data_t...
+Generating docs for compound HID_KeyboardReport_Data_t...
+Generating docs for compound HID_MouseAbsoluteReport_Data_t...
+Generating docs for compound HID_MouseReport_Data_t...
+Generating docs for compound HID_SystemControlReport_Data_t...
+Generating docs for compound Kaleidoscope_...
+Generating docs for compound KaleidoscopePlugin...
+Generating docs for compound Key_...
+Generating docs for compound key_t...
+Generating docs for compound Keyboard_...
+Generating docs for compound KeyboardioScanner...
+Generating docs for compound keydata_t...
+Generating docs for compound Layer_...
+Generating docs for compound LEDData_t...
+Generating docs for compound Macros_...
+Generating docs for compound Model01...
+Generating docs for compound Mouse_...
+Generating docs for compound MouseKeys_...
+Generating docs for compound MouseWrapper_...
+Generating docs for compound NumLock_...
+Generating docs for compound Shortcut...
+Generating docs for compound SingleAbsoluteMouse_...
+Generating docs for compound SystemControl_...
+Generating docs for compound TestMode_...
+Generating namespace index...
+Generating docs for compound example::TestLEDMode...
+Generating docs for compound kaleidoscope::ColormapEffect...
+Generating docs for compound kaleidoscope::Cycle...
+Generating docs for compound kaleidoscope::CycleTimeReport...
+Generating docs for compound kaleidoscope::DualUse...
+Generating docs for compound kaleidoscope::EEPROMKeymap...
+Generating docs for compound kaleidoscope::EEPROMKeymapProgrammer...
+Generating docs for compound kaleidoscope::EEPROMSettings...
+Generating docs for nested compound kaleidoscope::EEPROMSettings::settings...
+Generating docs for compound kaleidoscope::EscapeOneShot...
+Generating docs for compound kaleidoscope::FingerPainter...
+Generating docs for compound kaleidoscope::Focus...
+Generating docs for nested compound kaleidoscope::Focus::HookNode...
+Generating docs for compound kaleidoscope::GhostInTheFirmware...
+Generating docs for nested compound kaleidoscope::GhostInTheFirmware::GhostKey...
+Generating docs for compound kaleidoscope::Hardware...
+Generating docs for compound kaleidoscope::Heatmap...
+Generating docs for compound kaleidoscope::IgnoranceIsBliss...
+Generating docs for compound kaleidoscope::Leader...
+Generating docs for nested compound kaleidoscope::Leader::dictionary_t...
+Generating docs for compound kaleidoscope::ActiveModColorEffect...
+Generating docs for compound kaleidoscope::AlphaSquareEffect...
+Generating docs for compound kaleidoscope::AlphaSquare...
+Generating docs for compound kaleidoscope::LEDPaletteTheme...
+Generating docs for compound kaleidoscope::StalkerEffect...
+Generating docs f/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Stalker/src/Kaleidoscope/LED-Stalker.h:31: warning: Member compute(uint8_t *step)=0 (function) of class kaleidoscope::StalkerEffect::ColorComputer is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LEDControl/src/Kaleidoscope-LEDControl.h:64: warning: Found unknown command `\onActivate'
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LEDControl/src/Kaleidoscope-LEDControl.h:90: warning: Member begin(void) final (function) of class kaleidoscope::LEDControl is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LEDControl/src/Kaleidoscope-LEDControl.h:92: warning: Member next_mode(void) (function) of class kaleidoscope::LEDControl is not documented.
@@ -2335,80 +2401,7 @@ Generating docs for compound FingerprintUSBHost_.../home/travis/build/keyboardio
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Syster/src/Kaleidoscope/Syster.h:44: warning: Member symbol_[SYSTER_MAX_SYMBOL_LENGTH+1] (variable) of class kaleidoscope::Syster is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Syster/src/Kaleidoscope/Syster.h:45: warning: Member symbol_pos_ (variable) of class kaleidoscope::Syster is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Syster/src/Kaleidoscope/Syster.h:46: warning: Member is_active_ (variable) of class kaleidoscope::Syster is not documented.
-
-Generating docs for compound Gamepad_...
-Generating docs for compound HID_BootKeyboardReport_Data_t...
-Generating docs for compound HID_ConsumerControlReport_Data_t...
-Generating docs for compound HID_GamepadReport_Data_t...
-Generating docs for compound HID_KeyboardReport_Data_t...
-Generating docs for compound HID_MouseAbsoluteReport_Data_t...
-Generating docs for compound HID_MouseReport_Data_t...
-Generating docs for compound HID_SystemControlReport_Data_t...
-Generating docs for compound Kaleidoscope_...
-Generating docs for compound KaleidoscopePlugin...
-Generating docs for compound Key_...
-Generating docs for compound key_t...
-Generating docs for compound Keyboard_...
-Generating docs for compound KeyboardioScanner...
-Generating docs for compound keydata_t...
-Generating docs for compound Layer_...
-Generating docs for compound LEDData_t...
-Generating docs for compound Macros_...
-Generating docs for compound Model01...
-Generating docs for compound Mouse_...
-Generating docs for compound MouseKeys_...
-Generating docs for compound MouseWrapper_...
-Generating docs for compound NumLock_...
-Generating docs for compound Shortcut...
-Generating docs for compound SingleAbsoluteMouse_...
-Generating docs for compound SystemControl_...
-Generating docs for compound TestMode_...
-Generating namespace index...
-Generating docs for compound example::TestLEDMode...
-Generating docs for compound kaleidoscope::ColormapEffect...
-Generating docs for compound kaleidoscope::Cycle...
-Generating docs for compound kaleidoscope::CycleTimeReport...
-Generating docs for compound kaleidoscope::DualUse...
-Generating docs for compound kaleidoscope::EEPROMKeymap...
-Generating docs for compound kaleidoscope::EEPROMKeymapProgrammer...
-Generating docs for compound kaleidoscope::EEPROMSettings...
-Generating docs for nested compound kaleidoscope::EEPROMSettings::settings...
-Generating docs for compound kaleidoscope::EscapeOneShot...
-Generating docs for compound kaleidoscope::FingerPainter...
-Generating docs for compound kaleidoscope::Focus...
-Generating docs for nested compound kaleidoscope::Focus::HookNode...
-Generating docs for compound kaleidoscope::GhostInTheFirmware...
-Generating docs for nested compound kaleidoscope::GhostInTheFirmware::GhostKey...
-Generating docs for compound kaleidoscope::Heatmap...
-Generating docs for compound kaleidoscope::IgnoranceIsBliss...
-Generating docs for compound kaleidoscope::Leader...
-Generating docs for nested compound kaleidoscope::Leader::dictionary_t...
-Generating docs for compound kaleidoscope::ActiveModColorEffect...
-Generating docs for compound kaleidoscope::AlphaSquareEffect...
-Generating docs for compound kaleidoscope::AlphaSquare...
-Generating docs for compound kaleidoscope::LEDPaletteTheme...
-Generating docs for compound kaleidoscope::StalkerEffect...
-Generating docs for nested compound kaleidoscope::StalkerEffect::ColorComputer...
-Generating docs for compound kaleidoscope::LEDMode...
-Generating docs for compound kaleidoscope::LEDControl...
-Generating docs for compound kaleidoscope::LEDOff...
-Generating docs for compound kaleidoscope::BootGreetingEffect...
-Generating docs for compound kaleidoscope::LEDBreatheEffect...
-Generating docs for compound kaleidoscope::LEDChaseEffect...
-Generating docs for compound kaleidoscope::LEDRainbowEffect...
-Generating docs for compound kaleidoscope::LEDRainbowWaveEffect...
-Generating docs for compound kaleidoscope::LEDSolidColor...
-Generating docs for compound kaleidoscope::TriColor...
-Generating docs for compound kaleidoscope::MagicCombo...
-Generating docs for nested compound kaleidoscope::MagicCombo::combo_t...
-Generating docs for compound kaleidoscope::OneShot...
-Generating docs for nested compound kaleidoscope::OneShot::state_t...
-Generating docs for compound kaleidoscope::ShapeShifter...
-Generating docs for nested compound kaleidoscope::ShapeShifter::dictionary_t...
-Generating docs for compound kaleidoscope::SpaceCadet...
-Generating docs for nested compound kaleidoscope::SpaceCadet::KeyBinding...
-Generating docs for compound kaleidoscope::Syster...
-Generating docs for compound ka/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-TapDance/src/Kaleidoscope/TapDance.h:35: warning: Member ActionType (enumeration) of class kaleidoscope::TapDance is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-TapDance/src/Kaleidoscope/TapDance.h:35: warning: Member ActionType (enumeration) of class kaleidoscope::TapDance is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-TapDance/src/Kaleidoscope/TapDance.h:45: warning: Member begin(void) final (function) of class kaleidoscope::TapDance is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-TapDance/src/Kaleidoscope/TapDance.h:48: warning: Member actionKeys(uint8_t tap_count, ActionType tap_dance_action, uint8_t max_keys, const Key tap_keys[]) (function) of class kaleidoscope::TapDance is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-TapDance/src/Kaleidoscope/TapDance.h:46: warning: Member time_out (variable) of class kaleidoscope::TapDance is not documented.
@@ -2476,7 +2469,27 @@ Generating docs for compound ka/home/travis/build/keyboardio/Arduino-Boards/libr
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Steno/src/Kaleidoscope/GeminiPR.h:38: warning: Member eventHandlerHook(Key mapped_key, byte row, byte col, uint8_t key_state) (function) of class kaleidoscope::steno::GeminiPR is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Steno/src/Kaleidoscope/GeminiPR.h:35: warning: Member keys_held_ (variable) of class kaleidoscope::steno::GeminiPR is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Steno/src/Kaleidoscope/GeminiPR.h:36: warning: Member state_[6] (variable) of class kaleidoscope::steno::GeminiPR is not documented.
-leidoscope::TapDance...
+or nested compound kaleidoscope::StalkerEffect::ColorComputer...
+Generating docs for compound kaleidoscope::LEDMode...
+Generating docs for compound kaleidoscope::LEDControl...
+Generating docs for compound kaleidoscope::LEDOff...
+Generating docs for compound kaleidoscope::BootGreetingEffect...
+Generating docs for compound kaleidoscope::LEDBreatheEffect...
+Generating docs for compound kaleidoscope::LEDChaseEffect...
+Generating docs for compound kaleidoscope::LEDRainbowEffect...
+Generating docs for compound kaleidoscope::LEDRainbowWaveEffect...
+Generating docs for compound kaleidoscope::LEDSolidColor...
+Generating docs for compound kaleidoscope::TriColor...
+Generating docs for compound kaleidoscope::MagicCombo...
+Generating docs for nested compound kaleidoscope::MagicCombo::combo_t...
+Generating docs for compound kaleidoscope::OneShot...
+Generating docs for nested compound kaleidoscope::OneShot::state_t...
+Generating docs for compound kaleidoscope::ShapeShifter...
+Generating docs for nested compound kaleidoscope::ShapeShifter::dictionary_t...
+Generating docs for compound kaleidoscope::SpaceCadet...
+Generating docs for nested compound kaleidoscope::SpaceCadet::KeyBinding...
+Generating docs for compound kaleidoscope::Syster...
+Generating docs for compound kaleidoscope::TapDance...
 Generating docs for compound kaleidoscope::TopsyTurvy...
 Generating docs for compound kaleidoscope::TypingBreaks...
 Generating docs for nested compound kaleidoscope::TypingBreaks::settings_t...
@@ -2594,6 +2607,7 @@ Generating dependency graph for directory libraries/Kaleidoscope-Escape-OneShot
 Generating dependency graph for directory libraries/Kaleidoscope-FingerPainter
 Generating dependency graph for directory libraries/Kaleidoscope-Focus
 Generating dependency graph for directory libraries/Kaleidoscope-GhostInTheFirmware
+Generating dependency graph for directory libraries/Kaleidoscope-Hardware
 Generating dependency graph for directory libraries/Kaleidoscope-Hardware-Model01
 Generating dependency graph for directory libraries/Kaleidoscope-Hardware-Shortcut
 Generating dependency graph for directory libraries/Kaleidoscope-Heatmap
@@ -2684,6 +2698,7 @@ Generating dependency graph for directory libraries/Kaleidoscope-Leader/src
 Generating dependency graph for directory libraries/Kaleidoscope-IgnoranceIsBliss/src
 Generating dependency graph for directory libraries/Kaleidoscope-HostOS/src
 Generating dependency graph for directory libraries/Kaleidoscope-Heatmap/src
+Generating dependency graph for directory libraries/Kaleidoscope-Hardware/src
 Generating dependency graph for directory libraries/Kaleidoscope-Hardware-Shortcut/src
 Generating dependency graph for directory libraries/Kaleidoscope-Hardware-Model01/src
 Generating dependency graph for directory libraries/Kaleidoscope-GhostInTheFirmware/src
@@ -2724,674 +2739,679 @@ Generating example index...
 finalizing index lists...
 Running dot...
 Generating dot graphs using 33 parallel threads...
-Running dot for graph 1/380
-Running dot for graph 2/380
-Running dot for graph 3/380
-Running dot for graph 4/380
-Running dot for graph 5/380
-Running dot for graph 6/380
-Running dot for graph 7/380
-Running dot for graph 8/380
-Running dot for graph 9/380
-Running dot for graph 10/380
-Running dot for graph 11/380
-Running dot for graph 12/380
-Running dot for graph 13/380
-Running dot for graph 14/380
-Running dot for graph 15/380
-Running dot for graph 16/380
-Running dot for graph 17/380
-Running dot for graph 18/380
-Running dot for graph 19/380
-Running dot for graph 20/380
-Running dot for graph 21/380
-Running dot for graph 22/380
-Running dot for graph 23/380
-Running dot for graph 24/380
-Running dot for graph 25/380
-Running dot for graph 26/380
-Running dot for graph 27/380
-Running dot for graph 28/380
-Running dot for graph 29/380
-Running dot for graph 30/380
-Running dot for graph 31/380
-Running dot for graph 32/380
-Running dot for graph 33/380
-Running dot for graph 34/380
-Running dot for graph 35/380
-Running dot for graph 36/380
-Running dot for graph 37/380
-Running dot for graph 38/380
-Running dot for graph 39/380
-Running dot for graph 40/380
-Running dot for graph 41/380
-Running dot for graph 42/380
-Running dot for graph 43/380
-Running dot for graph 44/380
-Running dot for graph 45/380
-Running dot for graph 46/380
-Running dot for graph 47/380
-Running dot for graph 48/380
-Running dot for graph 49/380
-Running dot for graph 50/380
-Running dot for graph 51/380
-Running dot for graph 52/380
-Running dot for graph 53/380
-Running dot for graph 54/380
-Running dot for graph 55/380
-Running dot for graph 56/380
-Running dot for graph 57/380
-Running dot for graph 58/380
-Running dot for graph 59/380
-Running dot for graph 60/380
-Running dot for graph 61/380
-Running dot for graph 62/380
-Running dot for graph 63/380
-Running dot for graph 64/380
-Running dot for graph 65/380
-Running dot for graph 66/380
-Running dot for graph 67/380
-Running dot for graph 68/380
-Running dot for graph 69/380
-Running dot for graph 70/380
-Running dot for graph 71/380
-Running dot for graph 72/380
-Running dot for graph 73/380
-Running dot for graph 74/380
-Running dot for graph 75/380
-Running dot for graph 76/380
-Running dot for graph 77/380
-Running dot for graph 78/380
-Running dot for graph 79/380
-Running dot for graph 80/380
-Running dot for graph 81/380
-Running dot for graph 82/380
-Running dot for graph 83/380
-Running dot for graph 84/380
-Running dot for graph 85/380
-Running dot for graph 86/380
-Running dot for graph 87/380
-Running dot for graph 88/380
-Running dot for graph 89/380
-Running dot for graph 90/380
-Running dot for graph 91/380
-Running dot for graph 92/380
-Running dot for graph 93/380
-Running dot for graph 94/380
-Running dot for graph 95/380
-Running dot for graph 96/380
-Running dot for graph 97/380
-Running dot for graph 98/380
-Running dot for graph 99/380
-Running dot for graph 100/380
-Running dot for graph 101/380
-Running dot for graph 102/380
-Running dot for graph 103/380
-Running dot for graph 104/380
-Running dot for graph 105/380
-Running dot for graph 106/380
-Running dot for graph 107/380
-Running dot for graph 108/380
-Running dot for graph 109/380
-Running dot for graph 110/380
-Running dot for graph 111/380
-Running dot for graph 112/380
-Running dot for graph 113/380
-Running dot for graph 114/380
-Running dot for graph 115/380
-Running dot for graph 116/380
-Running dot for graph 117/380
-Running dot for graph 118/380
-Running dot for graph 119/380
-Running dot for graph 120/380
-Running dot for graph 121/380
-Running dot for graph 122/380
-Running dot for graph 123/380
-Running dot for graph 124/380
-Running dot for graph 125/380
-Running dot for graph 126/380
-Running dot for graph 127/380
-Running dot for graph 128/380
-Running dot for graph 129/380
-Running dot for graph 130/380
-Running dot for graph 131/380
-Running dot for graph 132/380
-Running dot for graph 133/380
-Running dot for graph 134/380
-Running dot for graph 135/380
-Running dot for graph 136/380
-Running dot for graph 137/380
-Running dot for graph 138/380
-Running dot for graph 139/380
-Running dot for graph 140/380
-Running dot for graph 141/380
-Running dot for graph 142/380
-Running dot for graph 143/380
-Running dot for graph 144/380
-Running dot for graph 145/380
-Running dot for graph 146/380
-Running dot for graph 147/380
-Running dot for graph 148/380
-Running dot for graph 149/380
-Running dot for graph 150/380
-Running dot for graph 151/380
-Running dot for graph 152/380
-Running dot for graph 153/380
-Running dot for graph 154/380
-Running dot for graph 155/380
-Running dot for graph 156/380
-Running dot for graph 157/380
-Running dot for graph 158/380
-Running dot for graph 159/380
-Running dot for graph 160/380
-Running dot for graph 161/380
-Running dot for graph 162/380
-Running dot for graph 163/380
-Running dot for graph 164/380
-Running dot for graph 165/380
-Running dot for graph 166/380
-Running dot for graph 167/380
-Running dot for graph 168/380
-Running dot for graph 169/380
-Running dot for graph 170/380
-Running dot for graph 171/380
-Running dot for graph 172/380
-Running dot for graph 173/380
-Running dot for graph 174/380
-Running dot for graph 175/380
-Running dot for graph 176/380
-Running dot for graph 177/380
-Running dot for graph 178/380
-Running dot for graph 179/380
-Running dot for graph 180/380
-Running dot for graph 181/380
-Running dot for graph 182/380
-Running dot for graph 183/380
-Running dot for graph 184/380
-Running dot for graph 185/380
-Running dot for graph 186/380
-Running dot for graph 187/380
-Running dot for graph 188/380
-Running dot for graph 189/380
-Running dot for graph 190/380
-Running dot for graph 191/380
-Running dot for graph 192/380
-Running dot for graph 193/380
-Running dot for graph 194/380
-Running dot for graph 195/380
-Running dot for graph 196/380
-Running dot for graph 197/380
-Running dot for graph 198/380
-Running dot for graph 199/380
-Running dot for graph 200/380
-Running dot for graph 201/380
-Running dot for graph 202/380
-Running dot for graph 203/380
-Running dot for graph 204/380
-Running dot for graph 205/380
-Running dot for graph 206/380
-Running dot for graph 207/380
-Running dot for graph 208/380
-Running dot for graph 209/380
-Running dot for graph 210/380
-Running dot for graph 211/380
-Running dot for graph 212/380
-Running dot for graph 213/380
-Running dot for graph 214/380
-Running dot for graph 215/380
-Running dot for graph 216/380
-Running dot for graph 217/380
-Running dot for graph 218/380
-Running dot for graph 219/380
-Running dot for graph 220/380
-Running dot for graph 221/380
-Running dot for graph 222/380
-Running dot for graph 223/380
-Running dot for graph 224/380
-Running dot for graph 225/380
-Running dot for graph 226/380
-Running dot for graph 227/380
-Running dot for graph 228/380
-Running dot for graph 229/380
-Running dot for graph 230/380
-Running dot for graph 231/380
-Running dot for graph 232/380
-Running dot for graph 233/380
-Running dot for graph 234/380
-Running dot for graph 235/380
-Running dot for graph 236/380
-Running dot for graph 237/380
-Running dot for graph 238/380
-Running dot for graph 239/380
-Running dot for graph 240/380
-Running dot for graph 241/380
-Running dot for graph 242/380
-Running dot for graph 243/380
-Running dot for graph 244/380
-Running dot for graph 245/380
-Running dot for graph 246/380
-Running dot for graph 247/380
-Running dot for graph 248/380
-Running dot for graph 249/380
-Running dot for graph 250/380
-Running dot for graph 251/380
-Running dot for graph 252/380
-Running dot for graph 253/380
-Running dot for graph 254/380
-Running dot for graph 255/380
-Running dot for graph 256/380
-Running dot for graph 257/380
-Running dot for graph 258/380
-Running dot for graph 259/380
-Running dot for graph 260/380
-Running dot for graph 261/380
-Running dot for graph 262/380
-Running dot for graph 263/380
-Running dot for graph 264/380
-Running dot for graph 265/380
-Running dot for graph 266/380
-Running dot for graph 267/380
-Running dot for graph 268/380
-Running dot for graph 269/380
-Running dot for graph 270/380
-Running dot for graph 271/380
-Running dot for graph 272/380
-Running dot for graph 273/380
-Running dot for graph 274/380
-Running dot for graph 275/380
-Running dot for graph 276/380
-Running dot for graph 277/380
-Running dot for graph 278/380
-Running dot for graph 279/380
-Running dot for graph 280/380
-Running dot for graph 281/380
-Running dot for graph 282/380
-Running dot for graph 283/380
-Running dot for graph 284/380
-Running dot for graph 285/380
-Running dot for graph 286/380
-Running dot for graph 287/380
-Running dot for graph 288/380
-Running dot for graph 289/380
-Running dot for graph 290/380
-Running dot for graph 291/380
-Running dot for graph 292/380
-Running dot for graph 293/380
-Running dot for graph 294/380
-Running dot for graph 295/380
-Running dot for graph 296/380
-Running dot for graph 297/380
-Running dot for graph 298/380
-Running dot for graph 299/380
-Running dot for graph 300/380
-Running dot for graph 301/380
-Running dot for graph 302/380
-Running dot for graph 303/380
-Running dot for graph 304/380
-Running dot for graph 305/380
-Running dot for graph 306/380
-Running dot for graph 307/380
-Running dot for graph 308/380
-Running dot for graph 309/380
-Running dot for graph 310/380
-Running dot for graph 311/380
-Running dot for graph 312/380
-Running dot for graph 313/380
-Running dot for graph 314/380
-Running dot for graph 315/380
-Running dot for graph 316/380
-Running dot for graph 317/380
-Running dot for graph 318/380
-Running dot for graph 319/380
-Running dot for graph 320/380
-Running dot for graph 321/380
-Running dot for graph 322/380
-Running dot for graph 323/380
-Running dot for graph 324/380
-Running dot for graph 325/380
-Running dot for graph 326/380
-Running dot for graph 327/380
-Running dot for graph 328/380
-Running dot for graph 329/380
-Running dot for graph 330/380
-Running dot for graph 331/380
-Running dot for graph 332/380
-Running dot for graph 333/380
-Running dot for graph 334/380
-Running dot for graph 335/380
-Running dot for graph 336/380
-Running dot for graph 337/380
-Running dot for graph 338/380
-Running dot for graph 339/380
-Running dot for graph 340/380
-Running dot for graph 341/380
-Running dot for graph 342/380
-Running dot for graph 343/380
-Running dot for graph 344/380
-Running dot for graph 345/380
-Running dot for graph 346/380
-Running dot for graph 347/380
-Running dot for graph 348/380
-Running dot for graph 349/380
-Running dot for graph 350/380
-Running dot for graph 351/380
-Running dot for graph 352/380
-Running dot for graph 353/380
-Running dot for graph 354/380
-Running dot for graph 355/380
-Running dot for graph 356/380
-Running dot for graph 357/380
-Running dot for graph 358/380
-Running dot for graph 359/380
-Running dot for graph 360/380
-Running dot for graph 361/380
-Running dot for graph 362/380
-Running dot for graph 363/380
-Running dot for graph 364/380
-Running dot for graph 365/380
-Running dot for graph 366/380
-Running dot for graph 367/380
-Running dot for graph 368/380
-Running dot for graph 369/380
-Running dot for graph 370/380
-Running dot for graph 371/380
-Running dot for graph 372/380
-Running dot for graph 373/380
-Running dot for graph 374/380
-Running dot for graph 375/380
-Running dot for graph 376/380
-Running dot for graph 377/380
-Running dot for graph 378/380
-Running dot for graph 379/380
-Running dot for graph 380/380
-Patching output file 1/289
-Patching output file 2/289
-Patching output file 3/289
-Patching output file 4/289
-Patching output file 5/289
-Patching output file 6/289
-Patching output file 7/289
-Patching output file 8/289
-Patching output file 9/289
-Patching output file 10/289
-Patching output file 11/289
-Patching output file 12/289
-Patching output file 13/289
-Patching output file 14/289
-Patching output file 15/289
-Patching output file 16/289
-Patching output file 17/289
-Patching output file 18/289
-Patching output file 19/289
-Patching output file 20/289
-Patching output file 21/289
-Patching output file 22/289
-Patching output file 23/289
-Patching output file 24/289
-Patching output file 25/289
-Patching output file 26/289
-Patching output file 27/289
-Patching output file 28/289
-Patching output file 29/289
-Patching output file 30/289
-Patching output file 31/289
-Patching output file 32/289
-Patching output file 33/289
-Patching output file 34/289
-Patching output file 35/289
-Patching output file 36/289
-Patching output file 37/289
-Patching output file 38/289
-Patching output file 39/289
-Patching output file 40/289
-Patching output file 41/289
-Patching output file 42/289
-Patching output file 43/289
-Patching output file 44/289
-Patching output file 45/289
-Patching output file 46/289
-Patching output file 47/289
-Patching output file 48/289
-Patching output file 49/289
-Patching output file 50/289
-Patching output file 51/289
-Patching output file 52/289
-Patching output file 53/289
-Patching output file 54/289
-Patching output file 55/289
-Patching output file 56/289
-Patching output file 57/289
-Patching output file 58/289
-Patching output file 59/289
-Patching output file 60/289
-Patching output file 61/289
-Patching output file 62/289
-Patching output file 63/289
-Patching output file 64/289
-Patching output file 65/289
-Patching output file 66/289
-Patching output file 67/289
-Patching output file 68/289
-Patching output file 69/289
-Patching output file 70/289
-Patching output file 71/289
-Patching output file 72/289
-Patching output file 73/289
-Patching output file 74/289
-Patching output file 75/289
-Patching output file 76/289
-Patching output file 77/289
-Patching output file 78/289
-Patching output file 79/289
-Patching output file 80/289
-Patching output file 81/289
-Patching output file 82/289
-Patching output file 83/289
-Patching output file 84/289
-Patching output file 85/289
-Patching output file 86/289
-Patching output file 87/289
-Patching output file 88/289
-Patching output file 89/289
-Patching output file 90/289
-Patching output file 91/289
-Patching output file 92/289
-Patching output file 93/289
-Patching output file 94/289
-Patching output file 95/289
-Patching output file 96/289
-Patching output file 97/289
-Patching output file 98/289
-Patching output file 99/289
-Patching output file 100/289
-Patching output file 101/289
-Patching output file 102/289
-Patching output file 103/289
-Patching output file 104/289
-Patching output file 105/289
-Patching output file 106/289
-Patching output file 107/289
-Patching output file 108/289
-Patching output file 109/289
-Patching output file 110/289
-Patching output file 111/289
-Patching output file 112/289
-Patching output file 113/289
-Patching output file 114/289
-Patching output file 115/289
-Patching output file 116/289
-Patching output file 117/289
-Patching output file 118/289
-Patching output file 119/289
-Patching output file 120/289
-Patching output file 121/289
-Patching output file 122/289
-Patching output file 123/289
-Patching output file 124/289
-Patching output file 125/289
-Patching output file 126/289
-Patching output file 127/289
-Patching output file 128/289
-Patching output file 129/289
-Patching output file 130/289
-Patching output file 131/289
-Patching output file 132/289
-Patching output file 133/289
-Patching output file 134/289
-Patching output file 135/289
-Patching output file 136/289
-Patching output file 137/289
-Patching output file 138/289
-Patching output file 139/289
-Patching output file 140/289
-Patching output file 141/289
-Patching output file 142/289
-Patching output file 143/289
-Patching output file 144/289
-Patching output file 145/289
-Patching output file 146/289
-Patching output file 147/289
-Patching output file 148/289
-Patching output file 149/289
-Patching output file 150/289
-Patching output file 151/289
-Patching output file 152/289
-Patching output file 153/289
-Patching output file 154/289
-Patching output file 155/289
-Patching output file 156/289
-Patching output file 157/289
-Patching output file 158/289
-Patching output file 159/289
-Patching output file 160/289
-Patching output file 161/289
-Patching output file 162/289
-Patching output file 163/289
-Patching output file 164/289
-Patching output file 165/289
-Patching output file 166/289
-Patching output file 167/289
-Patching output file 168/289
-Patching output file 169/289
-Patching output file 170/289
-Patching output file 171/289
-Patching output file 172/289
-Patching output file 173/289
-Patching output file 174/289
-Patching output file 175/289
-Patching output file 176/289
-Patching output file 177/289
-Patching output file 178/289
-Patching output file 179/289
-Patching output file 180/289
-Patching output file 181/289
-Patching output file 182/289
-Patching output file 183/289
-Patching output file 184/289
-Patching output file 185/289
-Patching output file 186/289
-Patching output file 187/289
-Patching output file 188/289
-Patching output file 189/289
-Patching output file 190/289
-Patching output file 191/289
-Patching output file 192/289
-Patching output file 193/289
-Patching output file 194/289
-Patching output file 195/289
-Patching output file 196/289
-Patching output file 197/289
-Patching output file 198/289
-Patching output file 199/289
-Patching output file 200/289
-Patching output file 201/289
-Patching output file 202/289
-Patching output file 203/289
-Patching output file 204/289
-Patching output file 205/289
-Patching output file 206/289
-Patching output file 207/289
-Patching output file 208/289
-Patching output file 209/289
-Patching output file 210/289
-Patching output file 211/289
-Patching output file 212/289
-Patching output file 213/289
-Patching output file 214/289
-Patching output file 215/289
-Patching output file 216/289
-Patching output file 217/289
-Patching output file 218/289
-Patching output file 219/289
-Patching output file 220/289
-Patching output file 221/289
-Patching output file 222/289
-Patching output file 223/289
-Patching output file 224/289
-Patching output file 225/289
-Patching output file 226/289
-Patching output file 227/289
-Patching output file 228/289
-Patching output file 229/289
-Patching output file 230/289
-Patching output file 231/289
-Patching output file 232/289
-Patching output file 233/289
-Patching output file 234/289
-Patching output file 235/289
-Patching output file 236/289
-Patching output file 237/289
-Patching output file 238/289
-Patching output file 239/289
-Patching output file 240/289
-Patching output file 241/289
-Patching output file 242/289
-Patching output file 243/289
-Patching output file 244/289
-Patching output file 245/289
-Patching output file 246/289
-Patching output file 247/289
-Patching output file 248/289
-Patching output file 249/289
-Patching output file 250/289
-Patching output file 251/289
-Patching output file 252/289
-Patching output file 253/289
-Patching output file 254/289
-Patching output file 255/289
-Patching output file 256/289
-Patching output file 257/289
-Patching output file 258/289
-Patching output file 259/289
-Patching output file 260/289
-Patching output file 261/289
-Patching output file 262/289
-Patching output file 263/289
-Patching output file 264/289
-Patching output file 265/289
-Patching output file 266/289
-Patching output file 267/289
-Patching output file 268/289
-Patching output file 269/289
-Patching output file 270/289
-Patching output file 271/289
-Patching output file 272/289
-Patching output file 273/289
-Patching output file 274/289
-Patching output file 275/289
-Patching output file 276/289
-Patching output file 277/289
-Patching output file 278/289
-Patching output file 279/289
-Patching output file 280/289
-Patching output file 281/289
-Patching output file 282/289
-Patching output file 283/289
-Patching output file 284/289
-Patching output file 285/289
-Patching output file 286/289
-Patching output file 287/289
-Patching output file 288/289
-Patching output file 289/289
-lookup cache used 3364/65536 hits=24966 misses=3492
+Running dot for graph 1/383
+Running dot for graph 2/383
+Running dot for graph 3/383
+Running dot for graph 4/383
+Running dot for graph 5/383
+Running dot for graph 6/383
+Running dot for graph 7/383
+Running dot for graph 8/383
+Running dot for graph 9/383
+Running dot for graph 10/383
+Running dot for graph 11/383
+Running dot for graph 12/383
+Running dot for graph 13/383
+Running dot for graph 14/383
+Running dot for graph 15/383
+Running dot for graph 16/383
+Running dot for graph 17/383
+Running dot for graph 18/383
+Running dot for graph 19/383
+Running dot for graph 20/383
+Running dot for graph 21/383
+Running dot for graph 22/383
+Running dot for graph 23/383
+Running dot for graph 24/383
+Running dot for graph 25/383
+Running dot for graph 26/383
+Running dot for graph 27/383
+Running dot for graph 28/383
+Running dot for graph 29/383
+Running dot for graph 30/383
+Running dot for graph 31/383
+Running dot for graph 32/383
+Running dot for graph 33/383
+Running dot for graph 34/383
+Running dot for graph 35/383
+Running dot for graph 36/383
+Running dot for graph 37/383
+Running dot for graph 38/383
+Running dot for graph 39/383
+Running dot for graph 40/383
+Running dot for graph 41/383
+Running dot for graph 42/383
+Running dot for graph 43/383
+Running dot for graph 44/383
+Running dot for graph 45/383
+Running dot for graph 46/383
+Running dot for graph 47/383
+Running dot for graph 48/383
+Running dot for graph 49/383
+Running dot for graph 50/383
+Running dot for graph 51/383
+Running dot for graph 52/383
+Running dot for graph 53/383
+Running dot for graph 54/383
+Running dot for graph 55/383
+Running dot for graph 56/383
+Running dot for graph 57/383
+Running dot for graph 58/383
+Running dot for graph 59/383
+Running dot for graph 60/383
+Running dot for graph 61/383
+Running dot for graph 62/383
+Running dot for graph 63/383
+Running dot for graph 64/383
+Running dot for graph 65/383
+Running dot for graph 66/383
+Running dot for graph 67/383
+Running dot for graph 68/383
+Running dot for graph 69/383
+Running dot for graph 70/383
+Running dot for graph 71/383
+Running dot for graph 72/383
+Running dot for graph 73/383
+Running dot for graph 74/383
+Running dot for graph 75/383
+Running dot for graph 76/383
+Running dot for graph 77/383
+Running dot for graph 78/383
+Running dot for graph 79/383
+Running dot for graph 80/383
+Running dot for graph 81/383
+Running dot for graph 82/383
+Running dot for graph 83/383
+Running dot for graph 84/383
+Running dot for graph 85/383
+Running dot for graph 86/383
+Running dot for graph 87/383
+Running dot for graph 88/383
+Running dot for graph 89/383
+Running dot for graph 90/383
+Running dot for graph 91/383
+Running dot for graph 92/383
+Running dot for graph 93/383
+Running dot for graph 94/383
+Running dot for graph 95/383
+Running dot for graph 96/383
+Running dot for graph 97/383
+Running dot for graph 98/383
+Running dot for graph 99/383
+Running dot for graph 100/383
+Running dot for graph 101/383
+Running dot for graph 102/383
+Running dot for graph 103/383
+Running dot for graph 104/383
+Running dot for graph 105/383
+Running dot for graph 106/383
+Running dot for graph 107/383
+Running dot for graph 108/383
+Running dot for graph 109/383
+Running dot for graph 110/383
+Running dot for graph 111/383
+Running dot for graph 112/383
+Running dot for graph 113/383
+Running dot for graph 114/383
+Running dot for graph 115/383
+Running dot for graph 116/383
+Running dot for graph 117/383
+Running dot for graph 118/383
+Running dot for graph 119/383
+Running dot for graph 120/383
+Running dot for graph 121/383
+Running dot for graph 122/383
+Running dot for graph 123/383
+Running dot for graph 124/383
+Running dot for graph 125/383
+Running dot for graph 126/383
+Running dot for graph 127/383
+Running dot for graph 128/383
+Running dot for graph 129/383
+Running dot for graph 130/383
+Running dot for graph 131/383
+Running dot for graph 132/383
+Running dot for graph 133/383
+Running dot for graph 134/383
+Running dot for graph 135/383
+Running dot for graph 136/383
+Running dot for graph 137/383
+Running dot for graph 138/383
+Running dot for graph 139/383
+Running dot for graph 140/383
+Running dot for graph 141/383
+Running dot for graph 142/383
+Running dot for graph 143/383
+Running dot for graph 144/383
+Running dot for graph 145/383
+Running dot for graph 146/383
+Running dot for graph 147/383
+Running dot for graph 148/383
+Running dot for graph 149/383
+Running dot for graph 150/383
+Running dot for graph 151/383
+Running dot for graph 152/383
+Running dot for graph 153/383
+Running dot for graph 154/383
+Running dot for graph 155/383
+Running dot for graph 156/383
+Running dot for graph 157/383
+Running dot for graph 158/383
+Running dot for graph 159/383
+Running dot for graph 160/383
+Running dot for graph 161/383
+Running dot for graph 162/383
+Running dot for graph 163/383
+Running dot for graph 164/383
+Running dot for graph 165/383
+Running dot for graph 166/383
+Running dot for graph 167/383
+Running dot for graph 168/383
+Running dot for graph 169/383
+Running dot for graph 170/383
+Running dot for graph 171/383
+Running dot for graph 172/383
+Running dot for graph 173/383
+Running dot for graph 174/383
+Running dot for graph 175/383
+Running dot for graph 176/383
+Running dot for graph 177/383
+Running dot for graph 178/383
+Running dot for graph 179/383
+Running dot for graph 180/383
+Running dot for graph 181/383
+Running dot for graph 182/383
+Running dot for graph 183/383
+Running dot for graph 184/383
+Running dot for graph 185/383
+Running dot for graph 186/383
+Running dot for graph 187/383
+Running dot for graph 188/383
+Running dot for graph 189/383
+Running dot for graph 190/383
+Running dot for graph 191/383
+Running dot for graph 192/383
+Running dot for graph 193/383
+Running dot for graph 194/383
+Running dot for graph 195/383
+Running dot for graph 196/383
+Running dot for graph 197/383
+Running dot for graph 198/383
+Running dot for graph 199/383
+Running dot for graph 200/383
+Running dot for graph 201/383
+Running dot for graph 202/383
+Running dot for graph 203/383
+Running dot for graph 204/383
+Running dot for graph 205/383
+Running dot for graph 206/383
+Running dot for graph 207/383
+Running dot for graph 208/383
+Running dot for graph 209/383
+Running dot for graph 210/383
+Running dot for graph 211/383
+Running dot for graph 212/383
+Running dot for graph 213/383
+Running dot for graph 214/383
+Running dot for graph 215/383
+Running dot for graph 216/383
+Running dot for graph 217/383
+Running dot for graph 218/383
+Running dot for graph 219/383
+Running dot for graph 220/383
+Running dot for graph 221/383
+Running dot for graph 222/383
+Running dot for graph 223/383
+Running dot for graph 224/383
+Running dot for graph 225/383
+Running dot for graph 226/383
+Running dot for graph 227/383
+Running dot for graph 228/383
+Running dot for graph 229/383
+Running dot for graph 230/383
+Running dot for graph 231/383
+Running dot for graph 232/383
+Running dot for graph 233/383
+Running dot for graph 234/383
+Running dot for graph 235/383
+Running dot for graph 236/383
+Running dot for graph 237/383
+Running dot for graph 238/383
+Running dot for graph 239/383
+Running dot for graph 240/383
+Running dot for graph 241/383
+Running dot for graph 242/383
+Running dot for graph 243/383
+Running dot for graph 244/383
+Running dot for graph 245/383
+Running dot for graph 246/383
+Running dot for graph 247/383
+Running dot for graph 248/383
+Running dot for graph 249/383
+Running dot for graph 250/383
+Running dot for graph 251/383
+Running dot for graph 252/383
+Running dot for graph 253/383
+Running dot for graph 254/383
+Running dot for graph 255/383
+Running dot for graph 256/383
+Running dot for graph 257/383
+Running dot for graph 258/383
+Running dot for graph 259/383
+Running dot for graph 260/383
+Running dot for graph 261/383
+Running dot for graph 262/383
+Running dot for graph 263/383
+Running dot for graph 264/383
+Running dot for graph 265/383
+Running dot for graph 266/383
+Running dot for graph 267/383
+Running dot for graph 268/383
+Running dot for graph 269/383
+Running dot for graph 270/383
+Running dot for graph 271/383
+Running dot for graph 272/383
+Running dot for graph 273/383
+Running dot for graph 274/383
+Running dot for graph 275/383
+Running dot for graph 276/383
+Running dot for graph 277/383
+Running dot for graph 278/383
+Running dot for graph 279/383
+Running dot for graph 280/383
+Running dot for graph 281/383
+Running dot for graph 282/383
+Running dot for graph 283/383
+Running dot for graph 284/383
+Running dot for graph 285/383
+Running dot for graph 286/383
+Running dot for graph 287/383
+Running dot for graph 288/383
+Running dot for graph 289/383
+Running dot for graph 290/383
+Running dot for graph 291/383
+Running dot for graph 292/383
+Running dot for graph 293/383
+Running dot for graph 294/383
+Running dot for graph 295/383
+Running dot for graph 296/383
+Running dot for graph 297/383
+Running dot for graph 298/383
+Running dot for graph 299/383
+Running dot for graph 300/383
+Running dot for graph 301/383
+Running dot for graph 302/383
+Running dot for graph 303/383
+Running dot for graph 304/383
+Running dot for graph 305/383
+Running dot for graph 306/383
+Running dot for graph 307/383
+Running dot for graph 308/383
+Running dot for graph 309/383
+Running dot for graph 310/383
+Running dot for graph 311/383
+Running dot for graph 312/383
+Running dot for graph 313/383
+Running dot for graph 314/383
+Running dot for graph 315/383
+Running dot for graph 316/383
+Running dot for graph 317/383
+Running dot for graph 318/383
+Running dot for graph 319/383
+Running dot for graph 320/383
+Running dot for graph 321/383
+Running dot for graph 322/383
+Running dot for graph 323/383
+Running dot for graph 324/383
+Running dot for graph 325/383
+Running dot for graph 326/383
+Running dot for graph 327/383
+Running dot for graph 328/383
+Running dot for graph 329/383
+Running dot for graph 330/383
+Running dot for graph 331/383
+Running dot for graph 332/383
+Running dot for graph 333/383
+Running dot for graph 334/383
+Running dot for graph 335/383
+Running dot for graph 336/383
+Running dot for graph 337/383
+Running dot for graph 338/383
+Running dot for graph 339/383
+Running dot for graph 340/383
+Running dot for graph 341/383
+Running dot for graph 342/383
+Running dot for graph 343/383
+Running dot for graph 344/383
+Running dot for graph 345/383
+Running dot for graph 346/383
+Running dot for graph 347/383
+Running dot for graph 348/383
+Running dot for graph 349/383
+Running dot for graph 350/383
+Running dot for graph 351/383
+Running dot for graph 352/383
+Running dot for graph 353/383
+Running dot for graph 354/383
+Running dot for graph 355/383
+Running dot for graph 356/383
+Running dot for graph 357/383
+Running dot for graph 358/383
+Running dot for graph 359/383
+Running dot for graph 360/383
+Running dot for graph 361/383
+Running dot for graph 362/383
+Running dot for graph 363/383
+Running dot for graph 364/383
+Running dot for graph 365/383
+Running dot for graph 366/383
+Running dot for graph 367/383
+Running dot for graph 368/383
+Running dot for graph 369/383
+Running dot for graph 370/383
+Running dot for graph 371/383
+Running dot for graph 372/383
+Running dot for graph 373/383
+Running dot for graph 374/383
+Running dot for graph 375/383
+Running dot for graph 376/383
+Running dot for graph 377/383
+Running dot for graph 378/383
+Running dot for graph 379/383
+Running dot for graph 380/383
+Running dot for graph 381/383
+Running dot for graph 382/383
+Running dot for graph 383/383
+Patching output file 1/291
+Patching output file 2/291
+Patching output file 3/291
+Patching output file 4/291
+Patching output file 5/291
+Patching output file 6/291
+Patching output file 7/291
+Patching output file 8/291
+Patching output file 9/291
+Patching output file 10/291
+Patching output file 11/291
+Patching output file 12/291
+Patching output file 13/291
+Patching output file 14/291
+Patching output file 15/291
+Patching output file 16/291
+Patching output file 17/291
+Patching output file 18/291
+Patching output file 19/291
+Patching output file 20/291
+Patching output file 21/291
+Patching output file 22/291
+Patching output file 23/291
+Patching output file 24/291
+Patching output file 25/291
+Patching output file 26/291
+Patching output file 27/291
+Patching output file 28/291
+Patching output file 29/291
+Patching output file 30/291
+Patching output file 31/291
+Patching output file 32/291
+Patching output file 33/291
+Patching output file 34/291
+Patching output file 35/291
+Patching output file 36/291
+Patching output file 37/291
+Patching output file 38/291
+Patching output file 39/291
+Patching output file 40/291
+Patching output file 41/291
+Patching output file 42/291
+Patching output file 43/291
+Patching output file 44/291
+Patching output file 45/291
+Patching output file 46/291
+Patching output file 47/291
+Patching output file 48/291
+Patching output file 49/291
+Patching output file 50/291
+Patching output file 51/291
+Patching output file 52/291
+Patching output file 53/291
+Patching output file 54/291
+Patching output file 55/291
+Patching output file 56/291
+Patching output file 57/291
+Patching output file 58/291
+Patching output file 59/291
+Patching output file 60/291
+Patching output file 61/291
+Patching output file 62/291
+Patching output file 63/291
+Patching output file 64/291
+Patching output file 65/291
+Patching output file 66/291
+Patching output file 67/291
+Patching output file 68/291
+Patching output file 69/291
+Patching output file 70/291
+Patching output file 71/291
+Patching output file 72/291
+Patching output file 73/291
+Patching output file 74/291
+Patching output file 75/291
+Patching output file 76/291
+Patching output file 77/291
+Patching output file 78/291
+Patching output file 79/291
+Patching output file 80/291
+Patching output file 81/291
+Patching output file 82/291
+Patching output file 83/291
+Patching output file 84/291
+Patching output file 85/291
+Patching output file 86/291
+Patching output file 87/291
+Patching output file 88/291
+Patching output file 89/291
+Patching output file 90/291
+Patching output file 91/291
+Patching output file 92/291
+Patching output file 93/291
+Patching output file 94/291
+Patching output file 95/291
+Patching output file 96/291
+Patching output file 97/291
+Patching output file 98/291
+Patching output file 99/291
+Patching output file 100/291
+Patching output file 101/291
+Patching output file 102/291
+Patching output file 103/291
+Patching output file 104/291
+Patching output file 105/291
+Patching output file 106/291
+Patching output file 107/291
+Patching output file 108/291
+Patching output file 109/291
+Patching output file 110/291
+Patching output file 111/291
+Patching output file 112/291
+Patching output file 113/291
+Patching output file 114/291
+Patching output file 115/291
+Patching output file 116/291
+Patching output file 117/291
+Patching output file 118/291
+Patching output file 119/291
+Patching output file 120/291
+Patching output file 121/291
+Patching output file 122/291
+Patching output file 123/291
+Patching output file 124/291
+Patching output file 125/291
+Patching output file 126/291
+Patching output file 127/291
+Patching output file 128/291
+Patching output file 129/291
+Patching output file 130/291
+Patching output file 131/291
+Patching output file 132/291
+Patching output file 133/291
+Patching output file 134/291
+Patching output file 135/291
+Patching output file 136/291
+Patching output file 137/291
+Patching output file 138/291
+Patching output file 139/291
+Patching output file 140/291
+Patching output file 141/291
+Patching output file 142/291
+Patching output file 143/291
+Patching output file 144/291
+Patching output file 145/291
+Patching output file 146/291
+Patching output file 147/291
+Patching output file 148/291
+Patching output file 149/291
+Patching output file 150/291
+Patching output file 151/291
+Patching output file 152/291
+Patching output file 153/291
+Patching output file 154/291
+Patching output file 155/291
+Patching output file 156/291
+Patching output file 157/291
+Patching output file 158/291
+Patching output file 159/291
+Patching output file 160/291
+Patching output file 161/291
+Patching output file 162/291
+Patching output file 163/291
+Patching output file 164/291
+Patching output file 165/291
+Patching output file 166/291
+Patching output file 167/291
+Patching output file 168/291
+Patching output file 169/291
+Patching output file 170/291
+Patching output file 171/291
+Patching output file 172/291
+Patching output file 173/291
+Patching output file 174/291
+Patching output file 175/291
+Patching output file 176/291
+Patching output file 177/291
+Patching output file 178/291
+Patching output file 179/291
+Patching output file 180/291
+Patching output file 181/291
+Patching output file 182/291
+Patching output file 183/291
+Patching output file 184/291
+Patching output file 185/291
+Patching output file 186/291
+Patching output file 187/291
+Patching output file 188/291
+Patching output file 189/291
+Patching output file 190/291
+Patching output file 191/291
+Patching output file 192/291
+Patching output file 193/291
+Patching output file 194/291
+Patching output file 195/291
+Patching output file 196/291
+Patching output file 197/291
+Patching output file 198/291
+Patching output file 199/291
+Patching output file 200/291
+Patching output file 201/291
+Patching output file 202/291
+Patching output file 203/291
+Patching output file 204/291
+Patching output file 205/291
+Patching output file 206/291
+Patching output file 207/291
+Patching output file 208/291
+Patching output file 209/291
+Patching output file 210/291
+Patching output file 211/291
+Patching output file 212/291
+Patching output file 213/291
+Patching output file 214/291
+Patching output file 215/291
+Patching output file 216/291
+Patching output file 217/291
+Patching output file 218/291
+Patching output file 219/291
+Patching output file 220/291
+Patching output file 221/291
+Patching output file 222/291
+Patching output file 223/291
+Patching output file 224/291
+Patching output file 225/291
+Patching output file 226/291
+Patching output file 227/291
+Patching output file 228/291
+Patching output file 229/291
+Patching output file 230/291
+Patching output file 231/291
+Patching output file 232/291
+Patching output file 233/291
+Patching output file 234/291
+Patching output file 235/291
+Patching output file 236/291
+Patching output file 237/291
+Patching output file 238/291
+Patching output file 239/291
+Patching output file 240/291
+Patching output file 241/291
+Patching output file 242/291
+Patching output file 243/291
+Patching output file 244/291
+Patching output file 245/291
+Patching output file 246/291
+Patching output file 247/291
+Patching output file 248/291
+Patching output file 249/291
+Patching output file 250/291
+Patching output file 251/291
+Patching output file 252/291
+Patching output file 253/291
+Patching output file 254/291
+Patching output file 255/291
+Patching output file 256/291
+Patching output file 257/291
+Patching output file 258/291
+Patching output file 259/291
+Patching output file 260/291
+Patching output file 261/291
+Patching output file 262/291
+Patching output file 263/291
+Patching output file 264/291
+Patching output file 265/291
+Patching output file 266/291
+Patching output file 267/291
+Patching output file 268/291
+Patching output file 269/291
+Patching output file 270/291
+Patching output file 271/291
+Patching output file 272/291
+Patching output file 273/291
+Patching output file 274/291
+Patching output file 275/291
+Patching output file 276/291
+Patching output file 277/291
+Patching output file 278/291
+Patching output file 279/291
+Patching output file 280/291
+Patching output file 281/291
+Patching output file 282/291
+Patching output file 283/291
+Patching output file 284/291
+Patching output file 285/291
+Patching output file 286/291
+Patching output file 287/291
+Patching output file 288/291
+Patching output file 289/291
+Patching output file 290/291
+Patching output file 291/291
+lookup cache used 3385/65536 hits=25170 misses=3513
 finished...

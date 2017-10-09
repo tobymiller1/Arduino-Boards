@@ -4,6 +4,7 @@ var searchData=
   ['absolutemouseapi',['AbsoluteMouseAPI',['../classAbsoluteMouseAPI.html',1,'']]],
   ['activate',['activate',['../classkaleidoscope_1_1LEDMode.html#a6942e459d6f78e68b3b148d3dbabc709',1,'kaleidoscope::LEDMode']]],
   ['activemodcoloreffect',['ActiveModColorEffect',['../classkaleidoscope_1_1ActiveModColorEffect.html',1,'kaleidoscope']]],
+  ['actonmatrixscan',['actOnMatrixScan',['../group__kaleidoscope__hardware__matrix.html#gaa2af6b44b1dda8e1bbe289010eff0f3c',1,'kaleidoscope::Hardware']]],
   ['alphasquare',['AlphaSquare',['../classkaleidoscope_1_1AlphaSquare.html',1,'kaleidoscope']]],
   ['alphasquareeffect',['AlphaSquareEffect',['../classkaleidoscope_1_1AlphaSquareEffect.html',1,'kaleidoscope']]],
   ['atmegascanner',['AtmegaScanner',['../classAtmegaScanner.html',1,'']]],

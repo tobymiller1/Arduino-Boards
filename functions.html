@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -78,6 +79,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="#index_a"><span>a</span></a></li>
       <li><a href="#index_b"><span>b</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
@@ -90,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,12 +110,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>activate()
 : <a class="el" href="classkaleidoscope_1_1LEDMode.html#a6942e459d6f78e68b3b148d3dbabc709">kaleidoscope::LEDMode</a>
 </li>
+<li>actOnMatrixScan()
+: <a class="el" href="group__kaleidoscope__hardware__matrix.html#gaa2af6b44b1dda8e1bbe289010eff0f3c">kaleidoscope::Hardware</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
 <li>begin()
 : <a class="el" href="classkaleidoscope_1_1LEDMode.html#a75910ad946e9d2a01077c3a8878aca31">kaleidoscope::LEDMode</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>getCrgbAt()
+: <a class="el" href="group__kaleidoscope__hardware__leds.html#gaf4d56e07ec171798f4fb10f824766501">kaleidoscope::Hardware</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>isKeyMasked()
+: <a class="el" href="group__kaleidoscope__hardware__masking.html#ga20944dbe8ea64dbb7504b90940f8ac1c">kaleidoscope::Hardware</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>maskKey()
+: <a class="el" href="group__kaleidoscope__hardware__masking.html#ga0ebd635b61317731df87ca6407fc844e">kaleidoscope::Hardware</a>
 </li>
 </ul>
 
@@ -128,6 +156,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>readMatrix()
+: <a class="el" href="group__kaleidoscope__hardware__matrix.html#ga2dfda06dadd2faa0092e4e5f137616c2">kaleidoscope::Hardware</a>
+</li>
 <li>refreshAt()
 : <a class="el" href="classkaleidoscope_1_1ColormapEffect.html#a0eef0b398bf929eedabf4c16fbdc0211">kaleidoscope::ColormapEffect</a>
 , <a class="el" href="classkaleidoscope_1_1FingerPainter.html#a666b03856f984bc79d832165870c4da7">kaleidoscope::FingerPainter</a>
@@ -139,19 +170,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>scanMatrix()
+: <a class="el" href="group__kaleidoscope__hardware__matrix.html#ga3446911fdf70a46b1838414f2df25ec0">kaleidoscope::Hardware</a>
+</li>
+<li>setCrgbAt()
+: <a class="el" href="group__kaleidoscope__hardware__leds.html#ga337be6b88583d074ffce3368eca18dd8">kaleidoscope::Hardware</a>
+</li>
 <li>setup()
 : <a class="el" href="classexample_1_1TestLEDMode.html#a39d49526bbec2fcb301faf2e3aea13b2">example::TestLEDMode</a>
 , <a class="el" href="classkaleidoscope_1_1AlphaSquareEffect.html#aed4b7e47d70a939d74fd63cda436da9d">kaleidoscope::AlphaSquareEffect</a>
 , <a class="el" href="classkaleidoscope_1_1ColormapEffect.html#a652585f5cdf40f8ab8e7b97ef05e3945">kaleidoscope::ColormapEffect</a>
 , <a class="el" href="classkaleidoscope_1_1FingerPainter.html#abb0d36d3fcd4c3fe96675a3b19373b41">kaleidoscope::FingerPainter</a>
+, <a class="el" href="group__kaleidoscope__hardware__misc.html#gaedaadc1a1c25891c3605b681963d7c9c">kaleidoscope::Hardware</a>
 , <a class="el" href="classkaleidoscope_1_1Heatmap.html#add7c9ae409830940b5ed4734f5937697">kaleidoscope::Heatmap</a>
 , <a class="el" href="classkaleidoscope_1_1LEDMode.html#aac784ae7df620b5a648d52a2183b2dbf">kaleidoscope::LEDMode</a>
 , <a class="el" href="classkaleidoscope_1_1StalkerEffect.html#a654f8c2651a6e37ceea34e5f9038341e">kaleidoscope::StalkerEffect</a>
+</li>
+<li>syncLeds()
+: <a class="el" href="group__kaleidoscope__hardware__leds.html#gaf1733f589ffbe28047de5653282e6fc2">kaleidoscope::Hardware</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
+<li>unMaskKey()
+: <a class="el" href="group__kaleidoscope__hardware__masking.html#gae0bcb8133e31dab92ed4c65232de2f49">kaleidoscope::Hardware</a>
+</li>
 <li>update()
 : <a class="el" href="classexample_1_1TestLEDMode.html#ac3f4fa1d31b188d3cae0e1f0fb1d4ef4">example::TestLEDMode</a>
 , <a class="el" href="classkaleidoscope_1_1AlphaSquareEffect.html#a82557c799064986be2649805dcd0f386">kaleidoscope::AlphaSquareEffect</a>

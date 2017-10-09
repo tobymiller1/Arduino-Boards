@@ -13,6 +13,7 @@ var searchData=
   ['kaleidoscope_2dghostinthefirmware',['Kaleidoscope-GhostInTheFirmware',['../md_libraries_Kaleidoscope-GhostInTheFirmware_README.html',1,'']]],
   ['kaleidoscope_2dhardware_2dmodel01',['Kaleidoscope-Hardware-Model01',['../md_libraries_Kaleidoscope-Hardware-Model01_README.html',1,'']]],
   ['kaleidoscope_2dhardware_2dshortcut',['Kaleidoscope-Hardware-Shortcut',['../md_libraries_Kaleidoscope-Hardware-Shortcut_README.html',1,'']]],
+  ['kaleidoscope_2dhardware',['Kaleidoscope-Hardware',['../md_libraries_Kaleidoscope-Hardware_README.html',1,'']]],
   ['kaleidoscope_2dheatmap',['Kaleidoscope-Heatmap',['../md_libraries_Kaleidoscope-Heatmap_README.html',1,'']]],
   ['kaleidoscope_2dhostos',['Kaleidoscope-HostOS',['../md_libraries_Kaleidoscope-HostOS_README.html',1,'']]],
   ['kaleidoscope_2dignoranceisbliss',['Kaleidoscope-IgnoranceIsBliss',['../md_libraries_Kaleidoscope-IgnoranceIsBliss_README.html',1,'']]],

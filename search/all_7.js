@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['hardware',['Hardware',['../classkaleidoscope_1_1Hardware.html',1,'kaleidoscope']]],
   ['haunt',['Haunt',['../classkaleidoscope_1_1stalker_1_1Haunt.html',1,'kaleidoscope::stalker']]],
   ['heatmap',['Heatmap',['../classkaleidoscope_1_1Heatmap.html',1,'kaleidoscope']]],
   ['hid_5fbootkeyboardreport_5fdata_5ft',['HID_BootKeyboardReport_Data_t',['../unionHID__BootKeyboardReport__Data__t.html',1,'']]],
