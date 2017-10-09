@@ -151,3 +151,6 @@
 [submodule "libraries/Model01-Firmware"]
 	path = libraries/Model01-Firmware
 	url = https://github.com/Keyboardio/Model01-Firmware
+[submodule "libraries/Kaleidoscope-Hardware"]
+	path = libraries/Kaleidoscope-Hardware
+	url = https://github.com/Keyboardio/Kaleidoscope-Hardware/
