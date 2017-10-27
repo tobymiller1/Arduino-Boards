@@ -104,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><code>OSL(layer)</code></h3>
 <blockquote class="doxtable">
 <p>Takes a layer number as argument, and sets up the key to act as a one-shot layer key.</p>
-<p>Please note that while <code>Kaleidoscope</code> supports more, one-shot layers are limited to 24 layers only.</p>
+<p>Please note that while <code>Kaleidoscope</code> supports more, one-shot layers are limited to 8 layers only.</p>
 <p></p>
 </blockquote>
 <h2>Plugin methods</h2>
@@ -112,6 +112,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><code>.isActive()</code></h3>
 <blockquote class="doxtable">
 <p>Returns if any one-shot key is in flight. This makes it possible to differentiate between having a modifier or layer active, versus having them active only until after the next key getting pressed. And this, in turn, is useful for macros that need to fiddle with either modifier or layer state: if one-shots are not active, they need not restore the original state.</p>
+<p></p>
+</blockquote>
+<h3><code>.isSticky(key)</code></h3>
+<blockquote class="doxtable">
+<p>Returns if the key is currently sticky.</p>
 <p></p>
 </blockquote>
 <h3><code>.isModifierActive(key)</code></h3>

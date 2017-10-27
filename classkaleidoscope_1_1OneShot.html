@@ -123,8 +123,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afe27b3a09bcb5f7947b12858ae301c0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe27b3a09bcb5f7947b12858ae301c0a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (void) final</td></tr>
+<tr class="memitem:afe27b3a09bcb5f7947b12858ae301c0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkaleidoscope_1_1OneShot.html#afe27b3a09bcb5f7947b12858ae301c0a">begin</a> (void) final</td></tr>
 <tr class="separator:afe27b3a09bcb5f7947b12858ae301c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30686d5b13933b75df94adf44dccf843"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30686d5b13933b75df94adf44dccf843"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>inject</b> (<a class="el" href="unionKey__.html">Key</a> key, uint8_t key_state)</td></tr>
@@ -141,6 +140,9 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isActive</b> (
 <tr class="memitem:a6b7c7971264e938ea23fadfd0c175d20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b7c7971264e938ea23fadfd0c175d20"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isActive</b> (<a class="el" href="unionKey__.html">Key</a> key)</td></tr>
 <tr class="separator:a6b7c7971264e938ea23fadfd0c175d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adacfb0033cdebbc9ac2d0eeb492da0c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adacfb0033cdebbc9ac2d0eeb492da0c4"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSticky</b> (<a class="el" href="unionKey__.html">Key</a> key)</td></tr>
+<tr class="separator:adacfb0033cdebbc9ac2d0eeb492da0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a370832e9b16b7b6ce7821d47a36377f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a370832e9b16b7b6ce7821d47a36377f0"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>cancel</b> (bool with_stickies)</td></tr>
 <tr class="separator:a370832e9b16b7b6ce7821d47a36377f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,7 +213,42 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>should_mask_on
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="OneShot_8h_source.html#l00029">29</a> of file <a class="el" href="OneShot_8h_source.html">OneShot.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="afe27b3a09bcb5f7947b12858ae301c0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kaleidoscope::OneShot::begin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initial plugin setup hook. All plugins are supposed to provide a singleton object, statically initialized at compile-time (with few exceptions). Because of this, the order in which they are instantiated is unspecified, and cannot be relied upon. For this reason, one's expected to explicitly initialize, "use" the plugins one wishes to, by calling <code>Kaleidoscope.use()</code> with a list of plugin object pointers.</p>
+<p>This function will in turn call the <code>begin</code> function of each plugin, so that they can perform any initial setup they wish, such as registering event handler or loop hooks. This is the only time this function will be called. It is intentionally protected, and accessible by the <code>Kaleidoscope</code> class only. </p>
+
+<p>Reimplemented from <a class="el" href="classKaleidoscopePlugin.html#adeedf0552ab36cfb7744b77fa7fe554a">KaleidoscopePlugin</a>.</p>
+
+<p>Definition at line <a class="el" href="OneShot_8cpp_source.html#l00207">207</a> of file <a class="el" href="OneShot_8cpp_source.html">OneShot.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  Kaleidoscope.useEventHandlerHook(eventHandlerHook);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  Kaleidoscope.useLoopHook(loopHook);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>libraries/Kaleidoscope-OneShot/src/Kaleidoscope/<a class="el" href="OneShot_8h_source.html">OneShot.h</a></li>
 <li>libraries/Kaleidoscope-OneShot/src/Kaleidoscope/<a class="el" href="OneShot_8cpp_source.html">OneShot.cpp</a></li>
 </ul>

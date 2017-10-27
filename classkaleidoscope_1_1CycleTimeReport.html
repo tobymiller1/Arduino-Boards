@@ -116,8 +116,7 @@ Collaboration diagram for kaleidoscope::CycleTimeReport:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6f404caa512dd3dc222c8deb8a34d800"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f404caa512dd3dc222c8deb8a34d800"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (void) final</td></tr>
+<tr class="memitem:a6f404caa512dd3dc222c8deb8a34d800"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkaleidoscope_1_1CycleTimeReport.html#a6f404caa512dd3dc222c8deb8a34d800">begin</a> (void) final</td></tr>
 <tr class="separator:a6f404caa512dd3dc222c8deb8a34d800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -144,7 +143,42 @@ static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>loop_start
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="CycleTimeReport_8h_source.html#l00024">24</a> of file <a class="el" href="CycleTimeReport_8h_source.html">CycleTimeReport.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a6f404caa512dd3dc222c8deb8a34d800"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kaleidoscope::CycleTimeReport::begin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initial plugin setup hook. All plugins are supposed to provide a singleton object, statically initialized at compile-time (with few exceptions). Because of this, the order in which they are instantiated is unspecified, and cannot be relied upon. For this reason, one's expected to explicitly initialize, "use" the plugins one wishes to, by calling <code>Kaleidoscope.use()</code> with a list of plugin object pointers.</p>
+<p>This function will in turn call the <code>begin</code> function of each plugin, so that they can perform any initial setup they wish, such as registering event handler or loop hooks. This is the only time this function will be called. It is intentionally protected, and accessible by the <code>Kaleidoscope</code> class only. </p>
+
+<p>Reimplemented from <a class="el" href="classKaleidoscopePlugin.html#adeedf0552ab36cfb7744b77fa7fe554a">KaleidoscopePlugin</a>.</p>
+
+<p>Definition at line <a class="el" href="CycleTimeReport_8cpp_source.html#l00026">26</a> of file <a class="el" href="CycleTimeReport_8cpp_source.html">CycleTimeReport.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  Kaleidoscope.useLoopHook(loopHook);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  next_report_time_ = millis() + 1000;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>libraries/Kaleidoscope-CycleTimeReport/src/kaleidoscope/<a class="el" href="CycleTimeReport_8h_source.html">CycleTimeReport.h</a></li>
 <li>libraries/Kaleidoscope-CycleTimeReport/src/kaleidoscope/<a class="el" href="CycleTimeReport_8cpp_source.html">CycleTimeReport.cpp</a></li>
 </ul>

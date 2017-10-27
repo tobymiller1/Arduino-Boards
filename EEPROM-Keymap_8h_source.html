@@ -121,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> max_layers(uint8_t max);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">void</span> begin(<span class="keywordtype">void</span>) <span class="keyword">final</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classkaleidoscope_1_1EEPROMKeymap.html#a804f7b1f430126cfc6a91f9ab8d0b0a5">begin</a>(<span class="keywordtype">void</span>) <span class="keyword">final</span>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">static</span> uint16_t keymap_base(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
@@ -129,23 +129,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">static</span> <a class="code" href="unionKey__.html">Key</a> getKeyOverride(uint8_t layer, byte row, byte col);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> focusKeymap(<span class="keyword">const</span> <span class="keywordtype">char</span> *command);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> focusKeymapTransfer(<span class="keyword">const</span> <span class="keywordtype">char</span> *command);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> updateKey(uint16_t base_pos, <a class="code" href="unionKey__.html">Key</a> key);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">static</span> uint16_t keymap_base_;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">static</span> uint8_t max_layers_;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">static</span> <a class="code" href="unionKey__.html">Key</a> parseKey(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> printKey(<a class="code" href="unionKey__.html">Key</a> key);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> focusKeymapLayer(<span class="keyword">const</span> <span class="keywordtype">char</span> *command);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> focusKeymapTransfer(<span class="keyword">const</span> <span class="keywordtype">char</span> *command);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> updateKey(uint16_t base_pos, <a class="code" href="unionKey__.html">Key</a> key);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">static</span> uint16_t keymap_base_;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">static</span> uint8_t max_layers_;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">static</span> <a class="code" href="unionKey__.html">Key</a> parseKey(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> printKey(<a class="code" href="unionKey__.html">Key</a> key);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">extern</span> <a class="code" href="classkaleidoscope_1_1EEPROMKeymap.html">kaleidoscope::EEPROMKeymap</a> EEPROMKeymap;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">extern</span> <a class="code" href="classkaleidoscope_1_1EEPROMKeymap.html">kaleidoscope::EEPROMKeymap</a> EEPROMKeymap;</div>
+<div class="ttc" id="classkaleidoscope_1_1EEPROMKeymap_html_a804f7b1f430126cfc6a91f9ab8d0b0a5"><div class="ttname"><a href="classkaleidoscope_1_1EEPROMKeymap.html#a804f7b1f430126cfc6a91f9ab8d0b0a5">kaleidoscope::EEPROMKeymap::begin</a></div><div class="ttdeci">void begin(void) final</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM-Keymap_8cpp_source.html#l00030">EEPROM-Keymap.cpp:30</a></div></div>
 <div class="ttc" id="classkaleidoscope_1_1EEPROMKeymap_html"><div class="ttname"><a href="classkaleidoscope_1_1EEPROMKeymap.html">kaleidoscope::EEPROMKeymap</a></div><div class="ttdef"><b>Definition:</b> <a href="EEPROM-Keymap_8h_source.html#l00025">EEPROM-Keymap.h:25</a></div></div>
 <div class="ttc" id="unionKey___html"><div class="ttname"><a href="unionKey__.html">Key_</a></div><div class="ttdef"><b>Definition:</b> <a href="key__defs_8h_source.html#l00020">key_defs.h:20</a></div></div>
-<div class="ttc" id="classKaleidoscopePlugin_html"><div class="ttname"><a href="classKaleidoscopePlugin.html">KaleidoscopePlugin</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope_8h_source.html#l00040">Kaleidoscope.h:40</a></div></div>
+<div class="ttc" id="classKaleidoscopePlugin_html"><div class="ttname"><a href="classKaleidoscopePlugin.html">KaleidoscopePlugin</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope_8h_source.html#l00041">Kaleidoscope.h:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

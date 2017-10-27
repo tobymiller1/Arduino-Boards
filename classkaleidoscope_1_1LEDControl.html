@@ -117,8 +117,7 @@ Collaboration diagram for kaleidoscope::LEDControl:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aea9db86ba4fd3efb1979ef8593dc1654"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea9db86ba4fd3efb1979ef8593dc1654"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (void) final</td></tr>
+<tr class="memitem:aea9db86ba4fd3efb1979ef8593dc1654"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkaleidoscope_1_1LEDControl.html#aea9db86ba4fd3efb1979ef8593dc1654">begin</a> (void) final</td></tr>
 <tr class="separator:aea9db86ba4fd3efb1979ef8593dc1654"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -144,6 +143,9 @@ static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_mode_in
 <tr class="memitem:a9eeda5212b25e28685b0a7ea4c77ab1a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9eeda5212b25e28685b0a7ea4c77ab1a"></a>
 static <a class="el" href="classkaleidoscope_1_1LEDMode.html">LEDMode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_mode</b> ()</td></tr>
 <tr class="separator:a9eeda5212b25e28685b0a7ea4c77ab1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f190bf7e09fa402a16cd38b8e3df6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73f190bf7e09fa402a16cd38b8e3df6a"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>refreshAll</b> ()</td></tr>
+<tr class="separator:a73f190bf7e09fa402a16cd38b8e3df6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a447f412f5e4e65a86b54ad1aee404989"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a447f412f5e4e65a86b54ad1aee404989"></a>
 static int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>mode_add</b> (<a class="el" href="classkaleidoscope_1_1LEDMode.html">LEDMode</a> *mode)</td></tr>
 <tr class="separator:a447f412f5e4e65a86b54ad1aee404989"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,7 +204,52 @@ static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>mode</b></t
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="Kaleidoscope-LEDControl_8h_source.html#l00086">86</a> of file <a class="el" href="Kaleidoscope-LEDControl_8h_source.html">Kaleidoscope-LEDControl.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aea9db86ba4fd3efb1979ef8593dc1654"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kaleidoscope::LEDControl::begin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initial plugin setup hook. All plugins are supposed to provide a singleton object, statically initialized at compile-time (with few exceptions). Because of this, the order in which they are instantiated is unspecified, and cannot be relied upon. For this reason, one's expected to explicitly initialize, "use" the plugins one wishes to, by calling <code>Kaleidoscope.use()</code> with a list of plugin object pointers.</p>
+<p>This function will in turn call the <code>begin</code> function of each plugin, so that they can perform any initial setup they wish, such as registering event handler or loop hooks. This is the only time this function will be called. It is intentionally protected, and accessible by the <code>Kaleidoscope</code> class only. </p>
+
+<p>Reimplemented from <a class="el" href="classKaleidoscopePlugin.html#adeedf0552ab36cfb7744b77fa7fe554a">KaleidoscopePlugin</a>.</p>
+
+<p>Definition at line <a class="el" href="Kaleidoscope-LEDControl_8cpp_source.html#l00101">101</a> of file <a class="el" href="Kaleidoscope-LEDControl_8cpp_source.html">Kaleidoscope-LEDControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                           {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  set_all_leds_to({0, 0, 0});</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordflow">for</span> (uint8_t i = 0; i &lt; LED_MAX_MODES; i++) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">if</span> (modes[i])</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      (modes[i]-&gt;<a class="code" href="classkaleidoscope_1_1LEDMode.html#aac784ae7df620b5a648d52a2183b2dbf">setup</a>)();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  Kaleidoscope.useEventHandlerHook(eventHandler);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  Kaleidoscope.useLoopHook(loopHook);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  syncTimer = millis() + syncDelay;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="ttc" id="classkaleidoscope_1_1LEDMode_html_aac784ae7df620b5a648d52a2183b2dbf"><div class="ttname"><a href="classkaleidoscope_1_1LEDMode.html#aac784ae7df620b5a648d52a2183b2dbf">kaleidoscope::LEDMode::setup</a></div><div class="ttdeci">virtual void setup(void)</div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-LEDControl_8h_source.html#l00035">Kaleidoscope-LEDControl.h:35</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>libraries/Kaleidoscope-LEDControl/src/<a class="el" href="Kaleidoscope-LEDControl_8h_source.html">Kaleidoscope-LEDControl.h</a></li>
 <li>libraries/Kaleidoscope-LEDControl/src/<a class="el" href="Kaleidoscope-LEDControl_8cpp_source.html">Kaleidoscope-LEDControl.cpp</a></li>
 </ul>

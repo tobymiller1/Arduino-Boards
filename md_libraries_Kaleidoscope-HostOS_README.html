@@ -93,7 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>The extension provides a <code>HostOS</code> singleton object. It can either be a simple one without auto-detection (the default), or one that will try to detect the Host OS, using the <a href="https://github.com/keyboardio/FingerprintUSBHost">FingerprintUSBHost</a> library. To enable auto-detection, <code>KALEIDOSCOPE_HOSTOS_GUESSER</code> must be defined before including the <code>HostOS</code> library header.</p>
 <p>```c++ #define KALEIDOSCOPE_HOSTOS_GUESSER 1</p>
 <p>#include &lt;<a class="el" href="Kaleidoscope_8h_source.html">Kaleidoscope.h</a>&gt; #include &lt;<a class="el" href="Kaleidoscope-HostOS_8h_source.html">Kaleidoscope-HostOS.h</a>&gt; #include &lt;<a class="el" href="HostOS-select_8h_source.html">Kaleidoscope/HostOS-select.h</a>&gt;</p>
-<p>void someFunction(void) { if (HostOS.os() == kaleidoscope::HostOS::LINUX) { // do something linux-y } if (HostOS.os() == kaleidoscope::HostOS::OSX) { // do something OSX-y } }</p>
+<p>void someFunction(void) { if (HostOS.os() == kaleidoscope::hostos::LINUX) { // do something linux-y } if (HostOS.os() == kaleidoscope::hostos::OSX) { // do something OSX-y } }</p>
 <p>void setup(void) { Kaleidoscope.use(&amp;HostOS);</p>
 <p>Kaleidoscope.setup (); } ```</p>
 <p>To be able to choose between the two variants, one must also include the <code><a class="el" href="HostOS-select_8h_source.html">Kaleidoscope/HostOS-select.h</a></code> header.</p>
@@ -109,6 +109,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Sets the type of the host OS, overriding any previous value. The type is then stored in EEPROM for persistence.</p>
 <p></p>
 </blockquote>
+<h2>Host OS Values</h2>
+<p>The OS type (i.e. the return type of <code>.os()</code> and the arguments to <code>.os(type)</code>) will be one of the following:</p>
+<ul>
+<li><code>kaleidoscope::hostos::LINUX</code></li>
+<li><code>kaleidoscope::hostos::OSX</code></li>
+<li><code>kaleidoscope::hostos::WINDOWS</code></li>
+<li><code>kaleidoscope::hostos::OTHER</code></li>
+</ul>
 <h2>Dependencies</h2>
 <ul>
 <li><a href="https://github.com/keyboardio/Kaleidoscope-EEPROM-Settings">Kaleidoscope-EEPROM-Settings</a></li>

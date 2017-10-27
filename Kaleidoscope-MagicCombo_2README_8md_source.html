@@ -147,52 +147,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;each bit set tells the extension that the key with that index must be held <span class="keywordflow">for</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;the action to trigger. It is recommended to use the `RxCy` macros of the core</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;`KaleidoscopeFirmware`, and *or* them together to form a bitfield.</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;The combo list **must** end with an element containing zero values <span class="keywordflow">for</span> both the</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;left and the right halves.</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;## Extension methods</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;The extension provides a `MagicCombo` singleton object, with the following</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;methods and properties:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">### `.magic_combos`</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;&gt; Setting <span class="keyword">this</span> <span class="keyword">property</span> lets the plugin know which combinations of key presses</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;&gt; we are interested in. If any of these are found active, the</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;&gt; `magicComboActions()` <span class="keyword">function</span> will be called.</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;### `.min_interval`</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;&gt; Restrict the magic action to fire at most once every `minInterval`</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;&gt; milliseconds.</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;&gt;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;&gt; Defaults to 500.</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;## Overrideable methods</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;Whenever an combination is found to be held, the extension will trigger an</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;action, in each scan cycle until the keys remain held. This is done by calling</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;the overrideable `magicComboActions` <span class="keyword">function</span>:</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">### `magicComboActions(combo_index, left_hand, right_hand)`</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;&gt; Called whenever a combination is found to be held. The <span class="keyword">function</span> by <span class="keywordflow">default</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;&gt; does nothing, and it is recommended to <span class="keyword">override</span> it from within the Sketch.</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;&gt;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;&gt; The first argument will be the index in the combo list, the other two are the</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;&gt; key states on the left and right halves, respectively.</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;&gt;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;&gt; Plugins that build upon <span class="keyword">this</span> extensions *should not* <span class="keyword">override</span> <span class="keyword">this</span> <span class="keyword">function</span>,</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;&gt; but provide helpers that can be called from it. An <span class="keyword">override</span> should only happen</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;&gt; in the Sketch.</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;## Further reading</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;Starting from the [example][plugin:example] is the recommended way of getting</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;started with the plugin.</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; [plugin:example]: https:<span class="comment">//github.com/keyboardio/Kaleidoscope-MagicCombo/blob/master/examples/MagicCombo/MagicCombo.ino</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;To see how the `RxCy` coordinates correspond to the physical keys of your</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;keyboard, you<span class="stringliteral">&#39;ll have to consult the documentation for the keyboard.</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="stringliteral">Below, you can find a diagram showing the layout for the Keyboardio Model 01.</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="stringliteral">The combo list **must** end with an element containing zero values for both the</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="stringliteral">left and the right halves.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="stringliteral">## Extension methods</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="stringliteral">The extension provides a `MagicCombo` singleton object, with the following</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="stringliteral">methods and properties:</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="stringliteral">### `.magic_combos`</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="stringliteral">&gt; Setting this property lets the plugin know which combinations of key presses</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="stringliteral">&gt; we are interested in. If any of these are found active, the</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="stringliteral">&gt; `magicComboActions()` function will be called.</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="stringliteral">### `.min_interval`</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="stringliteral">&gt; Restrict the magic action to fire at most once every `minInterval`</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="stringliteral">&gt; milliseconds.</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="stringliteral">&gt;</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="stringliteral">&gt; Defaults to 500.</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="stringliteral">## Overrideable methods</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="stringliteral">Whenever an combination is found to be held, the extension will trigger an</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="stringliteral">action, in each scan cycle until the keys remain held. This is done by calling</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="stringliteral">the overrideable `magicComboActions` function:</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="stringliteral">### `magicComboActions(combo_index, left_hand, right_hand)`</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="stringliteral">&gt; Called whenever a combination is found to be held. The function by default</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="stringliteral">&gt; does nothing, and it is recommended to override it from within the Sketch.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="stringliteral">&gt;</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="stringliteral">&gt; The first argument will be the index in the combo list, the other two are the</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="stringliteral">&gt; key states on the left and right halves, respectively.</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="stringliteral">&gt;</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="stringliteral">&gt; Plugins that build upon this extensions *should not* override this function,</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="stringliteral">&gt; but provide helpers that can be called from it. An override should only happen</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="stringliteral">&gt; in the Sketch.</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="stringliteral">## Further reading</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="stringliteral">Starting from the [example][plugin:example] is the recommended way of getting</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="stringliteral">started with the plugin.</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="stringliteral">`RxCy` coordinates for a Model01:</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="stringliteral">![rxcy layout](./docs/rc_layout.png)</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="stringliteral"> [plugin:example]: https://github.com/keyboardio/Kaleidoscope-MagicCombo/blob/master/examples/MagicCombo/MagicCombo.ino</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

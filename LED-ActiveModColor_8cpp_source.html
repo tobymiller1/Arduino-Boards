@@ -119,49 +119,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  0xff, 0xff, 0xff</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> ActiveModColorEffect::begin(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  Kaleidoscope.useLoopHook(loopHook);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> ActiveModColorEffect::loopHook(<span class="keywordtype">bool</span> is_post_clear) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">if</span> (is_post_clear)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">for</span> (byte r = 0; r &lt; ROWS; r++) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">for</span> (byte c = 0; c &lt; COLS; c++) {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <a class="code" href="unionKey__.html">Key</a> k = Layer.lookupOnActiveLayer(r, c);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordflow">if</span> (::OneShot.isOneShotKey(k)) {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> (::OneShot.isActive(k))</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;          ::LEDControl.setCrgbAt(r, c, highlight_color);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        else</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;          ::LEDControl.refreshAt(r, c);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (k.raw &gt;= Key_LeftControl.raw &amp;&amp; k.raw &lt;= Key_RightGui.raw) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span> (hid::isModifierKeyActive(k))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          ::LEDControl.setCrgbAt(r, c, highlight_color);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        else</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          ::LEDControl.refreshAt(r, c);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (k.flags == (SYNTHETIC | SWITCH_TO_KEYMAP)) {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        uint8_t layer = k.keyCode;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> (layer &gt;= LAYER_SHIFT_OFFSET)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;          layer -= LAYER_SHIFT_OFFSET;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> (Layer.isOn(layer))</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          ::LEDControl.setCrgbAt(r, c, highlight_color);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        else</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          ::LEDControl.refreshAt(r, c);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<a class="code" href="classkaleidoscope_1_1ActiveModColorEffect.html">kaleidoscope::ActiveModColorEffect</a> ActiveModColorEffect;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<a class="code" href="structcRGB.html">cRGB</a> ActiveModColorEffect::sticky_color = CRGB(0xff, 0x00, 0x00);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classkaleidoscope_1_1ActiveModColorEffect.html#a1bb632f3ef578d3ab0276bbd36604438">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classkaleidoscope_1_1ActiveModColorEffect.html#a1bb632f3ef578d3ab0276bbd36604438">ActiveModColorEffect::begin</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  Kaleidoscope.useLoopHook(loopHook);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> ActiveModColorEffect::loopHook(<span class="keywordtype">bool</span> is_post_clear) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">if</span> (is_post_clear)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">for</span> (byte r = 0; r &lt; ROWS; r++) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">for</span> (byte c = 0; c &lt; COLS; c++) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <a class="code" href="unionKey__.html">Key</a> k = Layer.lookupOnActiveLayer(r, c);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">if</span> (::<a class="code" href="classkaleidoscope_1_1OneShot.html">OneShot</a>.isOneShotKey(k)) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">if</span> (::<a class="code" href="classkaleidoscope_1_1OneShot.html">OneShot</a>.isSticky(k))</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;          ::<a class="code" href="classkaleidoscope_1_1LEDControl.html">LEDControl</a>.setCrgbAt(r, c, sticky_color);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (::<a class="code" href="classkaleidoscope_1_1OneShot.html">OneShot</a>.isActive(k))</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;          ::<a class="code" href="classkaleidoscope_1_1LEDControl.html">LEDControl</a>.setCrgbAt(r, c, highlight_color);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        else</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          ::LEDControl.refreshAt(r, c);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (k.raw &gt;= Key_LeftControl.raw &amp;&amp; k.raw &lt;= Key_RightGui.raw) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> (hid::isModifierKeyActive(k))</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;          ::LEDControl.setCrgbAt(r, c, highlight_color);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        else</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;          ::LEDControl.refreshAt(r, c);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (k.flags == (SYNTHETIC | SWITCH_TO_KEYMAP)) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        uint8_t layer = k.keyCode;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (layer &gt;= LAYER_SHIFT_OFFSET)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;          layer -= LAYER_SHIFT_OFFSET;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> (Layer.isOn(layer))</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;          ::LEDControl.setCrgbAt(r, c, highlight_color);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        else</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          ::LEDControl.refreshAt(r, c);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<a class="code" href="classkaleidoscope_1_1ActiveModColorEffect.html">kaleidoscope::ActiveModColorEffect</a> ActiveModColorEffect;</div>
 <div class="ttc" id="classkaleidoscope_1_1ActiveModColorEffect_html"><div class="ttname"><a href="classkaleidoscope_1_1ActiveModColorEffect.html">kaleidoscope::ActiveModColorEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="LED-ActiveModColor_8h_source.html#l00025">LED-ActiveModColor.h:25</a></div></div>
+<div class="ttc" id="classkaleidoscope_1_1OneShot_html"><div class="ttname"><a href="classkaleidoscope_1_1OneShot.html">kaleidoscope::OneShot</a></div><div class="ttdef"><b>Definition:</b> <a href="OneShot_8h_source.html#l00029">OneShot.h:29</a></div></div>
 <div class="ttc" id="unionKey___html"><div class="ttname"><a href="unionKey__.html">Key_</a></div><div class="ttdef"><b>Definition:</b> <a href="key__defs_8h_source.html#l00020">key_defs.h:20</a></div></div>
-<div class="ttc" id="Kaleidoscope-Hardware_8h_html_a11a0c3d30e2ade065e64c5e24ea04d22"><div class="ttname"><a href="Kaleidoscope-Hardware_8h.html#a11a0c3d30e2ade065e64c5e24ea04d22">cRGB</a></div><div class="ttdeci">struct cRGB cRGB</div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Hardware_8h_source.html#l00036">Kaleidoscope-Hardware.h:36</a></div></div>
+<div class="ttc" id="Kaleidoscope-Hardware_8h_html_a11a0c3d30e2ade065e64c5e24ea04d22"><div class="ttname"><a href="Kaleidoscope-Hardware_8h.html#a11a0c3d30e2ade065e64c5e24ea04d22">cRGB</a></div><div class="ttdeci">struct cRGB cRGB</div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Hardware_8h_source.html#l00053">Kaleidoscope-Hardware.h:53</a></div></div>
 <div class="ttc" id="structcRGB_html"><div class="ttname"><a href="structcRGB.html">cRGB</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Hardware-Shortcut_8h_source.html#l00029">Kaleidoscope-Hardware-Shortcut.h:29</a></div></div>
+<div class="ttc" id="classkaleidoscope_1_1ActiveModColorEffect_html_a1bb632f3ef578d3ab0276bbd36604438"><div class="ttname"><a href="classkaleidoscope_1_1ActiveModColorEffect.html#a1bb632f3ef578d3ab0276bbd36604438">kaleidoscope::ActiveModColorEffect::begin</a></div><div class="ttdeci">void begin(void) final</div><div class="ttdef"><b>Definition:</b> <a href="LED-ActiveModColor_8cpp_source.html#l00031">LED-ActiveModColor.cpp:31</a></div></div>
+<div class="ttc" id="classkaleidoscope_1_1LEDControl_html"><div class="ttname"><a href="classkaleidoscope_1_1LEDControl.html">kaleidoscope::LEDControl</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-LEDControl_8h_source.html#l00086">Kaleidoscope-LEDControl.h:86</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

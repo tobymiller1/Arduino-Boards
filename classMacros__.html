@@ -111,8 +111,7 @@ Collaboration diagram for Macros_:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8e3cbf44fccc8b920306b16e1da1ede4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e3cbf44fccc8b920306b16e1da1ede4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (void) final</td></tr>
+<tr class="memitem:a8e3cbf44fccc8b920306b16e1da1ede4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMacros__.html#a8e3cbf44fccc8b920306b16e1da1ede4">begin</a> (void) final</td></tr>
 <tr class="separator:a8e3cbf44fccc8b920306b16e1da1ede4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af483ecd2ae4f6ef4c2f19ac7e487980d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af483ecd2ae4f6ef4c2f19ac7e487980d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>play</b> (const macro_t *macro_p)</td></tr>
@@ -146,7 +145,41 @@ Private Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="Kaleidoscope-Macros_8h_source.html#l00010">10</a> of file <a class="el" href="Kaleidoscope-Macros_8h_source.html">Kaleidoscope-Macros.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a8e3cbf44fccc8b920306b16e1da1ede4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Macros_::begin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initial plugin setup hook. All plugins are supposed to provide a singleton object, statically initialized at compile-time (with few exceptions). Because of this, the order in which they are instantiated is unspecified, and cannot be relied upon. For this reason, one's expected to explicitly initialize, "use" the plugins one wishes to, by calling <code>Kaleidoscope.use()</code> with a list of plugin object pointers.</p>
+<p>This function will in turn call the <code>begin</code> function of each plugin, so that they can perform any initial setup they wish, such as registering event handler or loop hooks. This is the only time this function will be called. It is intentionally protected, and accessible by the <code>Kaleidoscope</code> class only. </p>
+
+<p>Reimplemented from <a class="el" href="classKaleidoscopePlugin.html#adeedf0552ab36cfb7744b77fa7fe554a">KaleidoscopePlugin</a>.</p>
+
+<p>Definition at line <a class="el" href="Kaleidoscope-Macros_8cpp_source.html#l00200">200</a> of file <a class="el" href="Kaleidoscope-Macros_8cpp_source.html">Kaleidoscope-Macros.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                   {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  Kaleidoscope.useEventHandlerHook(handleMacroEvent);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>libraries/Kaleidoscope-Macros/src/<a class="el" href="Kaleidoscope-Macros_8h_source.html">Kaleidoscope-Macros.h</a></li>
 <li>libraries/Kaleidoscope-Macros/src/<a class="el" href="Kaleidoscope-Macros_8cpp_source.html">Kaleidoscope-Macros.cpp</a></li>
 </ul>

@@ -116,8 +116,7 @@ Collaboration diagram for kaleidoscope::EEPROMKeymap:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a804f7b1f430126cfc6a91f9ab8d0b0a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a804f7b1f430126cfc6a91f9ab8d0b0a5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (void) final</td></tr>
+<tr class="memitem:a804f7b1f430126cfc6a91f9ab8d0b0a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkaleidoscope_1_1EEPROMKeymap.html#a804f7b1f430126cfc6a91f9ab8d0b0a5">begin</a> (void) final</td></tr>
 <tr class="separator:a804f7b1f430126cfc6a91f9ab8d0b0a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -137,6 +136,9 @@ static <a class="el" href="unionKey__.html">Key</a>&#160;</td><td class="memItem
 <tr class="memitem:a602958e5bb79fb29dcfbe23e2f2a4643"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a602958e5bb79fb29dcfbe23e2f2a4643"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>focusKeymap</b> (const char *command)</td></tr>
 <tr class="separator:a602958e5bb79fb29dcfbe23e2f2a4643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa720bd1f960a38ad2885900d6c9d527c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa720bd1f960a38ad2885900d6c9d527c"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>focusKeymapLayer</b> (const char *command)</td></tr>
+<tr class="separator:aa720bd1f960a38ad2885900d6c9d527c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e7140599f7bb3c263909c0cfa72d91b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e7140599f7bb3c263909c0cfa72d91b"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>focusKeymapTransfer</b> (const char *command)</td></tr>
 <tr class="separator:a5e7140599f7bb3c263909c0cfa72d91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,7 +167,41 @@ static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_layers_
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="EEPROM-Keymap_8h_source.html#l00025">25</a> of file <a class="el" href="EEPROM-Keymap_8h_source.html">EEPROM-Keymap.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a804f7b1f430126cfc6a91f9ab8d0b0a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kaleidoscope::EEPROMKeymap::begin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initial plugin setup hook. All plugins are supposed to provide a singleton object, statically initialized at compile-time (with few exceptions). Because of this, the order in which they are instantiated is unspecified, and cannot be relied upon. For this reason, one's expected to explicitly initialize, "use" the plugins one wishes to, by calling <code>Kaleidoscope.use()</code> with a list of plugin object pointers.</p>
+<p>This function will in turn call the <code>begin</code> function of each plugin, so that they can perform any initial setup they wish, such as registering event handler or loop hooks. This is the only time this function will be called. It is intentionally protected, and accessible by the <code>Kaleidoscope</code> class only. </p>
+
+<p>Reimplemented from <a class="el" href="classKaleidoscopePlugin.html#adeedf0552ab36cfb7744b77fa7fe554a">KaleidoscopePlugin</a>.</p>
+
+<p>Definition at line <a class="el" href="EEPROM-Keymap_8cpp_source.html#l00030">30</a> of file <a class="el" href="EEPROM-Keymap_8cpp_source.html">EEPROM-Keymap.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                             {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  Kaleidoscope.use(&amp;::EEPROMSettings);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>libraries/Kaleidoscope-EEPROM-Keymap/src/Kaleidoscope/<a class="el" href="EEPROM-Keymap_8h_source.html">EEPROM-Keymap.h</a></li>
 <li>libraries/Kaleidoscope-EEPROM-Keymap/src/Kaleidoscope/<a class="el" href="EEPROM-Keymap_8cpp_source.html">EEPROM-Keymap.cpp</a></li>
 </ul>

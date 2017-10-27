@@ -237,7 +237,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keywordtype">void</span> loop_hook_use(Kaleidoscope_::loopHook hook) {</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  Kaleidoscope.useLoopHook(hook);</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
-<div class="ttc" id="classKaleidoscope___html"><div class="ttname"><a href="classKaleidoscope__.html">Kaleidoscope_</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope_8h_source.html#l00045">Kaleidoscope.h:45</a></div></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keywordtype">void</span> __USE_PLUGINS(<a class="code" href="classKaleidoscopePlugin.html">KaleidoscopePlugin</a> *plugin, ...) {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  va_list ap;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  Kaleidoscope.use(plugin);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  va_start(ap, plugin);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordflow">while</span> ((plugin = (<a class="code" href="classKaleidoscopePlugin.html">KaleidoscopePlugin</a> *)va_arg(ap, <a class="code" href="classKaleidoscopePlugin.html">KaleidoscopePlugin</a> *)) != NULL)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    Kaleidoscope.use(plugin);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  va_end(ap);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="ttc" id="classKaleidoscope___html"><div class="ttname"><a href="classKaleidoscope__.html">Kaleidoscope_</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope_8h_source.html#l00063">Kaleidoscope.h:63</a></div></div>
+<div class="ttc" id="classKaleidoscopePlugin_html"><div class="ttname"><a href="classKaleidoscopePlugin.html">KaleidoscopePlugin</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope_8h_source.html#l00041">Kaleidoscope.h:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

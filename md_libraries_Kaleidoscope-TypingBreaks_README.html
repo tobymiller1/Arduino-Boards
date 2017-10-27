@@ -92,25 +92,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>The plugin comes with reasonable defaults (see below), and can be used out of the box, without any further configuration:</p>
 <p>```c++ #include &lt;<a class="el" href="Kaleidoscope_8h_source.html">Kaleidoscope.h</a>&gt; #include &lt;<a class="el" href="Kaleidoscope-TypingBreaks_8h_source.html">Kaleidoscope-TypingBreaks.h</a>&gt;</p>
 <p>void setup (void) { Kaleidoscope.use (&amp;TypingBreaks);</p>
-<p>Kaleidoscope.setup (); } ```</p>
+<p>Kaleidoscope.setup ();</p>
+<p>TypingBreaks.settings.idle_time_limit = 60; } ```</p>
 <h2>Plugin methods</h2>
-<p>The plugin provides a single object, <code>TypingBreaks</code>, with the following properties. All times are in milliseconds.</p>
+<p>The plugin provides a single object, <code>TypingBreaks</code>, with the following properties. All times are in seconds.</p>
 <h3><code>.settings.idle_time_limit</code></h3>
 <blockquote class="doxtable">
 <p>The amount of time that can pass between two pressed keys, before the plugin considers it a new session, and starts all timers and counters over.</p>
-<p>Defaults to 10000 (10 seconds).</p>
+<p>Defaults to 10 seconds.</p>
 <p></p>
 </blockquote>
 <h3><code>.settings.lock_time_out</code></h3>
 <blockquote class="doxtable">
 <p>The length of the session, after which the keyboard will be locked.</p>
-<p>Defaults to 2700000 (45 minutes).</p>
+<p>Defaults to 2700 seconds (45 minutes).</p>
 <p></p>
 </blockquote>
 <h3><code>.settings.lock_length</code></h3>
 <blockquote class="doxtable">
 <p>The length until the keyboard lock is held. Any key pressed while the lock is active, will be discarded.</p>
-<p>Defaults to 300000 (15 minutes).</p>
+<p>Defaults to 300 seconds (5 minutes).</p>
 <p></p>
 </blockquote>
 <h3><code>.settings.left_hand_max_keys</code></h3>

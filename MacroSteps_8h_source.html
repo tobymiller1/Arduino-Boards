@@ -128,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define Uc(k) MACRO_ACTION_STEP_KEYCODEUP, (Key_ ## k).keyCode</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define Tc(k) MACRO_ACTION_STEP_TAPCODE, (Key_ ## k).keyCode</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define END   MACRO_ACTION_END</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;__attribute__((deprecated(<span class="stringliteral">&quot;END is no longer required to end macros&quot;</span>))) const MacroActionStepType END = MACRO_ACTION_END;</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

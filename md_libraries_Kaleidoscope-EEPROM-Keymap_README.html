@@ -105,11 +105,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p></p>
 </blockquote>
 <h2>Focus commands</h2>
-<p>The plugin provides two <code>Focus</code> hooks: <code>FOCUS_HOOK_KEYMAP</code>, and <code>FOCUS_HOOK_KEYMAP_TRANSFER</code>. Together, they make the following commands available, respectively:</p>
+<p>The plugin provides three <code>Focus</code> hooks: <code>FOCUS_HOOK_KEYMAP</code>, <code>FOCUS_HOOK_KEYMAP_LAYER</code>, and <code>FOCUS_HOOK_KEYMAP_TRANSFER</code>. Together, they make the following commands available, respectively:</p>
 <h3><code>keymap.map [codes...]</code></h3>
 <blockquote class="doxtable">
 <p>Without arguments, displays the keymap currently in effect. Each key is printed as its raw, 16-bit keycode.</p>
 <p>With arguments, it stores as many keys as given. One does not need to set all keys, on all layers: the command will start from the first key on the first layer, and go on as long as it has input. It will not go past the layer set via the <code>.max_layers()</code> method.</p>
+<p></p>
+</blockquote>
+<h3><code>keymap.layer LAYER [codes...]</code></h3>
+<blockquote class="doxtable">
+<p>Without codes, prints the keymap for the given layer (zero-indexed). Prints each key as its raw 16-bit keycode.</p>
+<p></p>
+</blockquote>
+<blockquote class="doxtable">
+<p>With codes, stores them as the keymap for the given layer.</p>
 <p></p>
 </blockquote>
 <h3><code>keymap.transfer LAYER</code></h3>

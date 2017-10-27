@@ -123,9 +123,10 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 <p>Forward declaration of the <a class="el" href="structcRGB.html">cRGB</a> structure.</p>
 <p>The base class does not define the <a class="el" href="structcRGB.html">cRGB</a> structure, that is left up to the individual Hardware libraries. We do a forward declaration here, because the base hardware has methods that depend on a <a class="el" href="structcRGB.html">cRGB</a> structure.</p>
-<p>The structure will need to have at least three members: r, g, and b - compilation will fail otherwise. </p>
+<p>The structure will need to have at least three members: r, g, and b - compilation will fail otherwise.</p>
+<p>Despite its name, the members do not need to be in the order r g b &ndash; most likely they will be in an order that is convenient for the hardware. So initializing a <a class="el" href="structcRGB.html">cRGB</a> with a struct literal will give surprising results for any colors where r, g, and b do not have the same value. Each Hardware library defines a CRGB(r,g,b) macro which returns a literal <a class="el" href="structcRGB.html">cRGB</a> with the given values. </p>
 
-<p>Definition at line <a class="el" href="Kaleidoscope-Hardware_8h_source.html#l00036">36</a> of file <a class="el" href="Kaleidoscope-Hardware_8h_source.html">Kaleidoscope-Hardware.h</a>.</p>
+<p>Definition at line <a class="el" href="Kaleidoscope-Hardware_8h_source.html#l00053">53</a> of file <a class="el" href="Kaleidoscope-Hardware_8h_source.html">Kaleidoscope-Hardware.h</a>.</p>
 
 </div>
 </div>

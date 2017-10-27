@@ -100,7 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;uint8_t NumLock_::numPadLayer;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<a class="code" href="structcRGB.html">cRGB</a> numpad_color = CRGB(255, 0, 0);</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> NumLock_::begin(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classNumLock__.html#ac9242be2e3cdd75fd48780902a1f27e3">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classNumLock__.html#ac9242be2e3cdd75fd48780902a1f27e3">NumLock_::begin</a>(<span class="keywordtype">void</span>) {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  Kaleidoscope.useLoopHook(loopHook);</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  Kaleidoscope.useEventHandlerHook(eventHandlerHook);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
@@ -133,7 +133,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">if</span> (key != Key_KeypadNumLock)</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> key;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">if</span> (!key_toggled_on(key_state))</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">if</span> (!keyToggledOn(key_state))</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> key;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">if</span> (Layer.isOn(numPadLayer)) {</div>
@@ -147,6 +147,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<a class="code" href="classNumLock__.html">NumLock_</a> NumLock;</div>
+<div class="ttc" id="classNumLock___html_ac9242be2e3cdd75fd48780902a1f27e3"><div class="ttname"><a href="classNumLock__.html#ac9242be2e3cdd75fd48780902a1f27e3">NumLock_::begin</a></div><div class="ttdeci">void begin(void) final</div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Numlock_8cpp_source.html#l00010">Kaleidoscope-Numlock.cpp:10</a></div></div>
 <div class="ttc" id="unionKey___html"><div class="ttname"><a href="unionKey__.html">Key_</a></div><div class="ttdef"><b>Definition:</b> <a href="key__defs_8h_source.html#l00020">key_defs.h:20</a></div></div>
 <div class="ttc" id="classNumLock___html"><div class="ttname"><a href="classNumLock__.html">NumLock_</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Numlock_8h_source.html#l00007">Kaleidoscope-Numlock.h:7</a></div></div>
 <div class="ttc" id="structcRGB_html"><div class="ttname"><a href="structcRGB.html">cRGB</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Hardware-Shortcut_8h_source.html#l00029">Kaleidoscope-Hardware-Shortcut.h:29</a></div></div>

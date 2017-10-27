@@ -118,11 +118,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;uint16_t LEDPaletteTheme::palette_base_;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> LEDPaletteTheme::begin(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  Kaleidoscope.use(&amp;::EEPROMSettings);</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classkaleidoscope_1_1LEDPaletteTheme.html#a1c7051716ced19bbd477f19ce6bed944">   28</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classkaleidoscope_1_1LEDPaletteTheme.html#a1c7051716ced19bbd477f19ce6bed944">LEDPaletteTheme::begin</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  Kaleidoscope.use(&amp;::<a class="code" href="classkaleidoscope_1_1EEPROMSettings.html">EEPROMSettings</a>);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">if</span> (!palette_base_)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    palette_base_ = ::EEPROMSettings.requestSlice(16 * <span class="keyword">sizeof</span>(<a class="code" href="structcRGB.html">cRGB</a>));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    palette_base_ = <a class="code" href="classkaleidoscope_1_1EEPROMSettings.html">::EEPROMSettings</a>.requestSlice(16 * <span class="keyword">sizeof</span>(<a class="code" href="structcRGB.html">cRGB</a>));</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;uint16_t LEDPaletteTheme::reserveThemes(uint8_t max_themes) {</div>
@@ -254,8 +254,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<a class="code" href="classkaleidoscope_1_1LEDPaletteTheme.html">kaleidoscope::LEDPaletteTheme</a> LEDPaletteTheme;</div>
+<div class="ttc" id="classkaleidoscope_1_1EEPROMSettings_html"><div class="ttname"><a href="classkaleidoscope_1_1EEPROMSettings.html">kaleidoscope::EEPROMSettings</a></div><div class="ttdef"><b>Definition:</b> <a href="EEPROM-Settings_8h_source.html#l00025">EEPROM-Settings.h:25</a></div></div>
 <div class="ttc" id="classkaleidoscope_1_1LEDPaletteTheme_html"><div class="ttname"><a href="classkaleidoscope_1_1LEDPaletteTheme.html">kaleidoscope::LEDPaletteTheme</a></div><div class="ttdef"><b>Definition:</b> <a href="LED-Palette-Theme_8h_source.html#l00026">LED-Palette-Theme.h:26</a></div></div>
 <div class="ttc" id="structcRGB_html"><div class="ttname"><a href="structcRGB.html">cRGB</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Hardware-Shortcut_8h_source.html#l00029">Kaleidoscope-Hardware-Shortcut.h:29</a></div></div>
+<div class="ttc" id="classkaleidoscope_1_1LEDPaletteTheme_html_a1c7051716ced19bbd477f19ce6bed944"><div class="ttname"><a href="classkaleidoscope_1_1LEDPaletteTheme.html#a1c7051716ced19bbd477f19ce6bed944">kaleidoscope::LEDPaletteTheme::begin</a></div><div class="ttdeci">void begin(void) final</div><div class="ttdef"><b>Definition:</b> <a href="LED-Palette-Theme_8cpp_source.html#l00028">LED-Palette-Theme.cpp:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

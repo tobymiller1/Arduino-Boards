@@ -153,7 +153,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;DualUse::DualUse(<span class="keywordtype">void</span>) {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">void</span> DualUse::begin(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classkaleidoscope_1_1DualUse.html#a5e43228fcad14735b598927fd2449d1d">   63</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classkaleidoscope_1_1DualUse.html#a5e43228fcad14735b598927fd2449d1d">DualUse::begin</a>(<span class="keywordtype">void</span>) {</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  Kaleidoscope.useEventHandlerHook(eventHandlerHook);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
@@ -185,51 +185,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyIsPressed(key_state)) {</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">if</span> (millis() &gt;= end_time_) {</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        new_key = specialAction(spec_index);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyToggledOff(key_state)) {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordflow">if</span> ((millis() &gt;= end_time_) &amp;&amp; bitRead(key_action_needed_map_, spec_index)) {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        uint8_t m = mapped_key.raw - ranges::DU_FIRST - (spec_index &lt;&lt; 8);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">if</span> (spec_index &gt;= 8)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;          m--;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="unionKey__.html">Key</a> new_key = { m, KEY_FLAGS };</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        handleKeyswitchEvent(new_key, row, col, IS_PRESSED | INJECTED);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        hid::sendKeyboardReport();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">if</span> (spec_index &gt;= 8) {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;          uint8_t target = spec_index - 8;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;          Layer.off(target);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      bitWrite(pressed_map_, spec_index, 0);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      bitWrite(key_action_needed_map_, spec_index, 0);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> new_key;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordflow">if</span> (pressed_map_ == 0) {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> mapped_key;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  pressAllSpecials(row, col);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  key_action_needed_map_ = 0;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordflow">if</span> (pressed_map_ &gt; (1 &lt;&lt; 7)) {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    mapped_key = Layer.lookup(row, col);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">return</span> mapped_key;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<a class="code" href="classkaleidoscope_1_1DualUse.html">kaleidoscope::DualUse</a> DualUse;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        bitWrite(key_action_needed_map_, spec_index, 0);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyToggledOff(key_state)) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="keywordflow">if</span> ((millis() &lt; end_time_) &amp;&amp; bitRead(key_action_needed_map_, spec_index)) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        uint8_t m = mapped_key.raw - ranges::DU_FIRST - (spec_index &lt;&lt; 8);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">if</span> (spec_index &gt;= 8)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;          m--;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="unionKey__.html">Key</a> new_key = { m, KEY_FLAGS };</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        handleKeyswitchEvent(new_key, row, col, IS_PRESSED | INJECTED);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        hid::sendKeyboardReport();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span> (spec_index &gt;= 8) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;          uint8_t target = spec_index - 8;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;          Layer.off(target);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      bitWrite(pressed_map_, spec_index, 0);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      bitWrite(key_action_needed_map_, spec_index, 0);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">return</span> new_key;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordflow">if</span> (pressed_map_ == 0) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> mapped_key;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  pressAllSpecials(row, col);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  key_action_needed_map_ = 0;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">if</span> (pressed_map_ &gt; (1 &lt;&lt; 7)) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    mapped_key = Layer.lookup(row, col);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">return</span> mapped_key;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<a class="code" href="classkaleidoscope_1_1DualUse.html">kaleidoscope::DualUse</a> DualUse;</div>
 <div class="ttc" id="unionKey___html"><div class="ttname"><a href="unionKey__.html">Key_</a></div><div class="ttdef"><b>Definition:</b> <a href="key__defs_8h_source.html#l00020">key_defs.h:20</a></div></div>
 <div class="ttc" id="classkaleidoscope_1_1DualUse_html"><div class="ttname"><a href="classkaleidoscope_1_1DualUse.html">kaleidoscope::DualUse</a></div><div class="ttdef"><b>Definition:</b> <a href="DualUse_8h_source.html#l00033">DualUse.h:33</a></div></div>
+<div class="ttc" id="classkaleidoscope_1_1DualUse_html_a5e43228fcad14735b598927fd2449d1d"><div class="ttname"><a href="classkaleidoscope_1_1DualUse.html#a5e43228fcad14735b598927fd2449d1d">kaleidoscope::DualUse::begin</a></div><div class="ttdeci">void begin(void) final</div><div class="ttdef"><b>Definition:</b> <a href="DualUse_8cpp_source.html#l00063">DualUse.cpp:63</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

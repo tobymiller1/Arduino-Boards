@@ -117,8 +117,7 @@ Collaboration diagram for kaleidoscope::hostos::Base:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a37c8be6645e24403962ae4d7d2966034"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37c8be6645e24403962ae4d7d2966034"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (void) final</td></tr>
+<tr class="memitem:a37c8be6645e24403962ae4d7d2966034"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkaleidoscope_1_1hostos_1_1Base.html#a37c8be6645e24403962ae4d7d2966034">begin</a> (void) final</td></tr>
 <tr class="separator:a37c8be6645e24403962ae4d7d2966034"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78ff1631e60ee5af62a289b48f367d67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78ff1631e60ee5af62a289b48f367d67"></a>
 Type&#160;</td><td class="memItemRight" valign="bottom"><b>os</b> (void)</td></tr>
@@ -157,7 +156,55 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_configured_</b> = 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="HostOS-Base_8h_source.html#l00035">35</a> of file <a class="el" href="HostOS-Base_8h_source.html">HostOS-Base.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a37c8be6645e24403962ae4d7d2966034"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kaleidoscope::hostos::Base::begin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initial plugin setup hook. All plugins are supposed to provide a singleton object, statically initialized at compile-time (with few exceptions). Because of this, the order in which they are instantiated is unspecified, and cannot be relied upon. For this reason, one's expected to explicitly initialize, "use" the plugins one wishes to, by calling <code>Kaleidoscope.use()</code> with a list of plugin object pointers.</p>
+<p>This function will in turn call the <code>begin</code> function of each plugin, so that they can perform any initial setup they wish, such as registering event handler or loop hooks. This is the only time this function will be called. It is intentionally protected, and accessible by the <code>Kaleidoscope</code> class only. </p>
+
+<p>Reimplemented from <a class="el" href="classKaleidoscopePlugin.html#adeedf0552ab36cfb7744b77fa7fe554a">KaleidoscopePlugin</a>.</p>
+
+<p>Definition at line <a class="el" href="HostOS-Base_8cpp_source.html#l00027">27</a> of file <a class="el" href="HostOS-Base_8cpp_source.html">HostOS-Base.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                     {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">if</span> (is_configured_)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  eeprom_slice_ = ::EEPROMSettings.requestSlice(<span class="keyword">sizeof</span>(os_));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  is_configured_ = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">if</span> (os_ != AUTO) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">if</span> ((os_ = (Type)EEPROM.read(eeprom_slice_)) != AUTO)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  autoDetect();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>libraries/Kaleidoscope-HostOS/src/Kaleidoscope/<a class="el" href="HostOS-Base_8h_source.html">HostOS-Base.h</a></li>
 <li>libraries/Kaleidoscope-HostOS/src/Kaleidoscope/<a class="el" href="HostOS-Base_8cpp_source.html">HostOS-Base.cpp</a></li>
 </ul>

@@ -131,10 +131,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;Kaleidoscope/HostOS-select.h&gt;</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> someFunction(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">if</span> (HostOS.os() == kaleidoscope::HostOS::LINUX) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">if</span> (HostOS.os() == kaleidoscope::hostos::LINUX) {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// do something linux-y</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">if</span> (HostOS.os() == kaleidoscope::HostOS::OSX) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">if</span> (HostOS.os() == kaleidoscope::hostos::OSX) {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// do something OSX-y</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
@@ -162,16 +162,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;&gt; Sets the type of the host OS, overriding any previous value. The type is then</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;&gt; stored in EEPROM <span class="keywordflow">for</span> persistence.</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;## Dependencies</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;## Host OS Values</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;* [Kaleidoscope-EEPROM-Settings](https:<span class="comment">//github.com/keyboardio/Kaleidoscope-EEPROM-Settings)</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;The OS type (i.e. the <span class="keywordflow">return</span> type of `.os()` and the arguments to `.os(type)`) will be one of the following:</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">## Further reading</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;Starting from the [example][plugin:example] is the recommended way of getting</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;started with the extension.</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;   - `kaleidoscope::hostos::LINUX`</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   - `kaleidoscope::hostos::OSX`</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;   - `kaleidoscope::hostos::WINDOWS`</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   - `kaleidoscope::hostos::OTHER`</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; [plugin:example]: https:<span class="comment">//github.com/keyboardio/Kaleidoscope-HostOS/blob/master/examples/HostOS/HostOS.ino</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;## Dependencies</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;* [Kaleidoscope-EEPROM-Settings](https:<span class="comment">//github.com/keyboardio/Kaleidoscope-EEPROM-Settings)</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;## Further reading</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;Starting from the [example][plugin:example] is the recommended way of getting</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;started with the extension.</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; [plugin:example]: https:<span class="comment">//github.com/keyboardio/Kaleidoscope-HostOS/blob/master/examples/HostOS/HostOS.ino</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
