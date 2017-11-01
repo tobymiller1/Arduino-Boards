@@ -115,58 +115,83 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  unexpected will happen. Plover will not take over the keys.</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;* The `GeminiPR` protocol supports language systems other than English.</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;All of <span class="keyword">this</span> comes at a cost, however: the protocol is implemented over the</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">virtual</span> serial port, any plugin that wants to use that port too, will run into</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;Do note that the `GeminiPR` protocol is implemented over the <span class="keyword">virtual</span> serial</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;port, so any plugin that wants to use that port too, will run into</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;conflicts with the Steno plugin. In other words, don<span class="stringliteral">&#39;t use it together</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="stringliteral">with [Focus][k:focus].</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="stringliteral"></span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="stringliteral"> [k:focus]: https://github.com/keyboardio/Kaleidoscope-Focus</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="stringliteral">## Using the plugin</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="stringliteral">## What is Steno? Why should I use it? How do I learn?</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="stringliteral">To use the plugin, simply include the header in your Sketch, tell the firmware</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="stringliteral">to use the `GeminiPR` object, and place Steno keys on your keymap. It is best</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="stringliteral">illustrated with an example:</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="stringliteral">```c++</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="stringliteral">#include &lt;Kaleidoscope.h&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="stringliteral">#include &lt;Kaleidoscope-Steno.h&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="stringliteral">// Somewhere in the keymap:</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="stringliteral">S(S1), S(S2), etc</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="stringliteral">void setup() {</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="stringliteral">  Kaleidoscope.use(&amp;GeminiPR);</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="stringliteral">  Kaleidoscope.setup ();</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="stringliteral">}</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="stringliteral">```</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="stringliteral">As mentioned above, steno (short for &quot;stenography&quot;) is a shorthand, chorded</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="stringliteral">input system that allows very fast input - licensed stenographers are required</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="stringliteral">to type **225 WPM at 95% accuracy** to get their license.  Although reaching that</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="stringliteral">speed typically takes 2-6 years of practice and training, lower speeds</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="stringliteral">comparable to or exceeding that of touch typing can reportedly be reached in</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="stringliteral">only a few months.</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="stringliteral">[This talk][stenotalk] (YouTube link) gives a brief introduction to Steno, how</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="stringliteral">it works, and why it is cool.</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="stringliteral">  [stenotalk]: https://youtu.be/Wpv-Qb-dB6g</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="stringliteral">One recommend way to get started with learning Steno is with [Plover][plover].</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="stringliteral">Plover is software for your computer that will interpret the steno input from</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="stringliteral">your Model 01 (or other NKRO QWERTY keyboard); it is available for Windows,</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="stringliteral">macOS, and Linux.  Plover&#39;</span>s [Beginner<span class="stringliteral">&#39;s Guide][ploverguide] is a great place to</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="stringliteral">get started with Steno in general and Plover in particular.</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="stringliteral">## Keys provided by the plugin</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="stringliteral">The plugin provides a number of keys one can put on the keymap, that allow</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="stringliteral">correspond to various Steno keys. All of these must be used together with the</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="stringliteral">`S()` macro provided by the plugin, as can be seen in the example above.</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="stringliteral">The provided keys are: `FN`, `N1`, `N2`, `N3`, `N4`, `N5`, `N6`, `S1`, `S2`,</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="stringliteral">`TL`, `KL`, `PL`, `WL`, `HL`, `RL`, `A`, `O`, `ST1`, `ST2`, `RE1`, `RE2`, `PWR`,</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="stringliteral">`ST3`, `ST4`, `E`, `U`, `FR`, `RR`, `PR`, `BR`, `LR`, `GR`, `TR`, `SR`, `DR`,</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="stringliteral">`N7`, `N8`, `N9`, `NA`, `NB`, `NC`, `ZR`.</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="stringliteral">## Plugin methods and properties</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="stringliteral">The plugin provides a `GeminiPR` object, with no public methods or properties.</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="stringliteral">## Dependencies</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="stringliteral">* [Kaleidoscope-Ranges](https://github.com/keyboardio/Kaleidoscope-Ranges)</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="stringliteral">## Further reading</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="stringliteral">Starting from the [example][plugin:example] is the recommended way of getting</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="stringliteral">started with the plugin.</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="stringliteral"> [plugin:example]: https://github.com/keyboardio/Kaleidoscope-Steno/blob/master/examples/Steno/Steno.ino</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="stringliteral">  [ploverguide]: https://github.com/openstenoproject/plover/wiki/Beginner&#39;</span>s-Guide:-Get-Started-with-Plover</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">## Using the plugin</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;To use the plugin, simply include the header in your Sketch, tell the firmware</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;to use the `GeminiPR` object, and place Steno keys on your keymap. It is best</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;illustrated with an example:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;```c++</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#include &lt;Kaleidoscope.h&gt;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#include &lt;Kaleidoscope-Steno.h&gt;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">// Somewhere in the keymap:</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;S(S1), S(S2), etc</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span> setup() {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  Kaleidoscope.use(&amp;GeminiPR);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  Kaleidoscope.setup ();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;```</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">## Keys provided by the plugin</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;The plugin provides a number of keys one can put on the keymap, that allow</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;correspond to various Steno keys. All of these must be used together with the</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;`S()` macro provided by the plugin, as can be seen in the example above.</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;The provided keys are: `FN`, `N1`, `N2`, `N3`, `N4`, `N5`, `N6`, `S1`, `S2`,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;`TL`, `KL`, `PL`, `WL`, `HL`, `RL`, `A`, `O`, `ST1`, `ST2`, `RE1`, `RE2`, `PWR`,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;`ST3`, `ST4`, `E`, `U`, `FR`, `RR`, `PR`, `BR`, `LR`, `GR`, `TR`, `SR`, `DR`,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;`N7`, `N8`, `N9`, `NA`, `NB`, `NC`, `ZR`.</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;See the [example][plugin:example] <span class="keywordflow">for</span> the <span class="keywordflow">default</span>/suggested placements of each</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;of these keys.</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;## Plugin methods and properties</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;The plugin provides a `GeminiPR` object, with no <span class="keyword">public</span> methods or properties.</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;## Dependencies</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;* [Kaleidoscope-Ranges](https:<span class="comment">//github.com/keyboardio/Kaleidoscope-Ranges)</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">## Further reading</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;Starting from the [example][plugin:example] is the recommended way of getting</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;started with the plugin.</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; [plugin:example]: https:<span class="comment">//github.com/keyboardio/Kaleidoscope-Steno/blob/master/examples/Steno/Steno.ino</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

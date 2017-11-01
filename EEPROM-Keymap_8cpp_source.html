@@ -206,47 +206,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  }</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  uint8_t layer = Serial.parseInt();</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  uint16_t keysPerLayer = ROWS * COLS;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  uint16_t offset = layer * keysPerLayer;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">if</span> (Serial.peek() == <span class="charliteral">&#39;\n&#39;</span>) {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">for</span> (uint8_t row = 0; row &lt; ROWS; row++) {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <span class="keywordflow">for</span> (uint8_t col = 0; col &lt; COLS; col++) {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="unionKey__.html">Key</a> k = Layer.getKey(layer, row, col);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        printKey(k);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        ::Focus.printSpace();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">for</span> (uint16_t k = 0; (k &lt; keysPerLayer) &amp;&amp; (Serial.peek() != <span class="charliteral">&#39;\n&#39;</span>); k++) {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      updateKey(layer + k, parseKey());</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keywordtype">bool</span> EEPROMKeymap::focusKeymapTransfer(<span class="keyword">const</span> <span class="keywordtype">char</span> *command) {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordflow">if</span> (strcmp_P(command, PSTR(<span class="stringliteral">&quot;keymap.transfer&quot;</span>)) != 0)</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  uint8_t layer = Serial.parseInt();</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">for</span> (uint8_t row = 0; row &lt; ROWS; row++) {</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">for</span> (uint8_t col = 0; col &lt; COLS; col++) {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <a class="code" href="unionKey__.html">Key</a> k = Layer.getKeyFromPROGMEM(layer, row, col);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      uint16_t pos = ((layer * ROWS * COLS) + (row * COLS) + col);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      updateKey(pos, k);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">if</span> (layer &gt;= max_layers_) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">if</span> (Serial.peek() == <span class="charliteral">&#39;\n&#39;</span>) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">for</span> (uint8_t row = 0; row &lt; ROWS; row++) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keywordflow">for</span> (uint8_t col = 0; col &lt; COLS; col++) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="unionKey__.html">Key</a> k = Layer.getKey(layer, row, col);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        printKey(k);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        ::Focus.printSpace();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    uint16_t keysPerLayer = ROWS * COLS;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    uint16_t offset = layer * keysPerLayer;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">for</span> (uint16_t k = 0; (k &lt; keysPerLayer) &amp;&amp; (Serial.peek() != <span class="charliteral">&#39;\n&#39;</span>); k++) {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      updateKey(offset + k, parseKey());</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keywordtype">bool</span> EEPROMKeymap::focusKeymapTransfer(<span class="keyword">const</span> <span class="keywordtype">char</span> *command) {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordflow">if</span> (strcmp_P(command, PSTR(<span class="stringliteral">&quot;keymap.transfer&quot;</span>)) != 0)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  uint8_t layer = Serial.parseInt();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordflow">for</span> (uint8_t row = 0; row &lt; ROWS; row++) {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">for</span> (uint8_t col = 0; col &lt; COLS; col++) {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <a class="code" href="unionKey__.html">Key</a> k = Layer.getKeyFromPROGMEM(layer, row, col);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      uint16_t pos = ((layer * ROWS * COLS) + (row * COLS) + col);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      updateKey(pos, k);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  }</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<a class="code" href="classkaleidoscope_1_1EEPROMKeymap.html">kaleidoscope::EEPROMKeymap</a> EEPROMKeymap;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<a class="code" href="classkaleidoscope_1_1EEPROMKeymap.html">kaleidoscope::EEPROMKeymap</a> EEPROMKeymap;</div>
 <div class="ttc" id="classkaleidoscope_1_1EEPROMKeymap_html_a804f7b1f430126cfc6a91f9ab8d0b0a5"><div class="ttname"><a href="classkaleidoscope_1_1EEPROMKeymap.html#a804f7b1f430126cfc6a91f9ab8d0b0a5">kaleidoscope::EEPROMKeymap::begin</a></div><div class="ttdeci">void begin(void) final</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM-Keymap_8cpp_source.html#l00030">EEPROM-Keymap.cpp:30</a></div></div>
 <div class="ttc" id="classkaleidoscope_1_1EEPROMKeymap_html"><div class="ttname"><a href="classkaleidoscope_1_1EEPROMKeymap.html">kaleidoscope::EEPROMKeymap</a></div><div class="ttdef"><b>Definition:</b> <a href="EEPROM-Keymap_8h_source.html#l00025">EEPROM-Keymap.h:25</a></div></div>
 <div class="ttc" id="classkaleidoscope_1_1EEPROMSettings_html"><div class="ttname"><a href="classkaleidoscope_1_1EEPROMSettings.html">kaleidoscope::EEPROMSettings</a></div><div class="ttdef"><b>Definition:</b> <a href="EEPROM-Settings_8h_source.html#l00025">EEPROM-Settings.h:25</a></div></div>

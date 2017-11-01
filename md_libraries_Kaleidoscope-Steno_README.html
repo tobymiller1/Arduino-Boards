@@ -92,7 +92,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Easier toggling, because you only have to toggle the layer, not Plover too. If you switch back to a keyboard layer, without toggling Plover off, nothing unexpected will happen. Plover will not take over the keys.</li>
 <li>The <code>GeminiPR</code> protocol supports language systems other than English.</li>
 </ul>
-<p>All of this comes at a cost, however: the protocol is implemented over the virtual serial port, any plugin that wants to use that port too, will run into conflicts with the Steno plugin. In other words, don't use it together with <a href="https://github.com/keyboardio/Kaleidoscope-Focus">Focus</a>.</p>
+<p>Do note that the <code>GeminiPR</code> protocol is implemented over the virtual serial port, so any plugin that wants to use that port too, will run into conflicts with the Steno plugin. In other words, don't use it together with <a href="https://github.com/keyboardio/Kaleidoscope-Focus">Focus</a>.</p>
+<p>#</p>
+<h1>What is Steno? Why should I use it? How do I learn?</h1>
+<p>As mentioned above, steno (short for "stenography") is a shorthand, chorded input system that allows very fast input - licensed stenographers are required to type <b>225 WPM at 95% accuracy</b> to get their license. Although reaching that speed typically takes 2-6 years of practice and training, lower speeds comparable to or exceeding that of touch typing can reportedly be reached in only a few months.</p>
+<p><a href="https://youtu.be/Wpv-Qb-dB6g">This talk</a> (YouTube link) gives a brief introduction to Steno, how it works, and why it is cool.</p>
+<p>One recommend way to get started with learning Steno is with <a href="http://www.openstenoproject.org/plover/">Plover</a>. Plover is software for your computer that will interpret the steno input from your Model 01 (or other NKRO QWERTY keyboard); it is available for Windows, macOS, and Linux. Plover's <a href="https://github.com/openstenoproject/plover/wiki/Beginner&apos;s-Guide:-Get-Started-with-Plover">Beginner's Guide</a> is a great place to get started with Steno in general and Plover in particular.</p>
 <p>#</p>
 <h1>Using the plugin</h1>
 <p>To use the plugin, simply include the header in your Sketch, tell the firmware to use the <code>GeminiPR</code> object, and place Steno keys on your keymap. It is best illustrated with an example:</p>
@@ -103,6 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h2>Keys provided by the plugin</h2>
 <p>The plugin provides a number of keys one can put on the keymap, that allow correspond to various Steno keys. All of these must be used together with the <code>S()</code> macro provided by the plugin, as can be seen in the example above.</p>
 <p>The provided keys are: <code>FN</code>, <code>N1</code>, <code>N2</code>, <code>N3</code>, <code>N4</code>, <code>N5</code>, <code>N6</code>, <code>S1</code>, <code>S2</code>, <code>TL</code>, <code>KL</code>, <code>PL</code>, <code>WL</code>, <code>HL</code>, <code>RL</code>, <code>A</code>, <code>O</code>, <code>ST1</code>, <code>ST2</code>, <code>RE1</code>, <code>RE2</code>, <code>PWR</code>, <code>ST3</code>, <code>ST4</code>, <code>E</code>, <code>U</code>, <code>FR</code>, <code>RR</code>, <code>PR</code>, <code>BR</code>, <code>LR</code>, <code>GR</code>, <code>TR</code>, <code>SR</code>, <code>DR</code>, <code>N7</code>, <code>N8</code>, <code>N9</code>, <code>NA</code>, <code>NB</code>, <code>NC</code>, <code>ZR</code>.</p>
+<p>See the <a href="https://github.com/keyboardio/Kaleidoscope-Steno/blob/master/examples/Steno/Steno.ino">example</a> for the default/suggested placements of each of these keys.</p>
 <h2>Plugin methods and properties</h2>
 <p>The plugin provides a <code>GeminiPR</code> object, with no public methods or properties.</p>
 <h2>Dependencies</h2>
