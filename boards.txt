@@ -69,3 +69,37 @@ shortcut.build.board=AVR_SHORTCUT
 shortcut.build.core=arduino:arduino
 shortcut.build.variant=shortcut
 shortcut.build.extra_flags={build.usb_flags} -DKALEIDOSCOPE_HARDWARE_H="Kaleidoscope-Hardware-Shortcut.h"
+
+##############################################################
+
+raise.name=Dygma Raise
+raise.vid.0=0x1209
+raise.pid.0=0x2202
+
+raise.upload.tool=avrdude
+raise.upload.protocol=avr109
+raise.upload.maximum_size=28672
+raise.upload.maximum_data_size=2560
+raise.upload.speed=57600
+raise.upload.disable_flushing=true
+raise.upload.use_1200bps_touch=true
+raise.upload.wait_for_upload_port=true
+
+raise.bootloader.tool=avrdude
+raise.bootloader.low_fuses=0xff
+raise.bootloader.high_fuses=0xd8
+raise.bootloader.extended_fuses=0xcb
+raise.bootloader.file=caterina/Caterina.hex
+raise.bootloader.unlock_bits=0x3F
+raise.bootloader.lock_bits=0x2F
+
+raise.build.mcu=atmega32u4
+raise.build.f_cpu=16000000L
+raise.build.vid=0x1209
+raise.build.pid=0x2201
+raise.build.usb_product="Raise"
+raise.build.usb_manufacturer="Dygma"
+raise.build.board=AVR_RAISE
+raise.build.core=arduino:arduino
+raise.build.variant=raise
+raise.build.extra_flags={build.usb_flags} -DKALEIDOSCOPE_HARDWARE_H="Kaleidoscope-Hardware-Raise.h"
