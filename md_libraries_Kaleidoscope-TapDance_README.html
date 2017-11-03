@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>To use the plugin, we need to include the header, and declare the behaviour used. Then, we need to place tap-dance keys on the keymap. And finally, we need to implement the <a href="#tapdanceactiontapdanceindex-tapcount-tapdanceaction">`tapDanceAction`</a> function that gets called each time an action is to be performed.</p>
 <p>```c++ #include &lt;<a class="el" href="Kaleidoscope_8h_source.html">Kaleidoscope.h</a>&gt; #include &lt;<a class="el" href="Kaleidoscope-TapDance_8h_source.html">Kaleidoscope-TapDance.h</a>&gt;</p>
 <p>// Somewhere in the keymap: TD(0)</p>
-<p>// later in the Sketch: void tapDanceAction(uint8_t tap_dance_index, uint8_t tap_count, kaleidoscope::TapDance::ActionType tap_dance_action) { switch (tap_dance_index) { case 0: return tapDanceActionKeys(tap_count, tap_dance_action, Consumer_ScanNextTrack, Consumer_ScanPreviousTrack); } }</p>
+<p>// later in the Sketch: void tapDanceAction(uint8_t tap_dance_index, byte row, byte col, uint8_t tap_count, kaleidoscope::TapDance::ActionType tap_dance_action) { switch (tap_dance_index) { case 0: return tapDanceActionKeys(tap_count, tap_dance_action, Consumer_ScanNextTrack, Consumer_ScanPreviousTrack); } }</p>
 <p>void setup() { Kaleidoscope.use(&amp;TapDance);</p>
 <p>Kaleidoscope.setup (); } ```</p>
 <h2>Keymap markup</h2>

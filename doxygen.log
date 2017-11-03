@@ -1832,9 +1832,10 @@ Generating docs for page md_libraries_Kaleidoscope-Numlock/home/travis/build/key
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Keyboard.h:57: warning: Member sendReport(void) (function) of class Keyboard_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Keyboard.h:59: warning: Member isModifierActive(uint8_t k) (function) of class Keyboard_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Keyboard.h:60: warning: Member wasModifierActive(uint8_t k) (function) of class Keyboard_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Keyboard.h:63: warning: Member _keyReport (variable) of class Keyboard_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Keyboard.h:64: warning: Member _lastKeyReport (variable) of class Keyboard_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Keyboard.h:66: warning: Member sendReportUnchecked(void) (function) of class Keyboard_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Keyboard.h:62: warning: Member getLEDs() (function) of class Keyboard_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Keyboard.h:65: warning: Member _keyReport (variable) of class Keyboard_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Keyboard.h:66: warning: Member _lastKeyReport (variable) of class Keyboard_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Keyboard.h:68: warning: Member sendReportUnchecked(void) (function) of class Keyboard_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/KeyboardioScanner.h:46: warning: Member KeyboardioScanner(byte setAd01) (function) of class KeyboardioScanner is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/KeyboardioScanner.h:49: warning: Member readVersion() (function) of class KeyboardioScanner is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioScanner/KeyboardioScanner.h:51: warning: Member setKeyscanInterval(byte delay) (function) of class KeyboardioScanner is not documented.
@@ -3379,5 +3380,5 @@ Patching output file 288/291
 Patching output file 289/291
 Patching output file 290/291
 Patching output file 291/291
-lookup cache used 3546/65536 hits=25796 misses=3679
+lookup cache used 3551/65536 hits=25804 misses=3684
 finished...
