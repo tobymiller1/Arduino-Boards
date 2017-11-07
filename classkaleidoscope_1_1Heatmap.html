@@ -385,7 +385,7 @@ static const float&#160;</td><td class="memItemRight" valign="bottom"><b>heat_co
 
 <p>Definition at line <a class="el" href="Heatmap_8cpp_source.html#l00098">98</a> of file <a class="el" href="Heatmap_8cpp_source.html">Heatmap.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordflow">if</span> (end_time_ &amp;&amp; (millis() &gt; end_time_))</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordflow">if</span> (end_time_ &amp;&amp; (millis() &lt; end_time_))</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  end_time_ = millis() + update_delay;</div>

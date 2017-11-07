@@ -189,7 +189,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">void</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classkaleidoscope_1_1Heatmap.html#a1226a87c7c7bdb72e347bc8b82e5f9a8">   98</a></span>&#160;<a class="code" href="classkaleidoscope_1_1Heatmap.html#a1226a87c7c7bdb72e347bc8b82e5f9a8">Heatmap::update</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordflow">if</span> (end_time_ &amp;&amp; (millis() &gt; end_time_))</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordflow">if</span> (end_time_ &amp;&amp; (millis() &lt; end_time_))</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  end_time_ = millis() + update_delay;</div>

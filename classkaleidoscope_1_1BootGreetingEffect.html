@@ -129,6 +129,12 @@ Static Private Attributes</h2></td></tr>
 <tr class="memitem:a3c533fb35cea316e8c8e106aad2242ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c533fb35cea316e8c8e106aad2242ac"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>done_</b></td></tr>
 <tr class="separator:a3c533fb35cea316e8c8e106aad2242ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307b845aa5f99868a9d5810f327015d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a307b845aa5f99868a9d5810f327015d9"></a>
+static byte&#160;</td><td class="memItemRight" valign="bottom"><b>row_</b></td></tr>
+<tr class="separator:a307b845aa5f99868a9d5810f327015d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad717e2989b79bbd01ff0a3c28453ec3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad717e2989b79bbd01ff0a3c28453ec3"></a>
+static byte&#160;</td><td class="memItemRight" valign="bottom"><b>col_</b></td></tr>
+<tr class="separator:aad717e2989b79bbd01ff0a3c28453ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -160,10 +166,27 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>done_</b></td>
 
 <p>Reimplemented from <a class="el" href="classKaleidoscopePlugin.html#adeedf0552ab36cfb7744b77fa7fe554a">KaleidoscopePlugin</a>.</p>
 
-<p>Definition at line <a class="el" href="Kaleidoscope-LEDEffect-BootGreeting_8cpp_source.html#l00026">26</a> of file <a class="el" href="Kaleidoscope-LEDEffect-BootGreeting_8cpp_source.html">Kaleidoscope-LEDEffect-BootGreeting.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                   {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  Kaleidoscope.useLoopHook(loopHook);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<p>Definition at line <a class="el" href="Kaleidoscope-LEDEffect-BootGreeting_8cpp_source.html#l00028">28</a> of file <a class="el" href="Kaleidoscope-LEDEffect-BootGreeting_8cpp_source.html">Kaleidoscope-LEDEffect-BootGreeting.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                   {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  Kaleidoscope.useLoopHook(loopHook);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">// Find the LED key.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">for</span> (uint8_t r = 0; r &lt; ROWS; r++) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">for</span> (uint8_t c = 0; c &lt; COLS; c++) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <a class="code" href="unionKey__.html">Key</a> k = Layer.lookupOnActiveLayer(r, c);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keywordflow">if</span> (k == Key_LEDEffectNext) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        row_ = r;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        col_ = c;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">// We didn&#39;t find the LED key. Let&#39;s just pretend we&#39;re &quot;done&quot;.</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  done_ = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="ttc" id="unionKey___html"><div class="ttname"><a href="unionKey__.html">Key_</a></div><div class="ttdef"><b>Definition:</b> <a href="key__defs_8h_source.html#l00020">key_defs.h:20</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

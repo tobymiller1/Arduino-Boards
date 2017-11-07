@@ -126,9 +126,6 @@ Static Private Member Functions</h2></td></tr>
 <tr class="memitem:afd9edf25cbed898c724f2e80ca5e1663"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd9edf25cbed898c724f2e80ca5e1663"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>loopHook</b> (const bool postClear)</td></tr>
 <tr class="separator:afd9edf25cbed898c724f2e80ca5e1663"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59361d927ae956405390debd327c1036"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59361d927ae956405390debd327c1036"></a>
-static <a class="el" href="unionKey__.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eventHandlerHook</b> (<a class="el" href="unionKey__.html">Key</a> key, byte row, byte col, uint8_t key_state)</td></tr>
-<tr class="separator:a59361d927ae956405390debd327c1036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -138,6 +135,9 @@ static byte&#160;</td><td class="memItemRight" valign="bottom"><b>row</b> = 255<
 <tr class="memitem:acebdba803461e1e0cc9440efd93deb8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acebdba803461e1e0cc9440efd93deb8c"></a>
 static byte&#160;</td><td class="memItemRight" valign="bottom"><b>col</b> = 255</td></tr>
 <tr class="separator:acebdba803461e1e0cc9440efd93deb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a730b44d73bbdca8c6aa862ae2922d5be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a730b44d73bbdca8c6aa862ae2922d5be"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isOn</b></td></tr>
+<tr class="separator:a730b44d73bbdca8c6aa862ae2922d5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -169,10 +169,9 @@ static byte&#160;</td><td class="memItemRight" valign="bottom"><b>col</b> = 255<
 
 <p>Reimplemented from <a class="el" href="classKaleidoscopePlugin.html#adeedf0552ab36cfb7744b77fa7fe554a">KaleidoscopePlugin</a>.</p>
 
-<p>Definition at line <a class="el" href="Kaleidoscope-Numlock_8cpp_source.html#l00010">10</a> of file <a class="el" href="Kaleidoscope-Numlock_8cpp_source.html">Kaleidoscope-Numlock.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                         {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  Kaleidoscope.useLoopHook(loopHook);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  Kaleidoscope.useEventHandlerHook(eventHandlerHook);</div>
+<p>Definition at line <a class="el" href="Kaleidoscope-Numlock_8cpp_source.html#l00011">11</a> of file <a class="el" href="Kaleidoscope-Numlock_8cpp_source.html">Kaleidoscope-Numlock.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                         {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  Kaleidoscope.useLoopHook(loopHook);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
