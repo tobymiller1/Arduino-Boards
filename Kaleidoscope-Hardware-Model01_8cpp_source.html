@@ -335,7 +335,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  memcpy(rightHandMask.rows, rightHandState.rows, <span class="keyword">sizeof</span>(rightHandMask));</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;HARDWARE_IMPLEMENTATION KeyboardHardware;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="keywordtype">void</span> Model01::setKeyscanInterval(uint8_t interval) {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  leftHand.setKeyscanInterval(interval);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  rightHand.setKeyscanInterval(interval);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;HARDWARE_IMPLEMENTATION KeyboardHardware;</div>
 <div class="ttc" id="unionkeydata__t_html"><div class="ttname"><a href="unionkeydata__t.html">keydata_t</a></div><div class="ttdef"><b>Definition:</b> <a href="KeyboardioScanner_8h_source.html#l00036">KeyboardioScanner.h:36</a></div></div>
 <div class="ttc" id="structcRGB_html"><div class="ttname"><a href="structcRGB.html">cRGB</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Hardware-Shortcut_8h_source.html#l00029">Kaleidoscope-Hardware-Shortcut.h:29</a></div></div>
 <div class="ttc" id="classKeyboardioScanner_html"><div class="ttname"><a href="classKeyboardioScanner.html">KeyboardioScanner</a></div><div class="ttdef"><b>Definition:</b> <a href="KeyboardioScanner_8h_source.html#l00044">KeyboardioScanner.h:44</a></div></div>
