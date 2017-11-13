@@ -98,171 +98,181 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;avr/wdt.h&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<a class="code" href="structcRGB.html">cRGB</a> red;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<a class="code" href="structcRGB.html">cRGB</a> blue;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<a class="code" href="structcRGB.html">cRGB</a> green;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<a class="code" href="structcRGB.html">cRGB</a> white;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;TestMode_::TestMode_(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classTestMode__.html#a4d6adf748df389eedb4e22a419083067">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classTestMode__.html#a4d6adf748df389eedb4e22a419083067">TestMode_::begin</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  red.r = 201;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  blue.b = 201;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  green.g = 201;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  white.r = 50;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  white.g = 50;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  white.b = 50;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  Kaleidoscope.useLoopHook(this-&gt;loopHook);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> TestMode_::loopHook(<span class="keywordtype">bool</span> postClear) {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">if</span> (postClear)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">if</span> (KeyboardHardware.leftHandState.all == TEST_MODE_KEY_COMBO</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//  &amp;&amp; KeyboardHardware.rightHandState.all == combo.rightHand</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;     ) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    run_tests();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> TestMode_::waitForKeypress() {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  delay(25);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">while</span> (1) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    KeyboardHardware.readMatrix();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span> (KeyboardHardware.leftHandState.all ==  R3C6</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        &amp;&amp; KeyboardHardware.previousLeftHandState.all == 0) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> TestMode_::set_leds(uint8_t r, uint8_t g, uint8_t b) {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  LEDControl.set_all_leds_to(r, g, b);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  LEDControl.syncLeds();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  waitForKeypress();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> TestMode_::test_leds(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">// make all the LEDs bright red</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  set_leds(200, 0, 0);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">// make all the LEDs bright green</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  set_leds(0, 200, 0);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="comment">// make all the LEDs bright blue</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  set_leds(0, 0, 200);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="comment">// make all the LEDs bright white (1.6A)</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  set_leds(160, 160, 160);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">// rainbow for 10 seconds</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; 1000; i++) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    LEDRainbowEffect.<a class="code" href="classkaleidoscope_1_1LEDRainbowEffect.html#a21839eb9bc5dab4c0454405a6c694201">update</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    LEDControl.syncLeds();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="comment">// set all the keys to red</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;uint32_t leftBadKeys;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;uint32_t rightBadKeys;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;uint32_t olderLeftHandState = 0;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;uint32_t olderRightHandState = 0 ;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define CHATTER_CYCLE_LIMIT 15</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TOGGLED_OFF 2</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TOGGLED_ON 1</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define HELD 3</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RELEASED 0</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<a class="code" href="structcRGB.html">cRGB</a> red;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<a class="code" href="structcRGB.html">cRGB</a> blue;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<a class="code" href="structcRGB.html">cRGB</a> green;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<a class="code" href="structcRGB.html">cRGB</a> white;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;TestMode_::TestMode_(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classTestMode__.html#a4d6adf748df389eedb4e22a419083067">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classTestMode__.html#a4d6adf748df389eedb4e22a419083067">TestMode_::begin</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  red.r = 201;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  blue.b = 201;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  green.g = 201;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  white.r = 50;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  white.g = 50;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  white.b = 50;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  Kaleidoscope.useLoopHook(this-&gt;loopHook);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> TestMode_::loopHook(<span class="keywordtype">bool</span> postClear) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">if</span> (postClear)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">if</span> (KeyboardHardware.leftHandState.all == TEST_MODE_KEY_COMBO</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//  &amp;&amp; KeyboardHardware.rightHandState.all == combo.rightHand</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;     ) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    run_tests();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> TestMode_::waitForKeypress() {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  delay(25);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">while</span> (1) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    KeyboardHardware.readMatrix();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (KeyboardHardware.leftHandState.all ==  R3C6</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        &amp;&amp; KeyboardHardware.previousLeftHandState.all == 0) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> TestMode_::set_leds(uint8_t r, uint8_t g, uint8_t b) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  LEDControl.set_all_leds_to(r, g, b);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  LEDControl.syncLeds();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  waitForKeypress();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> TestMode_::test_leds(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="comment">// make all the LEDs bright red</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  set_leds(200, 0, 0);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="comment">// make all the LEDs bright green</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  set_leds(0, 200, 0);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="comment">// make all the LEDs bright blue</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  set_leds(0, 0, 200);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="comment">// make all the LEDs bright white (1.6A)</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  set_leds(160, 160, 160);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">// rainbow for 10 seconds</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; 1000; i++) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    LEDRainbowEffect.<a class="code" href="classkaleidoscope_1_1LEDRainbowEffect.html#a21839eb9bc5dab4c0454405a6c694201">update</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    LEDControl.syncLeds();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="comment">// set all the keys to red</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">void</span> TestMode_::testMatrix() {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  LEDControl.set_all_leds_to(200, 0, 0);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">while</span> (1) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    KeyboardHardware.readMatrix();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (KeyboardHardware.leftHandState.all == TEST_MODE_KEY_COMBO) {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">for</span> (byte row = 0; row &lt; 4; row++) {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">for</span> (byte col = 0; col &lt; 8; col++) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        uint8_t keynum = (row * 8) + (col);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        uint8_t keyState = (bitRead(olderLeftHandState, keynum) &lt;&lt; 2) |</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                           (bitRead(KeyboardHardware.previousLeftHandState.all, keynum) &lt;&lt; 1) |</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                           (bitRead(KeyboardHardware.leftHandState.all,         keynum) &lt;&lt; 0);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="comment">// If we had chatter in between two reads</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">if</span> (keyState == 2 || keyState == 5) {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;          bitSet(leftBadKeys, keynum);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">// If the key is held down</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">if</span> (keyState == 7) {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;          KeyboardHardware.setCrgbAt(row, 7 - col, green);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">// If we&#39;re seeing chatter right now</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyState == 2 || keyState == 5) {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;          KeyboardHardware.setCrgbAt(row, 7 - col, white);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="comment">// If we triggered chatter detection ever on this key</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (bitRead(leftBadKeys, keynum)) {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;          KeyboardHardware.setCrgbAt(row, 7 - col, red);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;uint32_t leftBadKeys;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;uint32_t rightBadKeys;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;uint32_t cyclesSinceStateChange[64];</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> TestMode_::testMatrix() {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  LEDControl.set_all_leds_to(200, 0, 0);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="comment">// Clear out the key event buffer so we don&#39;t get messed up information from</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="comment">// taps during LED test mode.</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> temp = 0; temp &lt; 16; temp++) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    KeyboardHardware.readMatrix();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordflow">while</span> (1) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    KeyboardHardware.readMatrix();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (KeyboardHardware.leftHandState.all == TEST_MODE_KEY_COMBO) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">for</span> (byte row = 0; row &lt; 4; row++) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">for</span> (byte col = 0; col &lt; 8; col++) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        uint8_t keynum = (row * 8) + (col);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        uint8_t keyState = ((bitRead(KeyboardHardware.previousLeftHandState.all, keynum) &lt;&lt; 1) |</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                            (bitRead(KeyboardHardware.leftHandState.all,         keynum) &lt;&lt; 0));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">if</span> (keyState == TOGGLED_ON) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;          <span class="keywordflow">if</span> (cyclesSinceStateChange[keynum] &lt; CHATTER_CYCLE_LIMIT) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            bitSet(leftBadKeys, keynum);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;          }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;          cyclesSinceStateChange[keynum] = 0;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cyclesSinceStateChange[keynum] &lt;= CHATTER_CYCLE_LIMIT)  {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;          cyclesSinceStateChange[keynum]++;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="comment">// If the key was just released</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyState == 6) {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;          KeyboardHardware.setCrgbAt(row, 7 - col, blue);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        keyState = (bitRead(olderRightHandState, keynum) &lt;&lt; 2) |</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                   (bitRead(KeyboardHardware.previousRightHandState.all, keynum) &lt;&lt; 1) |</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                   (bitRead(KeyboardHardware.rightHandState.all,         keynum) &lt;&lt; 0);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="comment">// If we had chatter in between two reads</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">if</span> (keyState == 2 || keyState == 5) {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;          bitSet(rightBadKeys, keynum);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="comment">// If the key is held down</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">if</span> (keyState == 7) {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;          KeyboardHardware.setCrgbAt(row, 15 - col, green);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        }</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="comment">// If we&#39;re seeing chatter right now</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyState == 2 || keyState == 5) {</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;          KeyboardHardware.setCrgbAt(row, 15 - col, white);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        }</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="comment">// If we triggered chatter detection ever on this key</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (bitRead(rightBadKeys, keynum)) {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;          KeyboardHardware.setCrgbAt(row, 15 - col, red);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        }</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="comment">// If the key was just released</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyState == 6) {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;          KeyboardHardware.setCrgbAt(row, 15 - col, blue);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      }</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    LEDControl.syncLeds();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    olderRightHandState = KeyboardHardware.previousRightHandState.all;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    olderLeftHandState = KeyboardHardware.previousLeftHandState.all;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="comment">// If the key is held down</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span> (keyState == HELD) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;          KeyboardHardware.setCrgbAt(row, 7 - col, green);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="comment">// If we triggered chatter detection ever on this key</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (bitRead(leftBadKeys, keynum) == 1) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;          KeyboardHardware.setCrgbAt(row, 7 - col, red);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="comment">// If the key was just released</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyState == TOGGLED_OFF) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;          KeyboardHardware.setCrgbAt(row, 7 - col, blue);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        keyState = ((bitRead(KeyboardHardware.previousRightHandState.all, keynum) &lt;&lt; 1) |</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    (bitRead(KeyboardHardware.rightHandState.all,         keynum) &lt;&lt; 0));</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">if</span> (keyState == TOGGLED_ON) {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;          <span class="keywordflow">if</span> (cyclesSinceStateChange[keynum + 32] &lt; CHATTER_CYCLE_LIMIT) {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            bitSet(rightBadKeys, keynum);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;          }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;          cyclesSinceStateChange[keynum + 32] = 0;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cyclesSinceStateChange[keynum + 32] &lt;= CHATTER_CYCLE_LIMIT)  {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;          cyclesSinceStateChange[keynum + 32]++;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">// If the key is held down</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">if</span> (keyState == HELD) {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;          KeyboardHardware.setCrgbAt(row, 15 - col, green);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="comment">// If we triggered chatter detection ever on this key</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (bitRead(rightBadKeys, keynum) == 1) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;          KeyboardHardware.setCrgbAt(row, 15 - col, red);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        }</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keywordtype">void</span> TestMode_::toggle_programming_leds_on() {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  PORTD |= (1 &lt;&lt; 5);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  PORTB |= (1 &lt;&lt; 0);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keywordtype">void</span> TestMode_::run_tests() {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="comment">//  Serial.println(&quot;Running tests&quot;);</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  toggle_programming_leds_on();</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="comment">// Disable debouncing</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  KeyboardHardware.setKeyscanInterval(0);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  test_leds();</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  testMatrix();</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="comment">//  Serial.println(&quot;Done running tests&quot;);</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="comment">// If the key was just released</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (keyState == TOGGLED_OFF) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;          KeyboardHardware.setCrgbAt(row, 15 - col, blue);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    LEDControl.syncLeds();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keywordtype">void</span> TestMode_::toggle_programming_leds_on() {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  PORTD |= (1 &lt;&lt; 5);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  PORTB |= (1 &lt;&lt; 0);</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<a class="code" href="classTestMode__.html">TestMode_</a> TestMode;</div>
-<div class="ttc" id="classTestMode___html_a4d6adf748df389eedb4e22a419083067"><div class="ttname"><a href="classTestMode__.html#a4d6adf748df389eedb4e22a419083067">TestMode_::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Model01-TestMode_8cpp_source.html#l00017">Kaleidoscope-Model01-TestMode.cpp:17</a></div></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="keywordtype">void</span> TestMode_::run_tests() {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="comment">//  Serial.println(&quot;Running tests&quot;);</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  toggle_programming_leds_on();</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="comment">// Disable debouncing</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  KeyboardHardware.setKeyscanInterval(0);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  test_leds();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  testMatrix();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="comment">//  Serial.println(&quot;Done running tests&quot;);</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<a class="code" href="classTestMode__.html">TestMode_</a> TestMode;</div>
+<div class="ttc" id="classTestMode___html_a4d6adf748df389eedb4e22a419083067"><div class="ttname"><a href="classTestMode__.html#a4d6adf748df389eedb4e22a419083067">TestMode_::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Model01-TestMode_8cpp_source.html#l00024">Kaleidoscope-Model01-TestMode.cpp:24</a></div></div>
 <div class="ttc" id="classTestMode___html"><div class="ttname"><a href="classTestMode__.html">TestMode_</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Model01-TestMode_8h_source.html#l00008">Kaleidoscope-Model01-TestMode.h:8</a></div></div>
 <div class="ttc" id="structcRGB_html"><div class="ttname"><a href="structcRGB.html">cRGB</a></div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-Hardware-Shortcut_8h_source.html#l00029">Kaleidoscope-Hardware-Shortcut.h:29</a></div></div>
 <div class="ttc" id="classkaleidoscope_1_1LEDRainbowEffect_html_a21839eb9bc5dab4c0454405a6c694201"><div class="ttname"><a href="classkaleidoscope_1_1LEDRainbowEffect.html#a21839eb9bc5dab4c0454405a6c694201">kaleidoscope::LEDRainbowEffect::update</a></div><div class="ttdeci">void update(void) final</div><div class="ttdef"><b>Definition:</b> <a href="Kaleidoscope-LEDEffect-Rainbow_8cpp_source.html#l00005">Kaleidoscope-LEDEffect-Rainbow.cpp:5</a></div></div>

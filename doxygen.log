@@ -1682,6 +1682,8 @@ Generating d/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-TypingBreaks/README.md:24: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Unicode/README.md:19: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Unicode/README.md:20: warning: explicit link request to 'include' could not be resolved
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Model01-Firmware/README.md:9: warning: Unexpected token TK_LISTITEM
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Model01-Firmware/README.md:13: warning: Unexpected token TK_LISTITEM
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:79: warning: Member begin(void) (function) of class AbsoluteMouseAPI is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:80: warning: Member end(void) (function) of class AbsoluteMouseAPI is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:82: warning: Member click(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
@@ -3410,5 +3412,5 @@ Patching output file 291/294
 Patching output file 292/294
 Patching output file 293/294
 Patching output file 294/294
-lookup cache used 3597/65536 hits=26139 misses=3730
+lookup cache used 3600/65536 hits=26133 misses=3733
 finished...
