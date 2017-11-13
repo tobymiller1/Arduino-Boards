@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classKaleidoscopePlugin.html" title="KaleidoscopePlugin" alt="" coords="5,883,141,909"/>
+<area shape="rect" id="node1" href="$classKaleidoscopePlugin.html" title="KaleidoscopePlugin" alt="" coords="5,908,141,935"/>
 <area shape="rect" id="node2" href="$classkaleidoscope_1_1ActiveModColorEffect.html" title="kaleidoscope::ActiveModColor\lEffect" alt="" coords="197,5,395,46"/>
 <area shape="rect" id="node3" href="$classkaleidoscope_1_1AlphaSquare.html" title="kaleidoscope::AlphaSquare" alt="" coords="206,71,386,97"/>
 <area shape="rect" id="node4" href="$classkaleidoscope_1_1BootGreetingEffect.html" title="kaleidoscope::BootGreeting\lEffect" alt="" coords="205,122,387,163"/>
@@ -31,7 +31,8 @@
 <area shape="rect" id="node44" href="$classMacros__.html" title="Macros_" alt="" coords="260,1548,332,1575"/>
 <area shape="rect" id="node45" href="$classMouseKeys__.html" title="MouseKeys_" alt="" coords="247,1599,345,1625"/>
 <area shape="rect" id="node46" href="$classNumLock__.html" title="NumLock_" alt="" coords="253,1649,339,1676"/>
-<area shape="rect" id="node47" href="$classTestMode__.html" title="TestMode_" alt="" coords="253,1700,339,1727"/>
+<area shape="rect" id="node47" href="$classNumPad__.html" title="NumPad_" alt="" coords="256,1700,336,1727"/>
+<area shape="rect" id="node48" href="$classTestMode__.html" title="TestMode_" alt="" coords="253,1751,339,1777"/>
 <area shape="rect" id="node15" href="$classkaleidoscope_1_1hostos_1_1Guesser.html" title="kaleidoscope::hostos\l::Guesser" alt="" coords="481,535,626,577"/>
 <area shape="rect" id="node20" href="$classexample_1_1TestLEDMode.html" title="example::TestLEDMode" alt="" coords="472,601,635,628"/>
 <area shape="rect" id="node21" href="$classkaleidoscope_1_1AlphaSquareEffect.html" title="kaleidoscope::AlphaSquare\lEffect" alt="" coords="463,653,643,694"/>

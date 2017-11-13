@@ -48,6 +48,7 @@ var searchData=
   ['kaleidoscope_2dmagiccombo',['Kaleidoscope-MagicCombo',['../md_libraries_Kaleidoscope-MagicCombo_README.html',1,'']]],
   ['kaleidoscope_2dmousekeys',['Kaleidoscope-MouseKeys',['../md_libraries_Kaleidoscope-MouseKeys_README.html',1,'']]],
   ['kaleidoscope_2dnumlock',['Kaleidoscope-Numlock',['../md_libraries_Kaleidoscope-Numlock_README.html',1,'']]],
+  ['kaleidoscope_2dnumpad',['Kaleidoscope-NumPad',['../md_libraries_Kaleidoscope-NumPad_README.html',1,'']]],
   ['kaleidoscope_2doneshot',['Kaleidoscope-OneShot',['../md_libraries_Kaleidoscope-OneShot_README.html',1,'']]],
   ['kaleidoscope_2dranges',['Kaleidoscope-Ranges',['../md_libraries_Kaleidoscope-Ranges_README.html',1,'']]],
   ['kaleidoscope_2dshapeshifter',['Kaleidoscope-ShapeShifter',['../md_libraries_Kaleidoscope-ShapeShifter_README.html',1,'']]],
