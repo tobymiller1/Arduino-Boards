@@ -114,39 +114,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;Kaleidoscope.h&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;Kaleidoscope-HostOS.h&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;Kaleidoscope/HostOS-select.h&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;Kaleidoscope-Unicode.h&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">const</span> <a class="code" href="unionKey__.html">Key</a> keymaps[][ROWS][COLS] PROGMEM = {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  [0] = KEYMAP_STACKED</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  (</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Key_NoKey,    Key_1, Key_2, Key_3, Key_4, Key_5, Key_NoKey,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Key_Backtick, Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Tab,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    Key_PageUp,   Key_A, Key_S, Key_D, Key_F, Key_G,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Key_PageDown,   Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Escape,</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Key_LeftControl, Key_Backspace, Key_LeftGui, Key_LeftShift,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    Key_skip,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    Key_skip,  Key_6, Key_7, Key_8,     Key_9,      Key_0,         Key_skip,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    Key_Enter, Key_Y, Key_U, Key_I,     Key_O,      Key_P,         Key_Equals,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    Key_H, Key_J, Key_K,     Key_L,      Key_Semicolon, Key_Quote,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    Key_skip,  Key_N, Key_M, Key_Comma, Key_Period, Key_Slash,     Key_Minus,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;Kaleidoscope-Macros.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;Kaleidoscope-Unicode.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">enum</span> { MACRO_KEYBOARD_EMOJI };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// *INDENT-OFF*</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">const</span> <a class="code" href="unionKey__.html">Key</a> keymaps[][ROWS][COLS] PROGMEM = {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  [0] = KEYMAP_STACKED</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  (</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Key_NoKey,    Key_1, Key_2, Key_3, Key_4, Key_5, Key_NoKey,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    Key_Backtick, Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Tab,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    Key_PageUp,   Key_A, Key_S, Key_D, Key_F, Key_G,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    Key_PageDown, Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Escape,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    Key_LeftControl, Key_Backspace, Key_LeftGui, Key_LeftShift,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    Key_skip,</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    Key_RightShift, Key_RightAlt, Key_Spacebar, Key_RightControl,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Key_skip),</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> setup() {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  Kaleidoscope.use(&amp;Unicode);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  Kaleidoscope.setup();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    M(MACRO_KEYBOARD_EMOJI), Key_6, Key_7, Key_8,     Key_9,      Key_0,         Key_skip,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Key_Enter,               Key_Y, Key_U, Key_I,     Key_O,      Key_P,         Key_Equals,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                             Key_H, Key_J, Key_K,     Key_L,      Key_Semicolon, Key_Quote,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    Key_skip,                Key_N, Key_M, Key_Comma, Key_Period, Key_Slash,     Key_Minus,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    Key_RightShift, Key_RightAlt, Key_Spacebar, Key_RightControl,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Key_skip),</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  Unicode.type(0x2328);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> loop() {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  Kaleidoscope.loop();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">// *INDENT-ON*</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> unicode(uint32_t character, uint8_t keyState) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">if</span> (keyToggledOn(keyState)) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    Unicode.type(character);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">const</span> macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">switch</span> (macroIndex) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">case</span> MACRO_KEYBOARD_EMOJI:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    unicode(0x2328, keyState);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">return</span> MACRO_NONE;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">void</span> setup() {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  Kaleidoscope.use(&amp;Macros, &amp;Unicode);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  Kaleidoscope.setup();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span> loop() {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  Kaleidoscope.loop();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
 <div class="ttc" id="unionKey___html"><div class="ttname"><a href="unionKey__.html">Key_</a></div><div class="ttdef"><b>Definition:</b> <a href="key__defs_8h_source.html#l00020">key_defs.h:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

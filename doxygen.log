@@ -2023,9 +2023,10 @@ Generating d/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LEDControl/src/Kaleidoscope-LEDControl.h:64: warning: Found unknown command `\onActivate'
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Colormap/src/Kaleidoscope/Colormap.h:29: warning: Member max_layers(uint8_t max_) (function) of class kaleidoscope::ColormapEffect is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Colormap/src/Kaleidoscope/Colormap.h:31: warning: Member focusHook(const char *command) (function) of class kaleidoscope::ColormapEffect is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Colormap/src/Kaleidoscope/Colormap.h:40: warning: Member last_highest_layer_ (variable) of class kaleidoscope::ColormapEffect is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Colormap/src/Kaleidoscope/Colormap.h:41: warning: Member max_layers_ (variable) of class kaleidoscope::ColormapEffect is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Colormap/src/Kaleidoscope/Colormap.h:42: warning: Member map_base_ (variable) of class kaleidoscope::ColormapEffect is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Colormap/src/Kaleidoscope/Colormap.h:32: warning: Member focusHookLayerwise(const char *command) (function) of class kaleidoscope::ColormapEffect is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Colormap/src/Kaleidoscope/Colormap.h:41: warning: Member last_highest_layer_ (variable) of class kaleidoscope::ColormapEffect is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Colormap/src/Kaleidoscope/Colormap.h:42: warning: Member max_layers_ (variable) of class kaleidoscope::ColormapEffect is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Colormap/src/Kaleidoscope/Colormap.h:43: warning: Member map_base_ (variable) of class kaleidoscope::ColormapEffect is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LEDControl/src/Kaleidoscope-LEDControl.h:64: warning: Found unknown command `\onActivate'
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Cycle/src/Kaleidoscope/Cycle.h:38: warning: Member replace(Key key) (function) of class kaleidoscope::Cycle is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Cycle/src/Kaleidoscope/Cycle.h:39: warning: Member replace(uint8_t cycle_size, const Key cycle_steps[]) (function) of class kaleidoscope::Cycle is not documented.
@@ -2254,7 +2255,8 @@ Generating docs for compound /home/travis/build/keyboardio/Arduino-Boards/librar
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Palette-Theme/src/Kaleidoscope/LED-Palette-Theme.h:40: warning: Member lookupPaletteColor(uint8_t palette_index) (function) of class kaleidoscope::LEDPaletteTheme is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Palette-Theme/src/Kaleidoscope/LED-Palette-Theme.h:42: warning: Member paletteFocusHook(const char *command) (function) of class kaleidoscope::LEDPaletteTheme is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Palette-Theme/src/Kaleidoscope/LED-Palette-Theme.h:43: warning: Member themeFocusHandler(const char *command, const char *expected_command, uint16_t theme_base, uint8_t max_themes) (function) of class kaleidoscope::LEDPaletteTheme is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Palette-Theme/src/Kaleidoscope/LED-Palette-Theme.h:47: warning: Member palette_base_ (variable) of class kaleidoscope::LEDPaletteTheme is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Palette-Theme/src/Kaleidoscope/LED-Palette-Theme.h:46: warning: Member themeLayerFocusHandler(const char *command, const char *expected_command, uint16_t theme_base, uint8_t max_themes) (function) of class kaleidoscope::LEDPaletteTheme is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Palette-Theme/src/Kaleidoscope/LED-Palette-Theme.h:51: warning: Member palette_base_ (variable) of class kaleidoscope::LEDPaletteTheme is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Stalker/src/Kaleidoscope/LED-Stalker.h:36: warning: Member variant (variable) of class kaleidoscope::StalkerEffect is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Stalker/src/Kaleidoscope/LED-Stalker.h:37: warning: Member step_length (variable) of class kaleidoscope::StalkerEffect is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Stalker/src/Kaleidoscope/LED-Stalker.h:48: warning: Member eventHandlerHook(Key mapped_key, byte row, byte col, uint8_t key_state) (function) of class kaleidoscope::StalkerEffect is not documented.
@@ -3412,5 +3414,5 @@ Patching output file 291/294
 Patching output file 292/294
 Patching output file 293/294
 Patching output file 294/294
-lookup cache used 3600/65536 hits=26132 misses=3733
+lookup cache used 3608/65536 hits=26192 misses=3741
 finished...

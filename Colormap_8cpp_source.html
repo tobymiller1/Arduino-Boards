@@ -158,9 +158,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;         map_base_, max_layers_);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<a class="code" href="classkaleidoscope_1_1ColormapEffect.html">kaleidoscope::ColormapEffect</a> ColormapEffect;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">bool</span> ColormapEffect::focusHookLayerwise(<span class="keyword">const</span> <span class="keywordtype">char</span> *command) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  return ::LEDPaletteTheme.themeLayerFocusHandler(command, PSTR(<span class="stringliteral">&quot;colormap.layer&quot;</span>),</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;         map_base_, max_layers_);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<a class="code" href="classkaleidoscope_1_1ColormapEffect.html">kaleidoscope::ColormapEffect</a> ColormapEffect;</div>
 <div class="ttc" id="classkaleidoscope_1_1EEPROMSettings_html"><div class="ttname"><a href="classkaleidoscope_1_1EEPROMSettings.html">kaleidoscope::EEPROMSettings</a></div><div class="ttdef"><b>Definition:</b> <a href="EEPROM-Settings_8h_source.html#l00025">EEPROM-Settings.h:25</a></div></div>
 <div class="ttc" id="classkaleidoscope_1_1ColormapEffect_html_a0eef0b398bf929eedabf4c16fbdc0211"><div class="ttname"><a href="classkaleidoscope_1_1ColormapEffect.html#a0eef0b398bf929eedabf4c16fbdc0211">kaleidoscope::ColormapEffect::refreshAt</a></div><div class="ttdeci">void refreshAt(byte row, byte col) final</div><div class="ttdef"><b>Definition:</b> <a href="Colormap_8cpp_source.html#l00058">Colormap.cpp:58</a></div></div>
 <div class="ttc" id="classkaleidoscope_1_1LEDPaletteTheme_html"><div class="ttname"><a href="classkaleidoscope_1_1LEDPaletteTheme.html">kaleidoscope::LEDPaletteTheme</a></div><div class="ttdef"><b>Definition:</b> <a href="LED-Palette-Theme_8h_source.html#l00026">LED-Palette-Theme.h:26</a></div></div>
