@@ -208,7 +208,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    color.g = min(*step * color.g / 255, 255);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">if</span> (*step &gt;= 0xf0 - 30)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">if</span> (*step &gt;= 0xff - 30)</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    *step -= 1;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*step &gt;= 0x40)</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    *step -= 16;</div>

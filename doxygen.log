@@ -1092,13 +1092,13 @@ Parsing file /h/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidosco
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LEDControl/src/LED-Off.h:6: warning: Compound kaleidoscope::LEDOff is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.h:35: warning: Compound SingleAbsoluteMouse_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Palette-Theme/src/Kaleidoscope/LED-Palette-Theme.h:26: warning: Compound kaleidoscope::LEDPaletteTheme is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:76: warning: Compound AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:87: warning: Compound AbsoluteMouseAPI is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LEDEffect-Rainbow/src/Kaleidoscope-LEDEffect-Rainbow.h:7: warning: Compound kaleidoscope::LEDRainbowEffect is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/SystemControl.h:39: warning: Compound SystemControl_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:66: warning: Compound HID_MouseAbsoluteReport_Data_t is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:76: warning: Compound HID_MouseAbsoluteReport_Data_t is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Heatmap/src/Kaleidoscope/Heatmap.h:25: warning: Compound kaleidoscope::Heatmap is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Model01-TestMode/src/Kaleidoscope-Model01-TestMode.h:8: warning: Compound TestMode_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:44: warning: Compound Mouse_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:45: warning: Compound Mouse_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-LED-Stalker/src/Kaleidoscope/LED-Stalker.h:53: warning: Compound kaleidoscope::stalker::Haunt is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-DualUse/src/Kaleidoscope/DualUse.h:33: warning: Compound kaleidoscope::DualUse is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Leader/src/Kaleidoscope/Leader.h:36: warning: Compound kaleidoscope::Leader::dictionary_t is not documented.
@@ -1659,9 +1659,9 @@ Generating d/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-MagicCombo/README.md:20: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-MouseKeys/README.md:23: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-MouseKeys/README.md:24: warning: explicit link request to 'include' could not be resolved
-/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-OneShot/README.md:29: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-OneShot/README.md:30: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-OneShot/README.md:31: warning: explicit link request to 'include' could not be resolved
+/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-OneShot/README.md:32: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-ShapeShifter/README.md:21: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-ShapeShifter/README.md:22: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-SpaceCadet/README.md:36: warning: explicit link request to 'include' could not be resolved
@@ -1684,34 +1684,34 @@ Generating d/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Unicode/README.md:20: warning: explicit link request to 'include' could not be resolved
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Model01-Firmware/README.md:9: warning: Unexpected token TK_LISTITEM
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Model01-Firmware/README.md:13: warning: Unexpected token TK_LISTITEM
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:79: warning: Member begin(void) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:80: warning: Member end(void) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:82: warning: Member click(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:83: warning: Member moveTo(uint16_t x, uint16_t y, signed char wheel=0) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:84: warning: Member move(int x, int y, signed char wheel=0) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:85: warning: Member press(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:86: warning: Member release(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:87: warning: Member isPressed(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:90: warning: Member begin(void) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:91: warning: Member end(void) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:93: warning: Member click(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:94: warning: Member moveTo(uint16_t x, uint16_t y, signed char vWheel=0, signed char hWheel=0) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:95: warning: Member move(int x, int y, signed char vWheel=0, signed char hWheel=0) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:96: warning: Member press(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:97: warning: Member release(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:98: warning: Member isPressed(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/AbsoluteMouse.h:39: warning: Member sendReport(void *data, int length) (function) of class AbsoluteMouse_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:97: warning: Member buttons(uint8_t b) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:98: warning: Member qadd16(int16_t base, int16_t increment) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:93: warning: Member xAxis (variable) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:94: warning: Member yAxis (variable) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:95: warning: Member _buttons (variable) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:79: warning: Member begin(void) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:80: warning: Member end(void) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:82: warning: Member click(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:83: warning: Member moveTo(uint16_t x, uint16_t y, signed char wheel=0) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:84: warning: Member move(int x, int y, signed char wheel=0) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:85: warning: Member press(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:86: warning: Member release(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:87: warning: Member isPressed(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:90: warning: Member sendReport(void *data, int length) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:97: warning: Member buttons(uint8_t b) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:98: warning: Member qadd16(int16_t base, int16_t increment) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:93: warning: Member xAxis (variable) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:94: warning: Member yAxis (variable) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:95: warning: Member _buttons (variable) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:108: warning: Member buttons(uint8_t b) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:109: warning: Member qadd16(int16_t base, int16_t increment) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:104: warning: Member xAxis (variable) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:105: warning: Member yAxis (variable) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:106: warning: Member _buttons (variable) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:90: warning: Member begin(void) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:91: warning: Member end(void) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:93: warning: Member click(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:94: warning: Member moveTo(uint16_t x, uint16_t y, signed char vWheel=0, signed char hWheel=0) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:95: warning: Member move(int x, int y, signed char vWheel=0, signed char hWheel=0) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:96: warning: Member press(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:97: warning: Member release(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:98: warning: Member isPressed(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:101: warning: Member sendReport(void *data, int length) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:108: warning: Member buttons(uint8_t b) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:109: warning: Member qadd16(int16_t base, int16_t increment) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:104: warning: Member xAxis (variable) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:105: warning: Member yAxis (variable) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:106: warning: Member _buttons (variable) of class AbsoluteMouseAPI is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/AtmegaScanner/src/AtmegaScanner.h:32: warning: Member readKeys(void) (function) of class AtmegaScanner is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/AtmegaScanner/src/AtmegaScanner.h:34: warning: Member leftHandState (variable) of class AtmegaScanner is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/AtmegaScanner/src/AtmegaScanner.h:35: warning: Member rightHandState (variable) of class AtmegaScanner is not documented.
@@ -1751,8 +1751,10 @@ Generating d/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/ConsumerControl.h:50: warning: Member press(uint16_t m) (function) of class ConsumerControl_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/ConsumerControl.h:51: warning: Member release(uint16_t m) (function) of class ConsumerControl_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/ConsumerControl.h:52: warning: Member releaseAll(void) (function) of class ConsumerControl_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/ConsumerControl.h:55: warning: Member sendReport(void *data, int length) (function) of class ConsumerControl_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/ConsumerControl.h:59: warning: Member _report (variable) of class ConsumerControl_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/ConsumerControl.h:55: warning: Member sendReport(void) (function) of class ConsumerControl_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/ConsumerControl.h:58: warning: Member _report (variable) of class ConsumerControl_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/ConsumerControl.h:59: warning: Member _lastReport (variable) of class ConsumerControl_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/ConsumerControl.h:62: warning: Member sendReportUnchecked(void) (function) of class ConsumerControl_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-EEPROM-Settings/src/Kaleidoscope/crc.h:40: warning: Member update(const void *data, uint8_t len) (function) of class CRC_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-EEPROM-Settings/src/Kaleidoscope/crc.h:41: warning: Member finalize(void) (function) of class CRC_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-EEPROM-Settings/src/Kaleidoscope/crc.h:44: warning: Member reflect(uint8_t len) (function) of class CRC_ is not documented.
@@ -1916,16 +1918,16 @@ Generating d/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Model01/src/Kaleidoscope-Hardware-Model01.h:59: warning: Member rightHand (variable) of class Model01 is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Model01/src/Kaleidoscope-Hardware-Model01.h:61: warning: Member leftHandMask (variable) of class Model01 is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Model01/src/Kaleidoscope-Hardware-Model01.h:62: warning: Member rightHandMask (variable) of class Model01 is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:47: warning: Member begin(void) (function) of class Mouse_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:48: warning: Member end(void) (function) of class Mouse_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:49: warning: Member click(uint8_t b=MOUSE_LEFT) (function) of class Mouse_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:50: warning: Member move(signed char x, signed char y, signed char wheel=0) (function) of class Mouse_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:51: warning: Member press(uint8_t b=MOUSE_LEFT) (function) of class Mouse_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:52: warning: Member release(uint8_t b=MOUSE_LEFT) (function) of class Mouse_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:53: warning: Member isPressed(uint8_t b=MOUSE_LEFT) (function) of class Mouse_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:55: warning: Member sendReport(void *data, int length) (function) of class Mouse_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:59: warning: Member buttons(uint8_t b) (function) of class Mouse_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:58: warning: Member _buttons (variable) of class Mouse_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:48: warning: Member begin(void) (function) of class Mouse_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:49: warning: Member end(void) (function) of class Mouse_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:50: warning: Member click(uint8_t b=MOUSE_LEFT) (function) of class Mouse_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:51: warning: Member move(signed char x, signed char y, signed char vWheel=0, signed char hWheel=0) (function) of class Mouse_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:52: warning: Member press(uint8_t b=MOUSE_LEFT) (function) of class Mouse_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:53: warning: Member release(uint8_t b=MOUSE_LEFT) (function) of class Mouse_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:54: warning: Member isPressed(uint8_t b=MOUSE_LEFT) (function) of class Mouse_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:56: warning: Member sendReport(void *data, int length) (function) of class Mouse_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:60: warning: Member buttons(uint8_t b) (function) of class Mouse_ is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/Mouse.h:59: warning: Member _buttons (variable) of class Mouse_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-MouseKeys/src/Kaleidoscope-MouseKeys.h:12: warning: Member speed (variable) of class MouseKeys_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-MouseKeys/src/Kaleidoscope-MouseKeys.h:13: warning: Member speedDelay (variable) of class MouseKeys_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-MouseKeys/src/Kaleidoscope-MouseKeys.h:14: warning: Member accelSpeed (variable) of class MouseKeys_ is not documented.
@@ -1984,26 +1986,26 @@ Generating d/home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-
 /home/travis/build/keyboardio/Arduino-Boards/libraries/Kaleidoscope-Hardware-Shortcut/src/Kaleidoscope-Hardware-Shortcut.h:72: warning: Member rightHandMask (variable) of class Shortcut is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.h:38: warning: Member getLeds(void) (function) of class SingleAbsoluteMouse_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.h:39: warning: Member getProtocol(void) (function) of class SingleAbsoluteMouse_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:79: warning: Member begin(void) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:80: warning: Member end(void) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:82: warning: Member click(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:83: warning: Member moveTo(uint16_t x, uint16_t y, signed char wheel=0) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:84: warning: Member move(int x, int y, signed char wheel=0) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:85: warning: Member press(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:86: warning: Member release(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:87: warning: Member isPressed(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:90: warning: Member begin(void) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:91: warning: Member end(void) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:93: warning: Member click(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:94: warning: Member moveTo(uint16_t x, uint16_t y, signed char vWheel=0, signed char hWheel=0) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:95: warning: Member move(int x, int y, signed char vWheel=0, signed char hWheel=0) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:96: warning: Member press(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:97: warning: Member release(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:98: warning: Member isPressed(uint8_t b=MOUSE_LEFT) (function) of class AbsoluteMouseAPI is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.h:43: warning: Member getInterface(uint8_t *interfaceCount) (function) of class SingleAbsoluteMouse_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.h:44: warning: Member getDescriptor(USBSetup &setup) (function) of class SingleAbsoluteMouse_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.h:45: warning: Member setup(USBSetup &setup) (function) of class SingleAbsoluteMouse_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.h:51: warning: Member sendReport(void *data, int length) override (function) of class SingleAbsoluteMouse_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:97: warning: Member buttons(uint8_t b) (function) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:98: warning: Member qadd16(int16_t base, int16_t increment) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:108: warning: Member buttons(uint8_t b) (function) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:109: warning: Member qadd16(int16_t base, int16_t increment) (function) of class AbsoluteMouseAPI is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.h:47: warning: Member epType[1] (variable) of class SingleAbsoluteMouse_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.h:48: warning: Member protocol (variable) of class SingleAbsoluteMouse_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/SingleReport/SingleAbsoluteMouse.h:49: warning: Member idle (variable) of class SingleAbsoluteMouse_ is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:93: warning: Member xAxis (variable) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:94: warning: Member yAxis (variable) of class AbsoluteMouseAPI is not documented.
-/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:95: warning: Member _buttons (variable) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:104: warning: Member xAxis (variable) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:105: warning: Member yAxis (variable) of class AbsoluteMouseAPI is not documented.
+/home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/DeviceAPIs/AbsoluteMouseAPI.h:106: warning: Member _buttons (variable) of class AbsoluteMouseAPI is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/SystemControl.h:41: warning: Member begin(void) (function) of class SystemControl_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/SystemControl.h:42: warning: Member end(void) (function) of class SystemControl_ is not documented.
 /home/travis/build/keyboardio/Arduino-Boards/libraries/KeyboardioHID/src/MultiReport/SystemControl.h:43: warning: Member write(uint8_t s) (function) of class SystemControl_ is not documented.
@@ -3414,5 +3416,5 @@ Patching output file 291/294
 Patching output file 292/294
 Patching output file 293/294
 Patching output file 294/294
-lookup cache used 3608/65536 hits=26192 misses=3741
+lookup cache used 3623/65536 hits=26251 misses=3756
 finished...

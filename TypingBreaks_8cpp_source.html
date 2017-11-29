@@ -116,7 +116,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span>kaleidoscope {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;TypingBreaks::settings_t TypingBreaks::settings = {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  .idle_time_limit = 10,  <span class="comment">//  10s</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  .idle_time_limit = 300, <span class="comment">//  5m</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  .lock_time_out = 2700,  <span class="comment">//  45m</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  .lock_length = 300,    <span class="comment">//   5m</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  .left_hand_max_keys = 0,</div>
@@ -188,7 +188,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// Is the session longer than lock_time_out?</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span> (millis() - session_start_time_ &gt;= lock_time_out) {</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="comment">// Yeah, it is.</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      lock_start_time_ = millis();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      lock_start_time_ = last_key_time_;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      TypingBreak(<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordflow">return</span> Key_NoKey;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>

@@ -146,7 +146,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> ConsumerControl_::end(<span class="keywordtype">void</span>) {</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  memset(&amp;_report, 0, <span class="keyword">sizeof</span>(_report));</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  sendReport(&amp;_report, <span class="keyword">sizeof</span>(_report));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  sendReport();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">void</span> ConsumerControl_::write(uint16_t m) {</div>
@@ -162,29 +162,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  sendReport(&amp;_report, <span class="keyword">sizeof</span>(_report));</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">void</span> ConsumerControl_::release(uint16_t m) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="comment">// search and release the keypress</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">for</span> (uint8_t i = 0; i &lt; <span class="keyword">sizeof</span>(<a class="code" href="unionHID__ConsumerControlReport__Data__t.html">HID_ConsumerControlReport_Data_t</a>) / 2; i++) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span> (_report.keys[i] == m) {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      _report.keys[i] = 0x00;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="comment">// no break to delete multiple keys</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  sendReport(&amp;_report, <span class="keyword">sizeof</span>(_report));</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">void</span> ConsumerControl_::releaseAll(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  end();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">void</span> ConsumerControl_::sendReport(<span class="keywordtype">void</span>* data, <span class="keywordtype">int</span> length) {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  HID().SendReport(HID_REPORTID_CONSUMERCONTROL, data, length);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<a class="code" href="classConsumerControl__.html">ConsumerControl_</a> ConsumerControl;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span> ConsumerControl_::release(uint16_t m) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="comment">// search and release the keypress</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordflow">for</span> (uint8_t i = 0; i &lt; <span class="keyword">sizeof</span>(<a class="code" href="unionHID__ConsumerControlReport__Data__t.html">HID_ConsumerControlReport_Data_t</a>) / 2; i++) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (_report.keys[i] == m) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      _report.keys[i] = 0x00;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="comment">// no break to delete multiple keys</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">void</span> ConsumerControl_::releaseAll(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  memset(&amp;_report, 0, <span class="keyword">sizeof</span>(_report));</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> ConsumerControl_::sendReportUnchecked(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  HID().SendReport(HID_REPORTID_CONSUMERCONTROL, &amp;_report, <span class="keyword">sizeof</span>(_report));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">void</span> ConsumerControl_::sendReport(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">// If the last report is different than the current report, then we need to send a report.</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="comment">// We guard sendReport like this so that calling code doesn&#39;t end up spamming the host with empty reports</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="comment">// if sendReport is called in a tight loop.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">// if the previous report is the same, return early without a new report.</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">if</span> (memcmp(&amp;_lastReport, &amp;_report, <span class="keyword">sizeof</span>(_report)) == 0)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  sendReportUnchecked();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  memcpy(&amp;_lastReport, &amp;_report, <span class="keyword">sizeof</span>(_report));</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<a class="code" href="classConsumerControl__.html">ConsumerControl_</a> ConsumerControl;</div>
 <div class="ttc" id="classConsumerControl___html"><div class="ttname"><a href="classConsumerControl__.html">ConsumerControl_</a></div><div class="ttdef"><b>Definition:</b> <a href="ConsumerControl_8h_source.html#l00044">ConsumerControl.h:44</a></div></div>
 <div class="ttc" id="unionHID__ConsumerControlReport__Data__t_html"><div class="ttname"><a href="unionHID__ConsumerControlReport__Data__t.html">HID_ConsumerControlReport_Data_t</a></div><div class="ttdef"><b>Definition:</b> <a href="ConsumerControl_8h_source.html#l00032">ConsumerControl.h:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

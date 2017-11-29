@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classConsumerControl__-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ConsumerControl_ Class Reference</div>  </div>
@@ -121,15 +122,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>release</b> (uint16_t
 <tr class="memitem:af391e4b889f2d31a90649d872f5bc4ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af391e4b889f2d31a90649d872f5bc4ec"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>releaseAll</b> (void)</td></tr>
 <tr class="separator:af391e4b889f2d31a90649d872f5bc4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d004210fb645e8a78bb6fd3158cceac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d004210fb645e8a78bb6fd3158cceac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sendReport</b> (void *data, int length)</td></tr>
-<tr class="separator:a9d004210fb645e8a78bb6fd3158cceac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d38f11f57e288696bd34d71d39e549f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d38f11f57e288696bd34d71d39e549f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>sendReport</b> (void)</td></tr>
+<tr class="separator:a0d38f11f57e288696bd34d71d39e549f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a66e2bcddfd349162b01daef4ec61d9e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66e2bcddfd349162b01daef4ec61d9e1"></a>
 <a class="el" href="unionHID__ConsumerControlReport__Data__t.html">HID_ConsumerControlReport_Data_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_report</b></td></tr>
 <tr class="separator:a66e2bcddfd349162b01daef4ec61d9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a14856c7893a760380e221463e1ebe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74a14856c7893a760380e221463e1ebe"></a>
+<a class="el" href="unionHID__ConsumerControlReport__Data__t.html">HID_ConsumerControlReport_Data_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_lastReport</b></td></tr>
+<tr class="separator:a74a14856c7893a760380e221463e1ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aa47d82b80c6b8577792e74804e32d0cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa47d82b80c6b8577792e74804e32d0cf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>sendReportUnchecked</b> (void)</td></tr>
+<tr class="separator:aa47d82b80c6b8577792e74804e32d0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">

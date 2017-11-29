@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>The plugin provides the <code>EEPROMKeymap</code> object, which has the following methods:</p>
 <h3><code>.max_layers(max)</code></h3>
 <blockquote class="doxtable">
-<p>Tells the extension to reserve space in EEPROM for up to <code>max</code> layers. Can only be called once, any subsequent call will be a no-op.</p>
+<p>Tells the extension to reserve space in EEPROM for up to <code>max</code> layers. Can only be called once, any subsequent call will be a no-op. This should be set to the number of keymap layers you want to be able to program from EEPROM (probably the number of layers you have defined in your keymap).</p>
 <p></p>
 </blockquote>
 <h2>Focus commands</h2>

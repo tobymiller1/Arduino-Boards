@@ -131,14 +131,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordflow">if</span> (!::<a class="code" href="classkaleidoscope_1_1OneShot.html">OneShot</a>.isActive())</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> mapped_key;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classkaleidoscope_1_1OneShot.html">::OneShot</a>.cancel();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  KeyboardHardware.maskKey(row, col);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">return</span> Key_NoKey;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="classkaleidoscope_1_1OneShot.html">::OneShot</a>.cancel();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">return</span> Key_NoKey;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<a class="code" href="classkaleidoscope_1_1EscapeOneShot.html">kaleidoscope::EscapeOneShot</a> EscapeOneShot;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<a class="code" href="classkaleidoscope_1_1EscapeOneShot.html">kaleidoscope::EscapeOneShot</a> EscapeOneShot;</div>
 <div class="ttc" id="classkaleidoscope_1_1OneShot_html"><div class="ttname"><a href="classkaleidoscope_1_1OneShot.html">kaleidoscope::OneShot</a></div><div class="ttdef"><b>Definition:</b> <a href="OneShot_8h_source.html#l00029">OneShot.h:29</a></div></div>
 <div class="ttc" id="unionKey___html"><div class="ttname"><a href="unionKey__.html">Key_</a></div><div class="ttdef"><b>Definition:</b> <a href="key__defs_8h_source.html#l00020">key_defs.h:20</a></div></div>
 <div class="ttc" id="classkaleidoscope_1_1EscapeOneShot_html"><div class="ttname"><a href="classkaleidoscope_1_1EscapeOneShot.html">kaleidoscope::EscapeOneShot</a></div><div class="ttdef"><b>Definition:</b> <a href="Escape-OneShot_8h_source.html#l00024">Escape-OneShot.h:24</a></div></div>

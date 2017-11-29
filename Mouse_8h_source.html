@@ -129,30 +129,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    uint8_t buttons;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    int8_t xAxis;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    int8_t yAxis;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    int8_t wheel;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  };</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;} <a class="code" href="unionHID__MouseReport__Data__t.html">HID_MouseReport_Data_t</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    int8_t vWheel;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    int8_t hWheel;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;} <a class="code" href="unionHID__MouseReport__Data__t.html">HID_MouseReport_Data_t</a>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classMouse__.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMouse__.html">Mouse_</a> {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="classMouse__.html">Mouse_</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> begin(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">void</span> end(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> click(uint8_t b = MOUSE_LEFT);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> move(<span class="keywordtype">signed</span> <span class="keywordtype">char</span> x, <span class="keywordtype">signed</span> <span class="keywordtype">char</span> y, <span class="keywordtype">signed</span> <span class="keywordtype">char</span> wheel = 0);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> press(uint8_t b = MOUSE_LEFT);   <span class="comment">// press LEFT by default</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">void</span> release(uint8_t b = MOUSE_LEFT); <span class="comment">// release LEFT by default</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">bool</span> isPressed(uint8_t b = MOUSE_LEFT); <span class="comment">// check LEFT by default</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> sendReport(<span class="keywordtype">void</span>* data, <span class="keywordtype">int</span> length);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  uint8_t _buttons;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">void</span> buttons(uint8_t b);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">extern</span> <a class="code" href="classMouse__.html">Mouse_</a> Mouse;</div>
-<div class="ttc" id="classMouse___html"><div class="ttname"><a href="classMouse__.html">Mouse_</a></div><div class="ttdef"><b>Definition:</b> <a href="Mouse_8h_source.html#l00044">Mouse.h:44</a></div></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classMouse__.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMouse__.html">Mouse_</a> {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="classMouse__.html">Mouse_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">void</span> begin(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> end(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> click(uint8_t b = MOUSE_LEFT);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> move(<span class="keywordtype">signed</span> <span class="keywordtype">char</span> x, <span class="keywordtype">signed</span> <span class="keywordtype">char</span> y, <span class="keywordtype">signed</span> <span class="keywordtype">char</span> vWheel = 0, <span class="keywordtype">signed</span> <span class="keywordtype">char</span> hWheel = 0);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">void</span> press(uint8_t b = MOUSE_LEFT);   <span class="comment">// press LEFT by default</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> release(uint8_t b = MOUSE_LEFT); <span class="comment">// release LEFT by default</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">bool</span> isPressed(uint8_t b = MOUSE_LEFT); <span class="comment">// check LEFT by default</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">void</span> sendReport(<span class="keywordtype">void</span>* data, <span class="keywordtype">int</span> length);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  uint8_t _buttons;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">void</span> buttons(uint8_t b);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">extern</span> <a class="code" href="classMouse__.html">Mouse_</a> Mouse;</div>
+<div class="ttc" id="classMouse___html"><div class="ttname"><a href="classMouse__.html">Mouse_</a></div><div class="ttdef"><b>Definition:</b> <a href="Mouse_8h_source.html#l00045">Mouse.h:45</a></div></div>
 <div class="ttc" id="unionHID__MouseReport__Data__t_html"><div class="ttname"><a href="unionHID__MouseReport__Data__t.html">HID_MouseReport_Data_t</a></div><div class="ttdef"><b>Definition:</b> <a href="Mouse_8h_source.html#l00033">Mouse.h:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
