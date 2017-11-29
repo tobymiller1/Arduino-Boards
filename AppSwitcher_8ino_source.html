@@ -117,7 +117,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;Macros.h&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* *INDENT-OFF* */</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">const</span> <a class="code" href="unionKey__.html">Key</a> keymaps[][ROWS][COLS] PROGMEM = {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;KEYMAPS(</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  [0] = KEYMAP_STACKED</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  (</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   Key_NoKey,    Key_1, Key_2, Key_3, Key_4, Key_5, Key_NoKey,</div>
@@ -136,11 +136,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   Key_RightShift, Key_RightAlt, Key_Spacebar, Key_RightControl,</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   M(M_APPCANCEL)</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   ),</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;)</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">/* *INDENT-ON* */</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">const</span> macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">switch</span> (macroIndex) {</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">case</span> M_APPSWITCH:</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> macroAppSwitch(keyState);</div>
@@ -159,7 +159,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> loop() {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  Kaleidoscope.loop();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="ttc" id="unionKey___html"><div class="ttname"><a href="unionKey__.html">Key_</a></div><div class="ttdef"><b>Definition:</b> <a href="key__defs_8h_source.html#l00020">key_defs.h:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
