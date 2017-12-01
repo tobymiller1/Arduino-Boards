@@ -87,13 +87,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classMouse__-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Mouse_ Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for Mouse_:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMouse____coll__graph.png" border="0" usemap="#Mouse___coll__map" alt="Collaboration graph"/></div>
+<map name="Mouse___coll__map" id="Mouse___coll__map">
+<area shape="rect" id="node2" href="unionHID__MouseReport__Data__t.html" title="HID_MouseReport_Data_t" alt="" coords="5,5,181,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -118,21 +125,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>release</b> (uint8_t 
 <tr class="memitem:a31367036f6b6be99098ec6d748b2b06f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31367036f6b6be99098ec6d748b2b06f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isPressed</b> (uint8_t b=MOUSE_LEFT)</td></tr>
 <tr class="separator:a31367036f6b6be99098ec6d748b2b06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7be66b22ed1e2428e0791925b5048c2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7be66b22ed1e2428e0791925b5048c2a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sendReport</b> (void *data, int length)</td></tr>
-<tr class="separator:a7be66b22ed1e2428e0791925b5048c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae6454bfb7ef5eff4a88e5a9085705437"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6454bfb7ef5eff4a88e5a9085705437"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>buttons</b> (uint8_t b)</td></tr>
-<tr class="separator:ae6454bfb7ef5eff4a88e5a9085705437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a644e3442055837cd6ff87b8df787fb76"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a644e3442055837cd6ff87b8df787fb76"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>sendReport</b> (void)</td></tr>
+<tr class="separator:a644e3442055837cd6ff87b8df787fb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd55cdab71f62c315bf9e5c13f00194e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd55cdab71f62c315bf9e5c13f00194e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>releaseAll</b> (void)</td></tr>
+<tr class="separator:acd55cdab71f62c315bf9e5c13f00194e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a7d7a6018c0a99b5c043eed2a035fe176"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d7a6018c0a99b5c043eed2a035fe176"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_buttons</b></td></tr>
-<tr class="separator:a7d7a6018c0a99b5c043eed2a035fe176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97f8b4bc84586c89da7a323af0577234"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97f8b4bc84586c89da7a323af0577234"></a>
+<a class="el" href="unionHID__MouseReport__Data__t.html">HID_MouseReport_Data_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>report</b></td></tr>
+<tr class="separator:a97f8b4bc84586c89da7a323af0577234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afae3025321aced105354ede283d18d1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afae3025321aced105354ede283d18d1f"></a>
+<a class="el" href="unionHID__MouseReport__Data__t.html">HID_MouseReport_Data_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lastReport</b></td></tr>
+<tr class="separator:afae3025321aced105354ede283d18d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a298cd5cb9160a6c28e1cdea97822f38f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a298cd5cb9160a6c28e1cdea97822f38f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>sendReportUnchecked</b> (void)</td></tr>
+<tr class="separator:a298cd5cb9160a6c28e1cdea97822f38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
