@@ -24,6 +24,7 @@ model01.bootloader.extended_fuses=0xcb
 model01.bootloader.file=caterina/Caterina.hex
 model01.bootloader.unlock_bits=0x3F
 model01.bootloader.lock_bits=0x2F
+model01.bootloader.pid=0x2300
 
 model01.build.mcu=atmega32u4
 model01.build.f_cpu=16000000L
