@@ -29,8 +29,8 @@ smoke-examples:
 	$(KALEIDOSCOPE_BUILDER_DIR)/kaleidoscope-builder build-all 
 
 check-docs:
-	doxygen $(PLUGIN_TEST_SUPPORT_DIR)/check-docs.conf 2> /dev/null >/dev/null
-	python $(PLUGIN_TEST_SUPPORT_DIR)/doxy-coverage.py /tmp/undocced/xml
+	doxygen $(PLUGIN_TEST_SUPPORT_DIR)/quality/etc/check-docs.conf 2> /dev/null >/dev/null
+	python $(PLUGIN_TEST_SUPPORT_DIR)/quality/doxy-coverage.py /tmp/undocced/xml
 
 check-astyle:
 	$(PLUGIN_TEST_SUPPORT_DIR)/run-astyle
