@@ -160,3 +160,6 @@
 [submodule "toolchain"]
 	path = toolchain
 	url = https://github.com/keyboardio/Kaleidoscope-Prebuilt-Toolchain.git
+[submodule "build-tools"]
+	path = build-tools
+	url = https://github.com/keyboardio/Kaleidoscope-Build-Tools.git
