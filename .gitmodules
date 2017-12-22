@@ -157,3 +157,6 @@
 [submodule "libraries/Kaleidoscope-HostPowerManagement"]
 	path = libraries/Kaleidoscope-HostPowerManagement
 	url = https://github.com/keyboardio/Kaleidoscope-HostPowerManagement
+[submodule "toolchain"]
+	path = toolchain
+	url = https://github.com/keyboardio/Kaleidoscope-Prebuilt-Toolchain.git
