@@ -32,7 +32,7 @@ blindly-commit-updates: git-pull maintainer-update-submodules
 
 
 doxygen-generate:
-	doxygen etc/doxygen/doxygen.conf
+	doxygen build-tools/automation/etc/doxygen/doxygen.conf
 
 
 -include build-tools/makefiles/rules.mk
