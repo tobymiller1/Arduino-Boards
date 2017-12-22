@@ -37,11 +37,11 @@ check-astyle:
 	$(PLUGIN_TEST_SUPPORT_DIR)/astyle-check
 	
 cpplint-noisy:
-	-$(PLUGIN_TEST_SUPPORT_DIR)/cpplint.py  --filter=-legal/copyright,-build/include,-readability/namespace,,-whitespace/line_length  --recursive --extensions=cpp,h,ino --exclude=$(BOARD_HARDWARE_PATH) --exclude=$(TRAVIS_ARDUINO) src examples
+	-$(PLUGIN_TEST_SUPPORT_DIR)/quality/cpplint.py  --filter=-legal/copyright,-build/include,-readability/namespace,,-whitespace/line_length  --recursive --extensions=cpp,h,ino --exclude=$(BOARD_HARDWARE_PATH) --exclude=$(TRAVIS_ARDUINO) src examples
 
 
 cpplint:
-	$(PLUGIN_TEST_SUPPORT_DIR)/cpplint.py  --quiet --filter=-whitespace,-legal/copyright,-build/include,-readability/namespace  --recursive --extensions=cpp,h,ino src examples
+	$(PLUGIN_TEST_SUPPORT_DIR)/quality/cpplint.py  --quiet --filter=-whitespace,-legal/copyright,-build/include,-readability/namespace  --recursive --extensions=cpp,h,ino src examples
 
 ## NOTE: HERE BE DRAGONS, DO NOT CLEAN THIS UP!
 # When building outside of Arduino-Boards, we want to use the current library,
