@@ -69,7 +69,7 @@
 	url = https://github.com/keyboardio/Kaleidoscope-Ranges
 [submodule "libraries/Kaleidoscope-Unicode"]
 	path = libraries/Kaleidoscope-Unicode
-	url = https://github.com/keyboardio/Kaleidoscope-Unicode
+	url = https://github.com/tobymiller1/Kaleidoscope-Unicode
 [submodule "libraries/Kaleidoscope-LEDEffects"]
 	path = libraries/Kaleidoscope-LEDEffects
 	url = https://github.com/keyboardio/Kaleidoscope-LEDEffects
